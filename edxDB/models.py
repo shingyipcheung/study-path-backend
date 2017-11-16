@@ -1,4 +1,5 @@
 from django.db import models
+import json
 
 # Create your models here.
 
@@ -6,11 +7,67 @@ from django.db import models
 class Student(models.Model):
     student_id = models.IntegerField()
     enroll_time = models.DateTimeField(null = True)
+    # store the result of get_all_learning_object_points() in this field to speed up queries
+    lo_points_json = models.CharField(max_length = 100)
+
+    # https://stackoverflow.com/questions/22340258/django-list-field-in-model
+    def get_lo_points(self):
+        return json.loads(self.lo_points_json)
+
+    def set_lo_points(self, d):
+        self.lo_points_json = json.dumps(d)
+
+    # get the point earned on this learning object by this student
+    def get_learning_object_points(self, lo):
+        # lo should be LearningObject class and in the database
+        # -1 means student haven't touched this learning object
+        points = -1
+        # each contribution means a question
+        for c in lo.contribution_set.all():
+            records = Record.objects.filter(student=self, question=c.question)
+            # if the student hasn't answered this question
+            if records.count() <= 0:
+                continue
+            # the max score this student has got on this question
+            max_score = records.aggregate(score = models.Max('score'))['score']
+            # student has touched this learning object
+            if points < 0:
+                points = 0
+            points += max_score * c.ratio
+        return points
+
+    # get all learning objects points and return as a dictionary
+    def get_all_learning_object_points(self):
+        los = LearningObject.objects.all()
+        points_dict = {}
+        for lo in los:
+            points_dict[lo.id] = self.get_learning_object_points(lo)
+        return points_dict
 
 # The learning objects of the courses.
 class LearningObject(models.Model):
     name = models.CharField(max_length = 100)
     children = models.ManyToManyField("LearningObject", through = "Dependency", through_fields = ("parent_lo", "child_lo"))
+    questions = models.ManyToManyField("Question", through = "Contribution", through_fields = ("learning_object", "question"))
+    # total points for this learning object, calcilated from the related Contribution
+    total_points = models.FloatField(null=True)
+    # average points students get for this learning object
+    average_points = models.FloatField(null=True)
+
+    # These two functions are to update the 2 attributes above. only for update.
+    def get_total_points(self):
+        total_points = 0
+        contributions = self.contribution_set.all()
+        for c in contributions:
+            total_points += c.ratio * c.question.max_score
+        return total_points
+
+    def get_average_points(self):
+        average_points = 0
+        contributions = self.contribution_set.all()
+        for c in contributions:
+            average_points += c.ratio * c.question.average_score
+        return average_points
 
 # only care about the graded problem within the semester
 # (exclude the final questions and course reviews)
@@ -18,6 +75,22 @@ class Question(models.Model):
     file_name = models.CharField(max_length = 40)
     name = models.CharField(max_length = 100)
     max_score = models.FloatField()
+    average_score = models.FloatField(null = True)
+
+    def __str__(self):
+        return self.name
+
+    # For update the average_score above
+    def get_average_score(self):
+        records = self.record_set.all()
+        total = 0.0
+        count = 0.0
+        for r in records:
+            total += r.score
+            count += 1.0
+        if count == 0:
+            return 0
+        return total / count
 
 # the records of student doing the problems
 # class for many to many relationship between Student and Question
