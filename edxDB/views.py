@@ -24,13 +24,12 @@ def student_lo(request):
         students = Student.objects.all()[0:500]
         serializer = StudentSerializer(students, many=True)
         total_points = [x.total_points for x in LearningObject.objects.all()]
-        learning_objects = [x.name  for x in LearningObject.objects.all()]
+        learning_objects = [x.name for x in LearningObject.objects.all()]
         return JSONResponse({
-            "students":serializer.data,
+            "students": serializer.data,
             "total_points": total_points,
             "learning_objects": learning_objects
             })
-    else:
-        return HttpResponse(status = 404)
+    return HttpResponse(status = 404)
 
 # Create your views here.

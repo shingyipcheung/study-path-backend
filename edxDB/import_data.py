@@ -17,20 +17,16 @@ import pytz
 # for formatted output
 from pprint import pprint
 
-try:
-    from models import *
-    from constants import *
-    from helpers import *
-except:
-    from .models import *
-    from .constants import *
-    from .helpers import *
+
+from edxDB.models import *
+from edxDB.constants import *
+from edxDB.helpers import *
 
 ################################################################
 # This variable should store the location of all the json file.#
 # Please change it accordingly.                                #
 ################################################################
-data_dir = r"C:\code\uropedx\edxback\edxDB\data"
+data_dir = r"./data"
 
 # import learning objects defined in the constants.py
 def import_learning_objects():
@@ -187,7 +183,7 @@ def import_records(file_name = "actions.sql"):
                 #print("Found question: %s" % (problem_file_name))
             else:
                 pass
-        counter +=1
+        counter += 1
         #print(create_counter)
         if counter % 1000 == 0:
             print("traversed %d records." % counter)
