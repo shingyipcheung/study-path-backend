@@ -82,3 +82,4 @@ CONCEPT_EDGES = {
 
 # preprocess grade file
 GRADE_FILE = "data/HKUSTx-COMP102x-2T2014-courseware_studentmodule-prod-analytics.sql"
+COURSE_STRUCTURE_FILE = "data/HKUSTx-COMP102x-2T2014-course_structure-prod-analytics.json"
