@@ -21,6 +21,9 @@ python manage.py runserver
 
 ### Usage
 
+#### Force-Directed Graph
+index.html
+
 #### return the concepts grades of a student with parameter student_id (e.g. 342)
 http://127.0.0.1:8000/study_plan/concept_score/342/
 
