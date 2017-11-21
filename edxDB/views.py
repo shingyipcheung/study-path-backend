@@ -31,6 +31,11 @@ def graph(request):
     return JsonResponse(df.to_dict('records'), safe=False)
 
 
+def concepts(request):
+    from .constants import PROBLEM_WEIGHT
+    return JsonResponse(list(PROBLEM_WEIGHT.keys()), safe=False)
+
+
 def problem(request, problem_id):
     df = read_df("problem_records.pkl")
     problem_df = df[df["problem_id"] == problem_id]
