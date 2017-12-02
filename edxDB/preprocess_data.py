@@ -2,6 +2,8 @@ import pandas as pd
 from edxDB.course_structure_parser import truncate_by_special_char
 from edxDB.constants import PROBLEM_WEIGHT, CONCEPT_EDGES, GRADE_FILE
 
+# To use this file this file in the shell, need use os module to change the
+# directory to edxDB
 
 def minify_problem_records():
     df = pd.read_table(GRADE_FILE)
@@ -33,11 +35,11 @@ def generate_concept_grade():
     # right outer join
     df = pd.merge(grade_df, weight_df, on='problem_id', how='right')
     # concept score for one question
-    df["weighted_grade"] = df["grade"] * df["weight"]
+    df["weighted_grade"] = df["grade"] * df["weight"] #/ df["max_grade"] # normalize using the max grade of the question
     # sum all concept score for all questions
     df = df.groupby(["student_id", "concept"]).agg({"weighted_grade": "sum"})
     # reshape to concepts columns
-    df = df.unstack(fill_value=0)
+    df = df.unstack(fill_value=-1) # -1 here did work, but why instance_variable always have the full mean?
     # drop column level "sum"
     df.columns = df.columns.droplevel(level=0)
     df.to_pickle("student_concept_grade.pkl")
@@ -45,11 +47,22 @@ def generate_concept_grade():
 
 
 def risk_ratio(df: pd.DataFrame, left: str, right: str):
-    mean = df.mean()
-    left_below = df[df[left] < mean[left]].index
-    left_above = df[df[left] >= mean[left]].index
-    right_below = df[df[right] < mean[right]].index
-    right_above = df[df[right] >= mean[right]].index
+    # mean = df.mean()
+    # left_below = df[df[left] < mean[left]].index
+    # left_above = df[df[left] >= mean[left]].index
+    # right_below = df[df[right] < mean[right]].index
+    # right_above = df[df[right] >= mean[right]].index
+
+    # try eliminating the students who have not answer the question
+    left_nonzero = df[df[left] >= 0]
+    left_mean = left_nonzero.mean()
+    left_below = left_nonzero[left_nonzero[left] < left_mean[left]].index
+    left_above = left_nonzero[left_nonzero[left] >= left_mean[left]].index
+
+    right_nonzero = df[df[right] >= 0]
+    right_mean = right_nonzero.mean()
+    right_below = right_nonzero[right_nonzero[right] < right_mean[right]].index
+    right_above = right_nonzero[right_nonzero[right] >= right_mean[right]].index
     """
     https://en.wikipedia.org/wiki/Relative_risk
           right
@@ -59,10 +72,20 @@ def risk_ratio(df: pd.DataFrame, left: str, right: str):
     """
     # get the sizes of sets
     a = left_below.intersection(right_below).shape[0]
-    b = left_below.intersection(right_above).shape[0]
+    b = left_below.intersection(right_above).shape[0] # sometimes b becomes zero
     c = left_above.intersection(right_below).shape[0]
     d = left_above.intersection(right_above).shape[0]
-    return (a / (a + b)) / (c / (c + d))
+    print(left)
+    print(right)
+    # print(right_mean[right])
+    print(a + b + c + d) # total number of the students who touched this 2 learning objects
+    print(a)
+    print(b)
+    print(c)
+    print(d)
+    # return (a / (a + b)) / (c / (c + d))
+    # add one to avoid dividing by zero
+    return (d / (c + d)) / ((b+1) / (a + b +1))
 
 
 def generate_risk_ratio():
