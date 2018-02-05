@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 import pandas as pd
 import os
-
+from .constants import PROBLEM_WEIGHT
 
 workpath = os.path.dirname(os.path.abspath(__file__))
 
@@ -32,8 +32,12 @@ def graph(request):
 
 
 def concepts(request):
-    from .constants import PROBLEM_WEIGHT
     return JsonResponse(list(PROBLEM_WEIGHT.keys()), safe=False)
+
+
+def means(request):
+    df = read_df("concept_score_mean.pkl")
+    return JsonResponse(df.round(2).to_dict(), safe=False)
 
 
 def problem(request, problem_id):
@@ -114,38 +118,43 @@ def recommendation(request, student_id):
     mean = mean.rename("mean")
     df = pd.concat([student, mean], axis=1)
 
+    path = list(PROBLEM_WEIGHT.keys())
+
     # https://bootstrap-vue.js.org/docs/components/table
     def row_variant(row):
         if row["grade"] is not None and row["grade"] >= row["mean"]:
+            path.remove(row.name)
             return "success"
         return "danger"
     df["_rowVariant"] = df.apply(row_variant, axis=1)
     df = df.round(2)
     # concept that below mean
-    below_mean = df[df["_rowVariant"] == "danger"].index.tolist()
+    # below_mean = df[df["_rowVariant"] == "danger"].index.tolist()
     # edges that risk ratio > threshold
-    THRESHOLD = 2
-    ratio = read_df("risk_ratio.pkl")
-    critical_pair = ratio[ratio["value"] >= THRESHOLD]
-
-    graph = {}
-
-    def add_edge(row):
-        if row["source"] not in below_mean:
-            if row["target"] not in graph:
-                graph[row["target"]] = []
-        else:
-            if row["source"] not in graph:
-                graph[row["source"]] = []
-            graph[row["source"]].append(row["target"])
-
-    for concept in below_mean:
-        pairs = critical_pair[critical_pair["target"] == concept]
-        pairs.apply(add_edge, axis=1)
+    # THRESHOLD = 2
+    # ratio = read_df("risk_ratio.pkl")
+    # critical_pair = ratio[ratio["value"] >= THRESHOLD]
+    #
+    # graph = {}
+    #
+    # def add_edge(row):
+    #     if row["source"] not in below_mean:
+    #         if row["target"] not in graph:
+    #             graph[row["target"]] = []
+    #     else:
+    #         if row["source"] not in graph:
+    #             graph[row["source"]] = []
+    #         graph[row["source"]].append(row["target"])
+    #
+    # for concept in below_mean:
+    #     pairs = critical_pair[critical_pair["target"] == concept]
+    #     pairs.apply(add_edge, axis=1)
 
     # print(topological(graph))
+    df.index.rename('Learning Object', inplace=True)
+    df.rename(columns={'grade': 'Score', 'mean': 'Avg. Score'}, inplace=True)
     df = df.round(2)
     return JsonResponse({
         "table": df.reset_index().to_dict(orient='records'),
-        "path": BFS(graph)
+        "path": path
     }, safe=False)

@@ -69,9 +69,9 @@ def risk_ratio(df: pd.DataFrame, mean, left: str, right: str):
     b = left_fail.intersection(right_pass).shape[0]
     c = left_pass.intersection(right_fail).shape[0]
     d = left_pass.intersection(right_pass).shape[0]
-    # print(left, right)
+    # print('left:', left, 'right:', right)
     # print(len(left_fail), len(left_pass), len(right_fail), len(right_pass))
-    # print(a, b, c, d)
+    # print('a:', a, 'b:', b, 'c:', c, 'd:', d)
     # print("==============")
     return (a / (a + b)) / (c / (c + d))
 

@@ -96,6 +96,7 @@ TEMPLATES = [
     },
 ]
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # Add for vuejs
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "dist/static"),
