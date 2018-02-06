@@ -74,7 +74,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'edxback.urls'
@@ -82,7 +82,8 @@ ROOT_URLCONF = 'edxback.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 'DIRS': [],
+        'DIRS': ['dist'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -93,6 +94,12 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+# Add for vuejs
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "dist/static"),
 ]
 
 WSGI_APPLICATION = 'edxback.wsgi.application'
