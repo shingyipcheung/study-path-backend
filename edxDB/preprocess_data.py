@@ -3,6 +3,8 @@ import numpy as np
 from edxDB.course_structure_parser import truncate_by_special_char
 from edxDB.constants import PROBLEM_WEIGHT, CONCEPT_EDGES, GRADE_FILE
 
+# To use this file this file in the shell, need use os module to change the
+# directory to edxDB
 
 def minify_problem_records():
     df = pd.read_table(GRADE_FILE)
@@ -50,13 +52,12 @@ def generate_concept_grade():
     print(df)
     return df
 
-
+  
 def risk_ratio(df: pd.DataFrame, mean, left: str, right: str):
     left_fail = df[df[left] < mean[left]].index
     left_pass = df[df[left] >= mean[left]].index
     right_fail = df[df[right] < mean[right]].index
     right_pass = df[df[right] >= mean[right]].index
-
     """
     https://en.wikipedia.org/wiki/Relative_risk
           right
