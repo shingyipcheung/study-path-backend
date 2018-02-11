@@ -10,7 +10,7 @@ you should have the graded sql under the folder **data**
 
 **HKUSTx-COMP102x-2T2014-courseware_studentmodule-prod-analytics.sql**
 
-`python migrations/preprocess_data.py`
+`python edxDB/migrations/preprocess_data.py`
 
 some .pkl files will be generated, these are the serialized result for responding the requests
 
