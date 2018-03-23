@@ -6457,7 +6457,7 @@
     "category": "video", 
     "children": [], 
     "metadata": {
-      "display_name": " Shortcut Operators", 
+      "display_name": "Shortcut Operators",
       "download_track": true, 
       "download_video": true, 
       "html5_sources": [
@@ -6547,7 +6547,7 @@
       "html5_sources": [
         "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T2.2-Demo on Static Methods.mp4"
       ], 
-      "sub": "MgM-dFOmAwQ", 
+      "sub": "COMP102x-L5-T2.2-Demo on Static Methods",
       "youtube_id_1_0": "MgM-dFOmAwQ"
     }
   }, 
@@ -7050,7 +7050,7 @@
       "html5_sources": [
         "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T1.0-Message from the Instructor.mp4"
       ], 
-      "sub": "", 
+      "sub": "COMP102x-L3-T1.0-Message from the Instructor",
       "youtube_id_1_0": "92k2QWxn8o0"
     }
   }, 
