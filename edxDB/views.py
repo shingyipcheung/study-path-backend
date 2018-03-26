@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 import pandas as pd
 import os
-from .constants import PROBLEM_WEIGHT
+from .constants import PROBLEM_WEIGHT, VIDEO_DICT
 
 workpath = os.path.dirname(os.path.abspath(__file__))
 
@@ -24,6 +24,10 @@ def read_df(filename):
         df = pd.read_pickle(local_path(filename))
     df_pool[filename] = df
     return df
+
+
+def videos(request, concept):
+    return JsonResponse(VIDEO_DICT[concept], safe=False)
 
 
 def graph(request):
