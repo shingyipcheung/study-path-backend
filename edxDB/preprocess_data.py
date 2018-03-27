@@ -6,6 +6,7 @@ from edxDB.constants import PROBLEM_WEIGHT, CONCEPT_EDGES, GRADE_FILE
 # To use this file this file in the shell, need use os module to change the
 # directory to edxDB
 
+
 def minify_problem_records():
     df = pd.read_table(GRADE_FILE)
     # filter module_type which is problem
