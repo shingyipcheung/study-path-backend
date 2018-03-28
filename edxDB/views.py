@@ -2,6 +2,7 @@ from django.http import JsonResponse
 import pandas as pd
 from .constants import PROBLEM_WEIGHT, VIDEO_DICT
 from .df_loader import load_df
+from .path import generate_paths
 
 
 def videos(request, concept):
@@ -51,14 +52,15 @@ def recommendation(request, student_id):
     mean = mean.rename("mean")
     df = pd.concat([student, mean], axis=1)
 
-    path = list(PROBLEM_WEIGHT.keys())
+    # path = list(PROBLEM_WEIGHT.keys())
 
     # https://bootstrap-vue.js.org/docs/components/table
     def row_variant(row):
         if row["grade"] is not None and row["grade"] >= row["mean"]:
-            path.remove(row.name)
+            # path.remove(row.name)
             return "success"
         return "danger"
+
     df["_rowVariant"] = df.apply(row_variant, axis=1)
     df = df.round(2)
 
@@ -67,5 +69,5 @@ def recommendation(request, student_id):
     df = df.round(2)
     return JsonResponse({
         "table": df.reset_index().to_dict(orient='records'),
-        "path": path
+        "paths": generate_paths(student_id)
     }, safe=False)
