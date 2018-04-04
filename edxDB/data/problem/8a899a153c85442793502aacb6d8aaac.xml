@@ -1,0 +1,62 @@
+<problem display_name="Week 06 Graded Problem Task 6" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+Given a 4 x 4 integer 2D array, <b>arr</b>. What would be the value stored in <b>arr[1][3]</b> after executing the following code for initialization?
+</p>
+  <p>
+    <pre>
+int size = 4;  
+  
+for (int i = 0; i &lt; size; i++) {
+    for (int j = 0; j &lt; size; j++) {
+        arr[i][j] = size * j + i;
+    }
+}
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week6gpt6input1" type="MultipleChoice">
+      <choice correct="false">7</choice>
+      <choice correct="false">2</choice>
+      <choice correct="false">8</choice>
+      <choice correct="true">13</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+  After initialization, the content of <b>arr</b> becomes:
+</p>
+      <p>
+        <table border="1">
+          <tr>
+            <td>  0 </td>
+            <td>  4 </td>
+            <td>  8 </td>
+            <td> 12 </td>
+          </tr>
+          <tr>
+            <td>  1 </td>
+            <td>  5 </td>
+            <td>  9 </td>
+            <td> 13 </td>
+          </tr>
+          <tr>
+            <td>  2 </td>
+            <td>  6 </td>
+            <td> 10</td>
+            <td> 14</td>
+          </tr>
+          <tr>
+            <td>  3</td>
+            <td>  7</td>
+            <td> 11</td>
+            <td> 15</td>
+          </tr>
+        </table>
+      </p>
+      <p><b>arr[1][3]</b> refers to the element of the second row and fourth column. Therefore, the value is 13.
+</p>
+    </div>
+  </solution>
+</problem>

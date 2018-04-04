@@ -1,0 +1,22 @@
+<problem display_name="Week 08 Graded Problem Task 1" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+  Consider a delegation event model for a mouse click event. The <b>mouseClicked(MouseEvent e)</b> is a method defined in ________.  
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="week8gpt2input1" type="MultipleChoice">
+      <choice correct="false">the event source class</choice>
+      <choice correct="false">the event object class</choice>
+      <choice correct="true">the event listener class</choice>
+      <choice correct="false">both the event source class and the event listener class</choice>
+      <choice correct="false">both the event object class and the event listener class</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+Methods for handling an event are defined in the event listener class. For a mouse click event, the <b>mouseClicked()</b> method is defined in the listener class which implemented the <b>MouseListener</b> interface.
+</p>
+    </div>
+  </solution>
+</problem>

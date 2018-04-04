@@ -1,0 +1,42 @@
+<problem display_name="Week 05 Graded Problem Task 1" markdown="null" max_attempts="5" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>In this exercise, you are tasked to complete your own implementation of the method <b>powerN(int, int)</b> in the class <b>PowerCalculator</b>. This method calculates the non-negative integer power of an integer number. The method takes in two <b>int</b> paramaters, <b>number</b> and <b>power</b>. It then calculates the result of raising the number to the given power and returns the calculated result. If a negative power is given, the method simply returns 1.
+</p>
+    <p>The BlueJ project for this exercise can be downloaded <a href="/static/week_5_power_n.zip">here</a>. You are encouraged to try your code on BlueJ first before submitting the answer online. To run the method, right click on the <b>PowerCalculator</b> class and click on the <b>long powerN(int number, int power)</b> method. Enter the values for the parameters <b>number</b> and <b>power</b> in the pop up dialog and click <b>Ok</b>. The calculated result will be shown in another pop up dialog.</p>
+    <p>
+      <img src="/static/power_calculator.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="10" cols="80" mode="python" tabsize="4" label="week5gpt3input1"/>
+    <codeparam>
+      <initial_display>
+  
+// write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/gps05/ex01", "version":"V-01-20140715", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p><u>Sample Answer</u><br/>
+long result = 1;<br/>
+<br/>
+while (power &gt; 0) {<br/>
+<br/>
+        result *= number;<br/>
+        power--;<br/>
+}<br/>
+<br/>  
+return result;<br/>
+</p>
+    </div>
+  </solution>
+</problem>

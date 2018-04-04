@@ -1,0 +1,28 @@
+<problem display_name="Week 06 Graded Problem Task 1 " markdown="null" max_attempts="2" weight="1.0">
+  <p>What would be the output of the following code segment?</p>
+  <p>
+    <pre>
+int[] array = {2, 1, 0, 2, 3, 4};
+IO.output(array[2]);
+IO.output(array[3]);
+IO.output(array[4]);
+IO.output(array[1]);
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week6gpt1input1" type="MultipleChoice">
+      <choice correct="false">1022</choice>
+      <choice correct="false">2341</choice>
+      <choice correct="true">0231</choice>
+      <choice correct="false">Error</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+Array indices start from 0. Therefore, array[2], array[3], array[4] and array[1] represent the third, the fourth, the fifth and the second element in the array respectively. This gives a result of 0231.
+</p>
+    </div>
+  </solution>
+</problem>

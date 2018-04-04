@@ -1,0 +1,23 @@
+<problem display_name="Final Exam Question 19" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Which of the following is false about stacks? <br/>  
+<br/>
+(i)    Addition of entries can only be carried out at the top<br/>
+(ii)   Removal of entries can only be carried out at the top<br/>
+(iii)  Push and pop are the two common operations<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ19" type="MultipleChoice">
+      <choice correct="false">(i) only</choice>
+      <choice correct="false">(ii) only</choice>
+      <choice correct="false">(iii) only</choice>
+      <choice correct="true">None of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

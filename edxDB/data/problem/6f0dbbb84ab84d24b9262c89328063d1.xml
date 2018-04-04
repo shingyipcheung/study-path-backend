@@ -1,0 +1,146 @@
+<problem display_name="Lab 04 Graded Task 4" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this lab exercise, you are tasked to complete the <b>playAgain()</b> method in the <b>Player</b> class. This method asks the user for some input, to determine whether to play the game again or not.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+A loop should be used to complete this task.
+</li>
+        <li>
+Declare a variable of type <b>char</b>. You can declare a <b>char</b> variable by coding:<br/>
+<br/>
+<pre>
+char variableName;
+</pre>
+<br/>  
+</li>
+        <li>
+Output a message on the terminal window to ask the user indicating if he/she wants to play the game again by entering the character <b>y</b> or <b>n</b>.
+</li>
+        <li>
+Read the character from the user by using the <b>IO.inputCharacter()</b> method. Assign the read character to the declared <b>char</b> variable. 
+</li>
+        <li>
+Check the character read from the user. If the character is neither <b>y</b> nor <b>Y</b> nor <b>n</b> nor <b>N</b>, ask the user to input again by repeating step 3.
+</li>
+        <li>
+Otherwise, if the character is <b>y</b> or <b>Y</b>, return the value <b>true</b>, else return the value <b>false</b>. 
+</li>
+        <li>  
+You can check if a <b>char</b> variable has a certain value by writing a Boolean expression. For example, suppose we have the <b>char</b> variable <i>input</i> and we want to check if it has a value of <b>a</b>, we can write the following Boolean expression:<br/>
+<br/>
+<pre>
+input == 'a';
+</pre>
+<br/>
+Suppose we want to check if its value is not equal to <b>a</b>, we can write the following Boolean expression:<br/>
+<br/>
+<pre>
+input != 'a';
+</pre>
+<br/>
+Notice the single quotes around the character a.<br/>
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Testing</u>
+    </p>
+    <p>
+A testing class, <b>Lab04GradedTask4</b>, has been prepared for you to test the implementation of the <b>playAgain()</b> method. To perform testing, right click on the <b>Lab04GradedTask4</b> class and then run the <b>testCase1()</b> method. The expected output of <b>testCase1()</b> is shown below.
+</p>
+    <p>
+      <u>Code in testCase1()</u>
+    </p>
+    <p>
+      <pre>
+Player player = new Player();
+boolean result = player.playAgain();
+IO.outputln(result);
+</pre>
+    </p>
+    <p>
+      <u>Expect output of testCase1()</u>
+    </p>
+    <p><pre>
+Want to play again? (y/n)
+y
+true
+</pre><br/>
+Notice that you don't need to enter the single quotes when enterting the character <b>y</b>.
+</p>
+    <p><pre>
+Want to play again? (y/n)
+k
+Want to play again? (y/n)
+</pre><br/>
+Similar to character <b>y</b>, you don't need to enter the single quotes when entering the character <b>k</b>.
+</p>
+    <p>
+  You are adviced to input characters other than <b>y</b> and <b>k</b> to test the correctness of the method.
+</p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab04gt4.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab04gt4input1"/>
+    <codeparam>
+      <initial_display>
+// write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab04/ex04", "version":"V-01-20140716", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <pre>
+char playAgain;
+        
+do {
+
+	IO.outputln("Want to play again? (y/n)");
+	playAgain = IO.inputCharacter();
+
+} while(playAgain ='n' &amp;&amp; playAgain ='y' &amp;&amp; playAgain ='N' &amp;&amp; playAgain ='Y');
+                
+return playAgain == 'y' || playAgain == 'Y';
+</pre>
+      <br/>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>Wrong loop construct. The statement asking user for input is placed outside of the loop.</li>
+          <li>Wrong loop condition. Please refer to <a href="https://courses.edx.org/courses/HKUSTx/COMP102x/2T2014/discussion/forum/i4x-HKUSTx-COMP102x-course-2014-LabExercises/threads/53d12b1d2b8b564977000f2f">this post</a> in the discussion forum for a detailed explanation.</li>
+          <li>Missing a return statement for the method in one of the execution paths. In most cases, the return statement is written for the <b>if</b> case and the <b>else-if</b> case. However, it is omitted in the <b>else</b> case.</li>
+        </ol>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_04_Sol.zip">here</a>.
+<br/>
+</p>
+    </div>
+  </solution>
+</problem>

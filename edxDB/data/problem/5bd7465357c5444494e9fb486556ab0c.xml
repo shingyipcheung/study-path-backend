@@ -1,0 +1,33 @@
+<problem display_name="Final Exam Question 15" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+What is the value of x after executing the following segment of code?
+</p>
+  <p>
+    <pre>
+int[] numbers = {9, 2, 8, 1, 4};
+int x = 0;
+
+for (int i = 0; i &lt; 5; i++) {
+
+        if (numbers[i] % 2 == 0) continue;
+        x += numbers[i];
+}
+  
+// What is the value of x at this point?
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ15" type="MultipleChoice">
+      <choice correct="false">0</choice>
+      <choice correct="false">3</choice>
+      <choice correct="true">10</choice>
+      <choice correct="false">14</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

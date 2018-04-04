@@ -1,0 +1,22 @@
+<problem display_name="Final Exam Question 17" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Which of the following statement(s) is/are true?<br/>
+(i)    A compilation error occurs if we type more than one character inside a pair of single quotes in a code statement, e.g., 'abc'<br/>
+(ii)   A compilation error occurs if we type nothing inside a pair of double quotes in a code statement, e.g., ""<br/>
+(iii)  A compilation error occurs if we type exactly one character inside a pair of double quotes in a code statement, e.g., "a"<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ17" type="MultipleChoice">
+      <choice correct="true">(i) only</choice>
+      <choice correct="false">(ii) only</choice>
+      <choice correct="false">(i) and (ii) only</choice>
+      <choice correct="false">(i), (ii), and (iii)</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,20 @@
+<problem id="Assignment1" display_name="Week 01 Graded Problem Task 2" markdown="null" max_attempts="1" weight="1.0">
+  <problem markdown="null">
+    <p>Use what you have observed from the 2D problem and try coming up with a quick solution to the following question again:</p>
+    <p>Would it be possible for the worm to finish eating through all the 27 apples if it starts from <u><b>one of the corners</b></u> of the cube?</p>
+    <multiplechoiceresponse>
+      <choicegroup label="Would it be possible for the worm to finish eating through all the 27 apples if start from corner?" type="MultipleChoice">
+        <choice correct="true">Yes</choice>
+        <choice correct="false">No</choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation: </p>
+        <p>
+From the 2D square apple problem, we can observe that the worm would be able to eat through all the apples if it starts from a location with a red apple. By applying the same rule in the 3D square apple problem, we can quickly tell that the worm cannot eat through all the apples if it starts from the center of the cube, which contains a green apple. Similarly, you can quickly tell that the worm can eat through all the apples if it starts from a corner of the cube, which contains a red apple.
+</p>
+      </div>
+    </solution>
+  </problem>
+</problem>

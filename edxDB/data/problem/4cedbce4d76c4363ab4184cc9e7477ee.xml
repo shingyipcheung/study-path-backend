@@ -1,0 +1,28 @@
+<problem display_name="Final Exam Question 28" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+What is the value of the variable "counter" after executing the following nested for loop?
+</p>
+  <p>
+    <pre>
+int counter = 0;
+  
+for (int i = 0; i &lt; 10; i++)
+        for (int j = 0; j &lt; i; j++)
+                counter = counter + 1;
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ28" type="MultipleChoice">
+      <choice correct="false">100</choice>
+      <choice correct="true">45</choice>
+      <choice correct="false">10</choice>
+      <choice correct="false">0</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

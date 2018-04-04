@@ -1,0 +1,191 @@
+<problem markdown="null" weight="0.0" display_name="Post-course Survey" showanswer="attempted">
+  <p>
+    <table width="100%" border="2" style="border-color:#6CC;">
+      <tr>
+        <th scope="col" style="border-color:#6CC; margin-left:20px">For questions 1 - 8, indicate the extent to which you agree with each of the following statements about what you learned in this course. Please rate on a scale of Strongly Disagree to Strongly Agree.</th>
+      </tr>
+    </table>
+  </p>
+  <p><font style="color: #6CC" size="+2"><b>Question 1</b></font><br/>
+I learned what I expected to learn in this course.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q01 I learned what I expected to learn in this course." type="MultipleChoice">
+      <choice correct="true">Strongly Disagree</choice>
+      <choice correct="true">Disagree</choice>
+      <choice correct="true">Neutral</choice>
+      <choice correct="true">Agree</choice>
+      <choice correct="true">Strongly Agree</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 2</b></font><br/>
+The communication about the course arrangements, such as the course outline, the grading scheme, announcements, and course team feedback in discussion forums, was clear and easy to follow.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q02 The communication about the course arrangements, such as the course outline, the grading scheme, announcements, and course team feedback in discussion forums, was clear and easy to follow." type="MultipleChoice">
+      <choice correct="true">Strongly Disagree</choice>
+      <choice correct="true">Disagree</choice>
+      <choice correct="true">Neutral</choice>
+      <choice correct="true">Agree</choice>
+      <choice correct="true">Strongly Agree</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 3</b></font><br/>
+The lecture videos were well-prepared and helped me learn the course material.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q03 The lecture videos were well-prepared and helped me learn the course material." type="MultipleChoice">
+      <choice correct="true">Strongly Disagree</choice>
+      <choice correct="true">Disagree</choice>
+      <choice correct="true">Neutral</choice>
+      <choice correct="true">Agree</choice>
+      <choice correct="true">Strongly Agree</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 4</b></font><br/>
+The online discussions on the topics posted by the course team deepened my understanding and helped me integrate the new knowledge into the discipline.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q04 The online discussions on the topics posted by the course team deepened my understanding and helped me integrate the new knowledge into the discipline." type="MultipleChoice">
+      <choice correct="true">Strongly Disagree</choice>
+      <choice correct="true">Disagree</choice>
+      <choice correct="true">Neutral</choice>
+      <choice correct="true">Agree</choice>
+      <choice correct="true">Strongly Agree</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 5</b></font><br/>
+The weekly graded problem sets were designed in a way that helped me learn.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q05 The weekly graded problem sets were designed in a way that helped me learn." type="MultipleChoice">
+      <choice correct="true">Strongly Disagree</choice>
+      <choice correct="true">Disagree</choice>
+      <choice correct="true">Neutral</choice>
+      <choice correct="true">Agree</choice>
+      <choice correct="true">Strongly Agree</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 6</b></font><br/>
+The graded lab tasks were designed in a way that helped me learn.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q06 The graded lab tasks were designed in a way that helped me learn." type="MultipleChoice">
+      <choice correct="true">Strongly Disagree</choice>
+      <choice correct="true">Disagree</choice>
+      <choice correct="true">Neutral</choice>
+      <choice correct="true">Agree</choice>
+      <choice correct="true">Strongly Agree</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 7</b></font><br/>
+The final exam tested concepts that were presented to me during the course.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q07 The final exam tested concepts that were presented to me during the course." type="MultipleChoice">
+      <choice correct="true">Strongly Disagree</choice>
+      <choice correct="true">Disagree</choice>
+      <choice correct="true">Neutral</choice>
+      <choice correct="true">Agree</choice>
+      <choice correct="true">Strongly Agree</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 8</b></font><br/>
+The difficulty level of the questions in the final exam was appropriate.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q08 The difficulty level of the questions in the final exam was appropriate." type="MultipleChoice">
+      <choice correct="true">Strongly Disagree</choice>
+      <choice correct="true">Disagree</choice>
+      <choice correct="true">Neutral</choice>
+      <choice correct="true">Agree</choice>
+      <choice correct="true">Strongly Agree</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p>
+    <table width="100%" border="2" style="border-color:#6CC;">
+      <tr>
+        <th scope="col" style="border-color:#6CC; margin-left:20px">For questions 9 - 10, indicate the extent to which you agree with each of the following statements about your achievements in this course. Please rate on a scale of Strongly Disagree to Strongly Agree.</th>
+      </tr>
+    </table>
+  </p>
+  <p><font style="color: #6CC" size="+2"><b>Question 9</b></font><br/>
+Earning a certificate is a significant part of the value of this course for me.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q09 Earning a certificate is a significant part of the value of this course for me." type="MultipleChoice">
+      <choice correct="true">Strongly Disagree</choice>
+      <choice correct="true">Disagree</choice>
+      <choice correct="true">Neutral</choice>
+      <choice correct="true">Agree</choice>
+      <choice correct="true">Strongly Agree</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 10</b></font><br/>
+What I have learned in this course will help me perform better in my current or future work.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q10 What I have learned in this course will help me perform better in my current or future work." type="MultipleChoice">
+      <choice correct="true">Strongly Disagree</choice>
+      <choice correct="true">Disagree</choice>
+      <choice correct="true">Neutral</choice>
+      <choice correct="true">Agree</choice>
+      <choice correct="true">Strongly Agree</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 11</b></font><br/>
+Please rate your overall learning experience with this course:</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q11 Please rate your overall learning experience with this course:" type="MultipleChoice">
+      <choice correct="true">Very Good</choice>
+      <choice correct="true">Good</choice>
+      <choice correct="true">Fair</choice>
+      <choice correct="true">Poor</choice>
+      <choice correct="true">Very Poor</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 12</b></font><br/>
+How would you rate the pacing of this course?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q12 How would you rate the pacing of this course?" type="MultipleChoice">
+      <choice correct="true">Too slow</choice>
+      <choice correct="true">Slow</choice>
+      <choice correct="true">Just right</choice>
+      <choice correct="true">Fast</choice>
+      <choice correct="true">Too fast</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 13</b></font><br/>
+How would you rate the difficulty of this course?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q13 How would you rate the difficulty of this course?" type="MultipleChoice">
+      <choice correct="true">Too difficult</choice>
+      <choice correct="true">Difficult</choice>
+      <choice correct="true">Just right</choice>
+      <choice correct="true">Easy</choice>
+      <choice correct="true">Too easy</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 14</b></font><br/>
+How would you rate the length of this course?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q14 How would you rate the length of the course?" type="MultipleChoice">
+      <choice correct="true">Too long</choice>
+      <choice correct="true">Long</choice>
+      <choice correct="true">Just right</choice>
+      <choice correct="true">Short</choice>
+      <choice correct="true">Too short</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <script type="loncapa/python">
+
+def postcourse_input(expect, ans):
+    try:
+        return True
+    except ValueError:
+        return False
+
+</script>
+  <p><font style="color: #6CC" size="+2"><b>Question 15</b></font><br/>
+Tell us how we can improve the future re-offer of this course.</p>
+  <customresponse cfn="postcourse_input">
+    <textline size="80" label="Q15 Tell us how we can improve the future re-offer of this course."/>
+    <br/>
+  </customresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Please ignore the green tick/red cross mark.</p>
+    </div>
+  </solution>
+</problem>

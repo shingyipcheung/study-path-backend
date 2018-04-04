@@ -1,0 +1,28 @@
+<problem display_name="Week 08 Graded Problem Task 2" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+  
+Given that a mouse listener is registered to a source object, which of the following method(s) of the registered mouse listener is(are) invoked after a mouse button is clicked on the source object?<br/>
+<br/>
+1. public void mousePressed(MouseEvent e)<br/>
+2. public void mouseReleased(MouseEvent e)<br/>
+3. public void mouseEntered(MouseEvent e)<br/>
+4. public void mouseExited(MouseEvent e)<br/>
+5. public void mouseClicked(MouseEvent e)<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="week8gpt1input1" type="MultipleChoice">
+      <choice correct="false">5 only</choice>
+      <choice correct="false">1 and 2</choice>
+      <choice correct="true">1, 2 and 5</choice>
+      <choice correct="false">All of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+A mouse click event involves two actions, pressing the mouse button and releasing it. Therefore, when we click on the source object, the <b>mousePressed()</b> method is invoked first, followed by the <b>mouseReleased()</b> method. Finally, the <b>mouseClicked()</b> method is invoked.
+</p>
+    </div>
+  </solution>
+</problem>

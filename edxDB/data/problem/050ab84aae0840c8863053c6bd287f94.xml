@@ -1,0 +1,81 @@
+<problem display_name="Week 07 Graded Problem Task 3" markdown="null" max_attempts="5" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+Complete the implementation of the method, isPalindrome(String), which takes in a String as parameter and returns <b>true</b> if the String is a palindrome. Otherwise, <b>false</b> is returned. Your implementation of the <b>isPalindrome()</b> method should <b>NOT</b> be case sensitive.
+</p>
+    <p>
+You can assume that the method reverseString(String) is provided and has the following implementation.
+</p>
+    <p>
+      <pre>
+public static String reverseString(String inputStr){
+  
+        String revStr= "";
+	
+        for(int i=0; i &lt; inputStr.length( ); i++) {
+                revStr= inputStr.charAt(i) + revStr;
+        }
+
+        return revStr;
+}
+</pre>
+    </p>
+    <p>
+A project template is provided for you to test the program before submitting your answers. Click <a href="https://courses.edx.org/c4x/HKUSTx/COMP102x/asset/week_7_palindrome_checker.zip">here</a> to download it.
+</p>
+    <p>
+To test the method, right click on the <b>PalindromeChecker</b> class and click on the <b>boolean isPalindrome(String str)</b> method. Enter a String in double quotes and press <b>Ok</b>.
+</p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="https://courses.edx.org/c4x/HKUSTx/COMP102x/asset/act3_01.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="week7gpt3input1"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/gps07/ex01", "version":"V-01-20140730", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <p>
+        <pre>
+return str.equalsIgnoreCase(reverseString(str));
+</pre>
+        <br/>
+      </p>
+      <p>
+Alternative 1:
+<pre>
+return str.toLowerCase().equals(reverseString(str).toLowerCase());
+</pre>
+<br/>
+</p>
+      <p>
+Alternative 2:
+<pre>
+return str.toUpperCase().equals(reverseString(str).toUpperCase());
+</pre>
+<br/>
+</p>
+      <br/>
+    </div>
+  </solution>
+</problem>

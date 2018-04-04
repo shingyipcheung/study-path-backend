@@ -1,0 +1,36 @@
+<problem display_name="Week 04 Graded Problem Task 1" markdown="null" max_attempts="2" weight="1.0">
+  <p>What will be the output after compiling and executing the main method of the following program?</p>
+  <p>
+    <pre>
+import comp102x.IO;  
+  
+public class Quiz1 {
+  
+        private int x;
+
+        public Quiz1(int x) {
+  
+                x = x;
+        }
+
+        public static void main(String[] args) {
+  
+                Quiz1 q1 = new Quiz1(10);
+                IO.outputln(q1.x);
+        }
+}
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week4gpt1input1" type="MultipleChoice">
+      <choice correct="true">0</choice>
+      <choice correct="false">10</choice>
+      <choice correct="false">Compilation Error</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution"><p>Explanation</p><p>In the constructor of Quiz1, the <b>x</b> on the left and  right hand side of the statement <b>x = x</b> refers to the same local variable <b>x</b> declared in the parameter list of the constructor.</p> This local variable disappears after Java has executed the constructor. The instance variable <b>x</b> is not modified at all and has an initial value of zero. Therefore, when we try to output the instance variable x of the Quiz1 object <b>q1</b>, we will get a 0; even if we use a constructor with 10 as parameter to construct the object <b>q1</b>.
+
+</div>
+  </solution>
+</problem>

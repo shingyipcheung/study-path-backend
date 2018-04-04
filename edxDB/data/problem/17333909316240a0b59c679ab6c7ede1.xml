@@ -1,0 +1,14 @@
+<problem display_name="Week 06 Graded Problem Task 5" markdown="null" max_attempts="2" weight="1.0"><p><table border="1"><tr><td>99.0</td><td>89.0</td><td>85.0</td><td>92.0</td></tr><tr><td>90.0</td><td>74.0</td><td bgcolor="#00FFFF">75.0</td><td>82.0</td></tr><tr><td>85.0</td><td>75.0</td><td>64.0</td><td>91.0</td></tr><tr><td>72.0</td><td>82.0</td><td>81.0</td><td>94.0</td></tr></table></p>
+Given the <b>scores</b> 2D array above, which of the following statements can set the highlighted element as 0.0?  
+<p>
+
+</p>
+  
+<multiplechoiceresponse><choicegroup label="week6gpt5input1" type="MultipleChoice"><choice correct="false">scores[2][3] = 0.0;</choice><choice correct="true">scores[1][2] = 0.0;</choice><choice correct="false">scores[3][2] = 0.0;</choice><choice correct="false">scores[2][1] = 0.0;</choice></choicegroup></multiplechoiceresponse>
+
+     
+<solution><div class="detailed-solution"><p>Explanation</p><p>
+The highlighted element is in the second row of the third column of the 2D array. The row and column index for accessing the element is 1 and 2 respectively. Thus <b>scores[1][2] = 0.0;</b> will set the highlighted element to 0.0.
+</p></div></solution>
+
+</problem>

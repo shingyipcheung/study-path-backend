@@ -1,0 +1,19 @@
+<problem id="Assignment" display_name="T01 Try it Yourself" markdown="null" weight="0.0">
+  <problem id="Assignment" markdown="null" weight="0.0">
+    <problem>
+      <p>What would be the answer?</p>
+      <p>1 + 2 x 3</p>
+      <stringresponse answer="7" type="ci">
+        <additional_answer>9</additional_answer>
+        <textline label="1 + 2 x 3" size="20"/>
+      </stringresponse>
+      <solution>
+        <div class="detailed-solution">
+          <p>Explanation</p>
+          <p>There are two possible answers for this question. If you do addition before multiplication, you will obtain 9. If you do multiplication before addition, you will obtain 7.</p>
+          <p/>
+        </div>
+      </solution>
+    </problem>
+  </problem>
+</problem>

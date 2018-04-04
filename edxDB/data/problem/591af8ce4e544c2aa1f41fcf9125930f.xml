@@ -1,0 +1,33 @@
+<problem display_name="Week 06 Graded Problem Task 4" markdown="null" max_attempts="2" weight="1.0">
+  <p>What would be the output of the following code segment?</p>
+  <p>
+    <pre>
+int i = 0;
+int j = 0;
+
+for (i = 0; i &lt; 3; i++) {
+    for (j = 0; j &lt; 3; j++) {
+        if (j == 1) break;
+    }
+}
+
+IO.outputln(i + " " + j);
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week6gpt4input1" type="MultipleChoice">
+      <choice correct="false">0 1</choice>
+      <choice correct="false">0 2</choice>
+      <choice correct="true">3 1</choice>
+      <choice correct="false">3 2</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+In Java, the <b>break</b> statement will cause the execution to break out of the inner <b>for loop</b> when the variable <b>j</b> is equal to 1. The outer <b>for loop</b> will continue to execute. Therefore, the final values of <b>i</b> and <b>j</b> are 3 and 1 respectively.
+</p>
+    </div>
+  </solution>
+</problem>

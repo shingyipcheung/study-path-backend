@@ -1,0 +1,23 @@
+<problem display_name="Final Exam Question 11" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Which of the following is false about an instance variable?<br/>  
+<br/>
+(i)     Its identifier cannot start with a number<br/>
+(ii)    It can never be accessed outside of the class it belongs to<br/>
+(iii)   It can be of a primitive data type<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ11" type="MultipleChoice">
+      <choice correct="false">(i) only</choice>
+      <choice correct="true">(ii) only</choice>
+      <choice correct="false">(iii) only</choice>
+      <choice correct="false">None of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

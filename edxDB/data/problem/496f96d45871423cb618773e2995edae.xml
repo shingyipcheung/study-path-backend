@@ -1,0 +1,83 @@
+<problem display_name="Lab 05 Graded Task 4" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this lab exercise, you are tasked to complete the <b>checkAllMatchesFound()</b> method in the <b>GameBoard</b> class of the <b>2D array matching game</b>. This method determines whether all matching cards have been found by checking if all <b>Card</b> objects have been flipped facing up.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+  Search through the 2D cards array and return <b>true</b> if all the <b>Card</b> objects have been flipped facing up. Otherwise, return <b>false</b>.
+</li>
+        <li>
+To determine the total number of rows and the total number of cards per row in the 2D array, you can use the static variables <b>NUMBER_OF_ROWS</b> and <b>NUMBER_OF_CARDS_PER_ROW</b> defined in the <b>MatchingGame</b> class respectively.
+</li>
+        <li>
+To determine whether a <b>Card</b> object is flipped facing up, use the <b>isFacingUp()</b> method in the <b>Card</b> class.
+</li>
+        <li>
+With a correct implementation of the method, a congratulations message should be displayed on the screen when all matching cards are found.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_task_4_ca.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab05gt4input1"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab05/ex04", "version":"V-01-20140730", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <pre>
+for(int i = 0; i &lt; MatchingGame.NUMBER_OF_ROWS; i++)
+{
+	for(int j = 0; j &lt; MatchingGame.NUMBER_OF_CARDS_PER_ROW; j++)
+	{
+		if(!cards[i][j].isFacingUp()) return false;
+	}
+}
+
+return true;
+</pre>
+      <br/>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>Checking if the <b>SAME</b> card is flipped up in loop. A correct implementation should check if <b>ALL</b> the cards are flipped up.</li>
+          <li>Return <b>true</b> immediately once a card is found flipped up but ignoring all the remaining cards.</li>
+          <li>Attempting to use a single <b>break</b> statement to break out of two for loops.</li>
+        </ol>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_05_2D_Sol.zip">here</a>.
+<br/>
+</p>
+    </div>
+  </solution>
+</problem>

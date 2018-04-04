@@ -1,0 +1,41 @@
+<problem display_name="Week 04 Graded Problem Task 3" markdown="null" max_attempts="2" weight="1.0">
+  <p>Given the following code segment, what would be the final value of x if initially:</p>
+  <p>
+  i)   x = 8,    y = 4,    z = 2<br/>
+  ii)  x = 2,    y = 4,    z = 8<br/>
+  iii) x = 2,    y = 8,    z = 4<br/>
+</p>
+  <p>
+if(z &lt; y)<br/>
+        if(x &gt; y)<br/>
+                x = 10;<br/>
+else <br/>
+        x = 3; <br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="week4gpt3input1" type="MultipleChoice">
+      <choice correct="true">i) 10    ii) 2    iii) 3</choice>
+      <choice correct="false">i) 10    ii) 3    iii) 2</choice>
+      <choice correct="false">i) 10    ii) 3    iii) 3</choice>
+      <choice correct="false">i)   8    ii) 2    iii) 2</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>In the above code, the <b>else clause</b> should follow the second <b>if clause</b>. Therefore, the code should be interpreted as follows:</p>
+      <p>
+if(z &lt; y) {<br/>
+        if(x &gt; y) {<br/>
+                x = 10;<br/>
+        } else {<br/>
+                x = 3; <br/>
+        } <br/>
+} <br/>
+</p>
+      <p>In case i), z is less than y, and x is greater than y. Therefore x is assigned a value of 10.</p>
+      <p>In case ii), z is greater than y, no assignment to x is made. Therefore, x retains its original value of 2.</p>
+      <p>In case iii), z is less than y, and x is less than y. Therefore, x is assigned a value of 3.</p>
+    </div>
+  </solution>
+</problem>

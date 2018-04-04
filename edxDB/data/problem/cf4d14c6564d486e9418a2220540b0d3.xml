@@ -1,0 +1,31 @@
+<problem display_name="Final Exam Question 10" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+What is the value of variable i after executing the following segment of code?
+</p>
+  <p>
+    <pre>
+int i = 0;
+  
+for ( i = 0; i &lt; 4; i++ ); {
+    i = i + 2;
+}
+  
+// What is the value of i at this point?
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ10" type="MultipleChoice">
+      <choice correct="false">The for loop is an infinite loop</choice>
+      <choice correct="false">3</choice>
+      <choice correct="false">4</choice>
+      <choice correct="false">5</choice>
+      <choice correct="true">6</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

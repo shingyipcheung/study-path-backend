@@ -1,0 +1,119 @@
+<problem display_name="Week 07 Graded Problem Task 4 (for reference only)" markdown="null" weight="0.0">
+  <text>
+    <center>
+      <p align="left">
+        <font color="red">
+We have encounter a technical problem for the original <i>Week 07 Graded Problem Task 4</i>. We are now contacting edX for recovering the original task. In case the recovery is not successful, we will remove the original problem from the final grade calculation.<br/>
+<br/>
+This page is only for reference only and DOES NOT carry any grade.
+</font>
+      </p>
+    </center>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+Complete the implementation of the method, searchFromRecord(String, String), which takes in the record filename as the first parameter and the word to be searched as the second parameter. The method returns <b>true</b> if the word exists in the record file and returns <b>false</b> otherwise. Notice that the <b>comparison of the word and the records should be case sensitive</b>.
+</p>
+    <p>
+You can make the following assumptions:
+</p>
+    <p>
+      <ol>
+        <li>The dictionary file always exists.</li>
+        <li>The words in the dictionary are stored in a line by line manner as indicated below. <br/><br/>
+<pre>
+word1
+word2
+word3
+.
+.
+.
+</pre>
+    </li>
+        <li>A word can contain empty spaces.</li>
+      </ol>
+    </p>
+    <p>
+A template project is provided for you to test the program before submitting your answers. Click <a href="https://courses.edx.org/c4x/HKUSTx/COMP102x/asset/week_7_dictionary_search.zip">here</a> to download the project.
+</p>
+    <p>
+To test the method, create an instance of SearchRecordDemo and run the void searchWord() instance method. You can then input a word on the terminal window. Search result will be displayed after inputting the word.
+</p>
+    <p>
+In addition to inputting a word by typing, we can also input a word from an image. The method <b>inputTextImage()</b> of the IO class reads an image from the user and perform Optical Character Recognition (OCR) for recognizing the string in the image. The OCR library is supported only on Windows platform with the software <b>Visual C++ Redistributable for Visual Studio 2012 Update 4</b> installed. The software can be downloaded from <a href="http://www.microsoft.com/en-us/download/details.aspx?id=30679">this page</a>.
+</p>
+    <p>
+  
+To enable OCR in the program, comment the following line in the searchWord() method: <br/>
+<pre>
+String word = IO.inputString();
+</pre>
+<br/>
+  
+Uncomment the following line in the <b>SearchRecordDemo</b> class: <br/>
+<pre>
+private static Loader loader = new Loader();
+</pre>
+<br/>
+  
+After that, uncomment the following lines in the <b>searchWord()</b> method: <br/>
+<pre>
+String word = IO.inputTextImage();
+word = removeExtraSpace(word);
+IO.outputln(word);
+</pre>
+<br/>
+  
+Some text images are prepared in the "images" folder of the BlueJ project. You can also input your own text image to the program.
+</p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="https://courses.edx.org/c4x/HKUSTx/COMP102x/asset/act4_01.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="week7gpt4input1reference"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "", "version":"V-01-20140812", "edge":true }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <pre>  
+File record = new File(recordName);
+Scanner scanner = new Scanner(record);
+
+String line;
+
+while (scanner.hasNextLine()) {
+
+    line = scanner.nextLine();
+    
+    if (line.equals(word)) {
+        scanner.close();
+        return true;
+    }
+    
+}
+
+scanner.close();
+return false;
+</pre>
+      <br/>
+    </div>
+  </solution>
+</problem>

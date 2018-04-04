@@ -1,0 +1,19 @@
+<problem display_name="Final Exam Question 21" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Which of the following Boolean expressions gives a false value?
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ21" type="MultipleChoice">
+      <choice correct="false">5*5 == 25 &amp;&amp; 1+1==2;</choice>
+      <choice correct="false">false != true || false;</choice>
+      <choice correct="true">3%3 &lt; 1 &amp;&amp; 3/3 &gt; 1;</choice>
+      <choice correct="false">true || !true;</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

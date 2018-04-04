@@ -1,0 +1,32 @@
+<problem display_name="Week 05 Graded Problem Task 5" markdown="null" max_attempts="2" weight="1.0">
+  <p>What does this program do ?</p>
+  <p>
+    <pre>
+public static int fact2(int n1, int n2) {  
+
+    int t = 1; // initialize t to 1       
+    for (int counter = n2; counter &gt; n1; counter--) {
+        t = t * counter;
+    }
+    return t;
+}
+
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week5gpt5input1" type="MultipleChoice">
+      <choice correct="false">n1 * (n1 + 1) * … * (n2 - 1)</choice>
+      <choice correct="false">n1 * (n1 + 1) * … * (n2 - 1) * n2</choice>
+      <choice correct="false">(n1 + 1) * … * (n2 - 1)</choice>
+      <choice correct="true">(n1 + 1) * … * (n2 - 1) * n2</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+The loop goes from iteration number <b>n2</b> down to and excluding iteration number <b>n1</b>. The loop will exit when the current iteration number is equal to <b>n1</b>. Initially, the variable <b>t</b> is initialized to be 1. In each iteration, the value of <b>t</b> is multiplied with the current iteration number and the result is assigned back to <b>t</b>. Therefore, the result of the program will be n2 * (n2 - 1) * … * (n1 + 1), which can be written as (n1 + 1) * … * (n2 - 1) * n2.
+</p>
+    </div>
+  </solution>
+</problem>

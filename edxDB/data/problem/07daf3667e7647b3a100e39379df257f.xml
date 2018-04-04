@@ -1,0 +1,27 @@
+<problem display_name="Code Submission" markdown="null" max_attempts="10" showanswer="never" submission_wait_seconds="5" weight="70.0">
+  <text>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+The implementations of all three methods should be submitted on this page. Please submit your code by copying <font color="red">ALL the code</font> in the StudentLogic Class and pasting it into the following box. A maximum of 40000 characters is allowed to be pasted into the following box.
+</p>
+    <p>
+We strongly recommend you to test your code in BlueJ before submission.
+</p>
+    <p>
+After submission, your will receive an URL pointing to the code you have submitted. This URL is used for other students to access your code during peer evaluation. Please copy and paste the returned URL of your <font color="red">FINALIZED version</font> into the Code Review page and submit it. 
+</p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="comp102xproject"/>
+    <codeparam>
+      <initial_display>
+
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/prj01/ex01", "version":"V-01-20140721", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+</problem>

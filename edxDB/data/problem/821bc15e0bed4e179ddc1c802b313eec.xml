@@ -1,0 +1,32 @@
+<problem display_name="Week 02 Graded Problem Task 3" markdown="null" max_attempts="2" weight="1.0">
+  <p>What is the result of each of the following expressions?<br/><br/>Expression X:    3 % 4 - 10 * 5<br/>Expression Y:    5 + 11 / 2 * 2.0<br/>Expression Z:    100 / 0
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="What is the result of each of the following expressions?" type="MultipleChoice">
+      <choice correct="false">X: -47    Y: 10.0    Z: 0</choice>
+      <choice correct="false">X:    1    Y: 10.0    Z: 0</choice>
+      <choice correct="true"> X: -47    Y: 15.0    Z: ERROR</choice>
+      <choice correct="false">X: -47    Y: 10.0    Z: ERROR</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p><b><u>Expression X</u></b><br/>By precedence rules, the operators % and * should be applied before the operator -. By associativity rules, the operator % should be applied before the operator *.</p>
+      <p>Therefore we have: <br/>
+    3 % 4 - 10 * 5<br/>
+    3 - 10 * 5<br/>
+    3 - 50<br/>
+    -47<br/>
+  </p>
+      <p><b><u>Expression Y</u></b><br/>By precedence rules, the operators / and * should be applied before the operator +. By associativity rules, the operator / should be applied before the operator *.</p>
+      <p>Therefore we have: <br/>
+    5 + 11 / 2 * 2.0<br/>
+    5 + 5 * 2.0 (Integer division: 11 / 2 = 5)<br/>
+    5 + 10.0<br/>
+    15.0<br/>
+  </p>
+      <p><b><u>Expression Z</u></b><br/>Integral division, by zero, (e.g. 100/0) in Java results to an error.</p>
+    </div>
+  </solution>
+</problem>

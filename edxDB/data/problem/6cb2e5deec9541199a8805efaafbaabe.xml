@@ -1,0 +1,35 @@
+<problem display_name="Final Exam Question 30" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+What is the value of variable a after executing the following block of statements?
+</p>
+  <p>
+    <pre>
+int a = 1;
+int b = 2;
+int c = 3;
+  
+if ( b &gt; a ) {
+        a = b;				
+                if ( c &gt; a ) {
+                        a = c;
+                }
+} else if ( a == c ) {
+        a = 0;
+}
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ30" type="MultipleChoice">
+      <choice correct="false">0</choice>
+      <choice correct="false">1</choice>
+      <choice correct="false">2</choice>
+      <choice correct="true">3</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

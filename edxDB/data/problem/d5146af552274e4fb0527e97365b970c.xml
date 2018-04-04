@@ -1,0 +1,56 @@
+<problem display_name="Week 03 Graded Problem Task 1" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+    <pre>
+import comp102x.IO;
+
+public class Week3Quiz
+{
+   private double x;
+   
+   public Week3Quiz(int i, double d) {
+       x = i + d;
+   }
+   
+   public Week3Quiz(double d, int i) {
+       x = i - d;
+   }
+   
+   public static void main(String[] args) {
+   
+       Week3Quiz q1 = new Week3Quiz(10.0, 10);
+       Week3Quiz q2 = new Week3Quiz(10, 10.0);
+       
+       IO.outputln(q1.x); // statement 1
+       IO.outputln(q2.x); // statement 2
+   }
+}
+
+</pre>
+  </p>
+  <p>Enter the number output by statement 1:</p>
+  <numericalresponse answer="0.0">
+    <formulaequationinput label="week3gpt1input1"/>
+  </numericalresponse>
+  <p>Enter the number output by statement 2:</p>
+  <numericalresponse answer="20.0">
+    <formulaequationinput label="week3gpt1input2"/>
+  </numericalresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>When we have multiple constructors, Java will try to decide which constructor to invoke by inspecting the parameter list of the constructor invoking statement. </p>
+      <p>The statement <b>Week3Quiz q1 = new Week3Quiz(10.0, 10);</b> is used to construct <b>q1</b>. The first parameter is of type <b>double</b>, and the second parameter is of type <b>int</b>. Therefore, the constructor below is invoked and x is initialized to i - d which is equivalent to 0.0.</p>
+      <pre>
+public Week3Quiz(double d, int i) {
+   x = i - d;
+}
+</pre>
+      <p>The statement <b>Week3Quiz q2 = new Week3Quiz(10, 10.0);</b> is used to construct <b>q2</b>. The first parameter is of type <b>int</b>, and the second parameter is of type <b>double</b>. Therefore, the constructor below is invoked and x is initialized to i + d which is equivalent to 20.0.</p>
+      <pre>
+public Week3Quiz(int i, double d) {
+   x = i + d;
+}
+</pre>
+    </div>
+  </solution>
+</problem>

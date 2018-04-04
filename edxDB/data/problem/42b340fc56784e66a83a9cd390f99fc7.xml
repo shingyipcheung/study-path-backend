@@ -1,0 +1,86 @@
+<problem display_name="Lab 06 Graded Task 3" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this lab exercise, you are tasked to complete the <b>constructInitialDisplayWord()</b> method in the <b>Hangman</b> class. This method constructs a masked representation (i.e. "?????") of the word to be guessed for displaying on the text box initially. 
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+Find out the length of the String parameter <b>secretWord</b>.
+</li>
+        <li>
+Create a String having the same length as <b>secretWord</b> by repeated concatenation of a pre-defined constant character (i.e. "?????"). The pre-defined constant character is named <b>UNKNOWN_CHARACTER</b> (i.e. '?').
+</li>
+        <li>
+Return the created String.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_06_ca3.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab06gt3input1"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab06/ex03", "version":"V-01-20140806", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <p>
+        <pre>
+String displayWord = "";        
+
+for(int i = 0; i &lt; secretWord.length(); i++) {
+        displayWord += UNKNOWN_CHARACTER;
+}
+        
+return displayWord;
+</pre>
+      </p>
+      <br/>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>
+Constructing a lengthened display word.
+</li>
+          <li>
+Returning the secret word directly.
+</li>
+          <li>
+Returning an empty String "" or a single character '?' only.
+</li>
+        </ol>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_06_Sol.zip">here</a>.
+<br/>
+</p>
+    </div>
+  </solution>
+</problem>

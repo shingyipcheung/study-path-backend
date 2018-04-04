@@ -1,0 +1,24 @@
+<problem display_name="Final Exam Question 09" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Which of the following statement(s) is/are true regarding a static variable in general?<br/>
+<br/>
+(1)    Its value cannot be changed after it is initialized with an initial value<br/>
+(2)    A new copy of it will be created for each object instance created for the class<br/>
+(3)    Its data type can only be one of the 8 primitive data types<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ09" type="MultipleChoice">
+      <choice correct="false">(1) only</choice>
+      <choice correct="false">(2) only</choice>
+      <choice correct="false">(3) only</choice>
+      <choice correct="false">(2) and (3) only</choice>
+      <choice correct="true">None of them</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

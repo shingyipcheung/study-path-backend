@@ -1,0 +1,38 @@
+<problem display_name="Week 05 Graded Task 3" markdown="null" max_attempts="2" weight="1.0">
+  <p>What would be the value of the variable “result” after executing the following segment of code?
+</p>
+  <p>
+    <pre>
+int i = 10;
+int j = 25;
+i += 5;
+j /= i;
+int result = i + j;
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week5gpt3input1" type="MultipleChoice">
+      <choice correct="false">35</choice>
+      <choice correct="true">16</choice>
+      <choice correct="false">12</choice>
+      <choice correct="false">11</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+After executing the first two lines of the code segment, <b>i</b> will have a value of 10 and <b>j</b> a value of 25.
+</p>
+      <p>
+When executing the third line of the code segment, <b>i</b>'s value is increased by 5 and the result is assigned back to <b>i</b>. Thus <b>i</b> becomes 15.
+</p>
+      <p>  
+When executing the fourth line of the code segment, <b>j</b>’s value is divided by <b>i</b>’s value and the result is assigned back to <b>j</b>. That is, <b>j = 25 / 15</b>. Since it is an integer division, <b>j</b> becomes 1.
+</p>
+      <p>
+In the last line, the variable result is assigned the value of <b>i</b> + <b>j</b>, which is equal to 15 + 1 = 16.
+</p>
+    </div>
+  </solution>
+</problem>

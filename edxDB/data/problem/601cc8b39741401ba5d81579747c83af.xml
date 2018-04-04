@@ -1,0 +1,40 @@
+<problem display_name="Final Exam Question 13" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+What is the return value when f() is called?
+</p>
+  <p>
+    <pre>
+public class Q {
+
+        private static int x = 10;
+
+        public static int f() {
+
+                int result = 1;
+                int[] array = {2, 3, 4};
+
+                for (int x = 0; x &lt; array.length - 1; x++) {
+                    result *= array[x];
+                }
+
+                result *= x;
+                return result;
+        }
+}
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ13" type="MultipleChoice">
+      <choice correct="false">120</choice>
+      <choice correct="false">240</choice>
+      <choice correct="true">60</choice>
+      <choice correct="false">Undefined/error during execution</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

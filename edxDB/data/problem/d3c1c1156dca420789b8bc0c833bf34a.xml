@@ -1,0 +1,20 @@
+<problem display_name="Week 02 Graded Problem Task 2 " markdown="null" max_attempts="2" weight="1.0">
+  <p>Please identify the valid identifier(s) in Java from the list below.</p>
+  <choiceresponse>
+    <checkboxgroup label="Please identify the valid identifier(s) in Java from the list below." direction="vertical">
+      <choice correct="true">Last_Name</choice>
+      <choice correct="false">1dentifier</choice>
+      <choice correct="false">You&amp;Me</choice>
+      <choice correct="false">COMP-102x</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p><b>Last_Name</b> : This identifier does not violate any identifier naming rules.</p>
+      <p><b>1dentifier</b> : An identifier cannot start with a number.</p>
+      <p><b>You&amp;Me</b> : Ampersand (<b>&amp;</b>) is not a valid character in an identifier.</p>
+      <p><b>COMP-102x</b> : Dash (<b>-</b>) is not a valid character in an identifier.</p>
+    </div>
+  </solution>
+</problem>

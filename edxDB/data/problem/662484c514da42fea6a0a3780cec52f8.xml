@@ -1,0 +1,42 @@
+<problem display_name="Week 06 Graded Problem Task 2" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+    <pre>
+public static int q2(int[] array) {
+  
+       int index = 0;
+  
+       for (int i = 0; i &lt; array.length; i++) {
+           if (array[i] &lt; array[index]) index = i;
+       }
+  
+       return index;
+  
+}
+</pre>
+  </p>
+  <p>
+Given the "q2" method above, what would be the output of the following code segment?
+</p>
+  <p>
+    <pre>
+int[] array = {22, 99, 11, 99, 33};
+IO.output(q2(array));
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week6pt2nput1" type="MultipleChoice">
+      <choice correct="true">2</choice>
+      <choice correct="false">11</choice>
+      <choice correct="false">99</choice>
+      <choice correct="false">3</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+The code loops through the array and finds the <b>index</b> of the integer with the smallest value in the array.
+</p>
+    </div>
+  </solution>
+</problem>

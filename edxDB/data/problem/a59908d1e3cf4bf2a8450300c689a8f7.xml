@@ -1,0 +1,16 @@
+<problem id="Assignment1" display_name="Week 01 Graded Problem Task 1" markdown="null" max_attempts="1" weight="1.0">
+  <problem markdown="null" max_attempts="1" weight="1.0">
+    <p>Use what you have observed from the 2D problem and try coming up with a quick solution to the following question again:</p>
+    <p>Would it be possible for the worm to finish eating through all the 27 apples if it starts from the <u><b>center</b></u> of the cube?</p>
+    <multiplechoiceresponse>
+      <choicegroup label="Would it be possible for the worm to finish eating through all the 27 apples if start from center?" type="MultipleChoice">
+        <choice correct="false">Yes</choice>
+        <choice correct="true">No</choice>
+      </choicegroup>
+    </multiplechoiceresponse>
+    <solution>
+      <div class="detailed-solution">
+</div>
+    </solution>
+  </problem>
+</problem>

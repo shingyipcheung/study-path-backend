@@ -1,0 +1,36 @@
+<problem display_name="Week 09 Graded Problem Task 3" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+Given the method <b>f3()</b> below, what is the return value of <b>f3(10200)</b>?  
+</p>
+  <p>
+    <pre>
+public static int f3(int n) {
+  
+    if (n == 0)
+        return 1;
+  
+    else if (n &lt; 10 &amp;&amp; n &gt; -10)
+        return 0;
+  
+    else      
+        return f3(n / 10) + f3(n % 10);
+}
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week9gpt3input1" type="MultipleChoice">
+      <choice correct="false">10200</choice>
+      <choice correct="true">3</choice>
+      <choice correct="false">12</choice>
+      <choice correct="false">0</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+  The recursive method <b>f3()</b> finds the number of zeros in a given integer. If the input parameter is 0, it returns 1. If the input parameter is greater than -10 and smaller than 10, it returns 0. Otherwise, it returns the sum of the results of the recursive call for the number <b>n</b> with the last digit removed and the recursive call for the last digit. Thus, <b>f3(10200)</b> returns a value of 3.
+</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,73 @@
+<problem display_name="Week 09 Graded Problem Task 4" markdown="null" max_attempts="5" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this exercise, you are tasked to modify the recursive method, <b>drawFractalTree()</b>, in the <b>TreePanel</b> class so that a fractal tree with four branches at each node will be drawn.
+</p>
+    <p>
+      <u>Project Template</u>
+    </p>
+    <p>
+The project template for this graded task can be downloaded <a href="/static/week_9_fractal_tree.zip">here</a>.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+The run the program, create a new instance of <b>FractalTree</b>.
+</li>
+        <li>
+The current implementation of the <b>drawFractalTree()</b> method draws the tree with three branches at each node oriented at 20 degrees, 0 degrees and -20 degrees relative to the node by three recursive calls.
+</li>
+        <li>
+Modify the implementation of the method so that it draws the tree with four branches at each node orientated at 30 degrees, 15 degrees, -15 degrees and -30 degrees relative to the node by four recursive calls.
+</li>
+        <li>
+You will need to change the fourth parameter for each of the four recursive calls to the <b>drawFractalTree()</b> method to complete this task.
+</li>
+        <li>
+          <font color="red">
+Submit <b>ONLY</b> the codes for the recursive calls. The remaining codes given in the <b>drawFractalTree()</b> method must not be submitted.
+</font>
+        </li>
+      </ol>
+    </p>
+    <p>
+      <u>Sample Output</u>
+    </p>
+    <p>
+      <img src="/static/fractal_tree_4.png" width="100%"/>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/week_09_gpt4_ca.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="week9gpt4input1"/>
+    <codeparam>
+      <initial_display>
+// draw the tree in different orientations by recursive calls
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/gps09/ex04", "version":"V-01-20140814", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution"><p>Explanation: </p><br/><p><u>Sample Answer</u><br/></p>
+drawFractalTree(g, x2, y2, angle - 15, level - 1);<br/>
+drawFractalTree(g, x2, y2, angle + 15, level - 1);<br/>
+drawFractalTree(g, x2, y2, angle - 30, level - 1);<br/>
+drawFractalTree(g, x2, y2, angle + 30, level - 1);<br/>
+<br/>
+
+</div>
+  </solution>
+</problem>

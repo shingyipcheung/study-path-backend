@@ -1,0 +1,25 @@
+<problem display_name="Final Exam Question 02" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Which of the following statement is/are legal in Java?<br/>
+<br/>
+(1)    int double = 2;<br/>
+(2)    int double1 = 1.0;<br/>
+(3)    int 1_plus_3 = 4;<br/>
+(4)    int one-minus-two;<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ02" type="MultipleChoice">
+      <choice correct="false">(1) only</choice>
+      <choice correct="false">(2) only</choice>
+      <choice correct="false">(3) only</choice>
+      <choice correct="false">(4) only</choice>
+      <choice correct="true">None of them</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

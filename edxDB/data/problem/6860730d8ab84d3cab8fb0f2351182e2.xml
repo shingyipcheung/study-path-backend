@@ -1,0 +1,45 @@
+<problem display_name="Week 03 Graded Problem Task 2" markdown="null" max_attempts="2" weight="1.0">
+  <p>What will be the output on the screen if the setAndOutput() method is invoked in the following program?</p>
+  <p>
+    <pre>
+import comp102x.IO;
+import comp102x.Canvas;
+import comp102x.ColorImage;
+
+public class ColorImageDemo
+{
+     public Canvas canvas = new Canvas();
+     public ColorImage image1 = new ColorImage();
+
+     public void setAndOutput() {
+
+          canvas.add(image1, 0, 0);
+          image1.setX(50);
+          image1.setY(100);
+          image1.setRotation(45);
+          image1.setY(image1.getX() + 100);
+          image1.setRotation(image1.getRotation() - 90);
+
+          IO.output(" X: " + image1.getX());
+          IO.output(" Y: " + image1.getY());
+          IO.output(" A: " + image1.getRotation());
+     }
+}
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week3gpt2input1" type="MultipleChoice">
+      <choice correct="false"> X: 50 Y: 100 A: 45</choice>
+      <choice correct="false"> X: 150 Y: 200 A: -45</choice>
+      <choice correct="true"> X: 50 Y: 150 A: -45</choice>
+      <choice correct="false"> X: 50 Y: 150 A: 45</choice>
+      <choice correct="false">Compilation Error</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>The x and y coordinates of image1 are set to 50 and 100 respectively. The rotation angle of the image is then set to 45 (degrees). After that, the <b>y-coordinate</b> of the image is updated to the current <b>x-coordinate</b> of the image plus 100 (i.e. 100 + 50 = 150). Finally, the rotation angle of the image is updated to the current rotation angle minus 90 (i.e. 45 - 90 = -45 degrees).</p>
+    </div>
+  </solution>
+</problem>

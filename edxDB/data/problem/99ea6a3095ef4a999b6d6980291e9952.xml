@@ -1,0 +1,143 @@
+<problem display_name="Coding Question 4" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="10.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this question, you are tasked to complete the implementation of the <b>printHourglass(int, char)</b> method for printing out an hourglass of a specific size and symbol.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+Given the parameters <b>size = n</b> and the character <b>symbol</b>.
+</li>
+        <li>
+You can assume that <b>n</b> is a positive odd number.
+</li>
+        <li>
+The hourglass consists of <b>n</b> lines.
+</li>
+        <li>
+  The character <b>symbol</b> will appear a number of times in each line. The <b>symbol</b> will appear <b>n</b> times in the first line. The number of times the <b>symbol</b> printed will be decreased by 2 in each subsequent line until it reaches 1. After that, the number of times the <b>symbol</b> printed will be increased by 2 in each subsequent line until it reaches <b>n</b> again.
+</li>
+        <li>
+Spaces are added to the start and end of each line so that the total width of each line is <b>n</b> and the symbols in each line are aligned at the center of each line.
+</li>
+        <li>
+For outputting, you can use either <b>System.out.print()/println()</b> or <b>IO.output()/outputln()</b>.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Sample Output</u>
+    </p>
+    <pre>
+      <table border="2">
+        <tr>
+          <td style="text-align: center;">
+            <font face="courier">
+ AAA
+  A 
+ AAA
+</font>
+          </td>
+          <td style="text-align: center;">
+            <font face="courier">
+???????
+ ????? 
+  ???  
+   ?   
+  ???  
+ ????? 
+???????
+</font>
+          </td>
+          <td style="text-align: center;">
+            <font face="courier">
+QQQQQ
+ QQQ 
+  Q  
+ QQQ 
+QQQQQ
+</font>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+  printHourglass(3, 'A');
+</td>
+          <td style="text-align: center;">
+  printHourglass(7, '?');
+</td>
+          <td style="text-align: center;">
+  printHourglass(5, 'Q');
+</td>
+        </tr>
+      </table>
+    </pre>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/final_exam_hourglass_ca.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="FinalExamQ34"/>
+    <codeparam>
+      <initial_display>
+// write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/final/cq04", "version":"V-01-20140819", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <pre>
+  
+for (int i = size; i &gt; 1; i -= 2) {
+
+	int start = (size - i) / 2;
+	int end = size - (size - i) / 2;
+            
+	for (int j = 0; j &lt; size; j++) {
+		if (j &gt;= start &amp;&amp; j &lt; end)
+			System.out.print(symbol);
+		else
+			System.out.print(" ");
+	}
+            
+	System.out.println();
+}
+        
+for (int i = 1; i &lt;= size; i += 2) {
+
+	int start = (size - i) / 2;
+	int end = size - (size - i) / 2;
+            
+	for (int j = 0; j &lt; size; j++) {
+		if (j &gt;= start &amp;&amp; j &lt; end)
+			System.out.print(symbol);
+		else
+			System.out.print(" ");
+	}
+            
+	System.out.println();
+}
+  
+</pre>
+      <br/>
+    </div>
+  </solution>
+</problem>

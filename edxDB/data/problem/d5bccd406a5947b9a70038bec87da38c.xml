@@ -1,0 +1,19 @@
+<problem display_name="Final Exam Question 29" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+We usually use the keyword "final" in Java when
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ29" type="MultipleChoice">
+      <choice correct="false">declaring instance variables.</choice>
+      <choice correct="false">declaring static variables.</choice>
+      <choice correct="true">declaring constants.</choice>
+      <choice correct="false">creating objects.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

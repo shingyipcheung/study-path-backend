@@ -1,0 +1,71 @@
+<problem display_name="Lab 06 Graded Task 5" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this lab exercise, you are tasked to complete the <b>checkGameOver()</b> method in the <b>Hangman</b> class. This method returns <b>true</b> if the game over condition has been met. Otherwise, it returns <b>false</b>.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+Return <b>true</b> if the String parameter <b>displayWord</b> is equal to the String parameter <b>secretWord</b> or if the <b>int</b> parameter <b>life</b> is equal to zero. Otherwise, return <b>false</b>.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_06_ca5.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab06gt5input1"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab06/ex05", "version":"V-01-20140806", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <p>
+        <pre>
+return secretWord.equals(displayWord) || life == 0;
+</pre>
+      </p>
+      <br/>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>
+Omitting the checking for the number of remaining lives.
+</li>
+          <li>
+Using "==" to check for String equality.
+</li>
+        </ol>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_06_Sol.zip">here</a>.
+<br/>
+</p>
+    </div>
+  </solution>
+</problem>
