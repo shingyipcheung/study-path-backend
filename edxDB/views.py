@@ -1,8 +1,9 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 import pandas as pd
 from .constants import PROBLEM_WEIGHT, VIDEO_DICT
-from .df_loader import load_df
+from .df_loader import load_df, local_path
 from .path import generate_paths
+import os
 
 
 def videos(request, concept):
@@ -28,6 +29,10 @@ def problem(request, problem_id):
     problem_df = df[df["problem_id"] == problem_id]
     sorted_grade = problem_df[["student_id", "grade"]].sort_values(by=["grade"])
     return JsonResponse(sorted_grade.to_dict(orient="list"), safe=False)
+
+
+def problem_html(request, problem_id):
+    return HttpResponse(open(local_path(os.path.join("data", "problem", problem_id + '.xml'))).read())
 
 
 def concept_score(request, student_id):
