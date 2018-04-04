@@ -1,0 +1,46 @@
+<problem display_name="Week 05 Graded Problem Task 4" markdown="null" max_attempts="2" weight="1.0">
+  <p>Given the following method:</p>
+  <p>
+    <pre>
+public static int fact2(int n1, int n2) {  
+
+    int t = 1; // initialize t to 1       
+    for (int counter = n1; counter &lt;= n2; counter++) {
+        t = t * counter;
+    }
+    return t;
+}
+</pre>
+  </p>
+  <p>
+What would be the return value of "t" if<br/>
+  i) n1 = 3,    n2 = 5<br/>
+ ii) n1 = 4,    n2 = 2<br/>
+iii) n1 = -2,    n2 = 2<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="week5gpt4input1" type="MultipleChoice">
+      <choice correct="false">i)    60        ii)    24        iii)    0</choice>
+      <choice correct="false">i)    60        ii)      1        iii)    infinite loop</choice>
+      <choice correct="true">i)    60        ii)      1        iii)    0</choice>
+      <choice correct="false">i)    12        ii)      1        iii)    0</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+  The loop goes from iteration number <b>n1</b> up to and including iteration number <b>n2</b>. The loop will exit when the current iteration number is greater than <b>n2</b>. Initially, the variable <b>t</b> is initialized to be 1. In each iteration, the value of <b>t</b> is multiplied with the current iteration number and the result is assigned back to <b>t</b>. Therefore, the result of the program will be n1 * (n1 + 1) * … * (n2 - 1) * n2.
+</p>
+      <p>
+For case i), n1 = 3, n2 = 5. Therefore, t = 3 * 4 * 5 = 60.  
+</p>
+      <p>
+For case ii), n1 = 4 and n2 = 2. Since initially n1 is greater than n2, the loop will exit before executing the first iteration. Thus, t remains its original value of 1.  
+</p>
+      <p>
+For case iii), n1 = -2 and n2 = 2. Therefore, t = -2 * -1 * 0 * 1 * 2 = 0.  
+</p>
+    </div>
+  </solution>
+</problem>

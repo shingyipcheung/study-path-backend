@@ -1,0 +1,16 @@
+<problem display_name="Week 02 Graded Problem Task 4" markdown="null" max_attempts="2" weight="1.0">
+  <p>What do you think would be the value of the variable <b>result</b> after executing the following segment of Java code?<br/><br/>int i = 1234567890;<br/>float f = i;<br/>int result = i - (int)f;</p>
+  <multiplechoiceresponse>
+    <choicegroup label="What do you think would be the value of the variable result after executing the following segment of Java code?" type="MultipleChoice">
+      <choice correct="false">0</choice>
+      <choice correct="true">nonzero</choice>
+      <choice correct="false">an error</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Both <b>int</b> and <b>float</b> are 32-bit types. All the 32 bits of <b>int</b> are used for representing the integral part of a numerical value. However, for <b>float</b>, some bits are used for representing the integral part and some for the decimal part. When assigning a large integral value to a <b>float</b> variable, the reduced number of bits for its integral part may not be able to precisely represent the large value. Therefore, calculating the difference between <b>int</b> and <b>float</b> variables of the same large numerical value, may not always give a result of 0. You may want to test the code indicated above in a Java program.</p>
+    </div>
+  </solution>
+</problem>

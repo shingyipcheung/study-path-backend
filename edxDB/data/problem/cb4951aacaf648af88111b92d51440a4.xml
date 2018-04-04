@@ -1,0 +1,26 @@
+<problem display_name="Week 04 Graded Problem Task 2" markdown="null" max_attempts="1" weight="1.0">
+  <p>What will be the value of the following Boolean expression in Java?</p>
+  <p>
+    <pre>0.1 * 0.1 == 0.01</pre>
+    <br/>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week4gpt2input1" type="MultipleChoice">
+      <choice correct="false">true</choice>
+      <choice correct="true">false</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Floating point numbers are not represented precisely in a computer. Therefore, the result "0.01" obtained from multiplying 0.1 to 0.1 is different from the "0.01" represented by 0.01 directly.</p>
+      <p>If we wish to test for equality between two floating point numbers, we may find the absolute difference between the two numbers and check to see if this difference is smaller than a threshold, e.g. 0.0001.</p>
+      <p>
+As an example, if we really wish to check 0.1 * 0.1 == 0.01, we may write the Boolean expression below and check to see if the result is true or false.
+</p>
+      <pre>
+Math.abs(0.1 * 0.1 - 0.01) &lt; 0.0001;
+</pre>
+    </div>
+  </solution>
+</problem>

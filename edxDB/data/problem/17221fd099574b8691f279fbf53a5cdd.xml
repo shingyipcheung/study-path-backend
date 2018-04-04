@@ -1,0 +1,93 @@
+<problem markdown="null" max_attempts="5" submission_wait_seconds="5" weight="2.0" display_name="Lab 02 Graded Task 3" showanswer="past_due">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>In this lab exercise, you are tasked to write a piece of Java code to solve for the quadratic equation:</p>
+    <center>
+      <img src="/static/lab_02_graded_task_3_quadratic_equation.png" width="30%"/>
+    </center>
+    <p>That is, to calculate the possible value(s) of x for given a, b and c. To do so, we can apply this formula:</p>
+    <center>
+      <img src="/static/lab_02_graded_task_3_quadratic_roots.png" width="40%"/>
+    </center>
+    <p>You can assume that that a≠0 and (b<sup>2</sup>- 4ac)≥0</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>The Java code should first ask the user to input the value of <b>a</b> by outputting a message on the screen. The format of the message must be <code>Enter a: </code>. Notice that the message ends with a colon followed by a space (i.e. ": ") and the printing position should <b>not</b> be moved to a new line. The program will then allow the user to input the value of a. After that, the inputted value from the user is stored by using a variable.</li>
+        <li>Repeat the previous step to get the values of <b>b</b> and <b>c</b>.</li>
+        <li>After getting the values of <b>a</b>, <b>b</b> and <b>c</b>, calculate for the two values of x according to the formula as indicated above. One value of x is calculated by applying addition of the (±) sign and the other value is calculated by applying subtraction of the (±) sign. Store the two calculated values by using two different variables.</li>
+        <li>Lastly, output two messages on the screen to show the answers to the user. The format of the first message must be <code>First solution for x = <i>first_x</i></code>, with <i>first_x</i> replaced by the first value of x calculated. The format for the second message must be <code>Second solution for x = <i>second_x</i></code>, with <i>second_x</i> replaced by the second value of x calculated. Notice that there must be an equal sign followed by a space (i.e. "= ") just before <i>first_x</i> and <i>second_x</i> in the two messages. The two messages must also be outputted on two different lines. </li>
+      </ol>
+    </p>
+    <p>
+      Hints: You can refer to the <u>Using the Math library</u> section of the <a href="/jump_to_id/3e3a5e31549e42f4bf677e0607de64c2" target="[object Object]">Lab 02 (Math is Easy) Manual</a> page for finding the square root of a number.
+    </p>
+    <p>
+      <u>Sample Input/Output</u>
+    </p>
+    <p>
+      <img src="/static/lab_02_graded_task_3_sample.png"/>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_02_gt3_ca.png"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="15" cols="80" mode="python" tabsize="4"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+    </initial_display>
+      <grader_payload>
+        
+		{"refid": "/comp102x/lab02/ex03", "version":"V-01-20140627", "edge":false }
+	</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p><u>Sample Answer</u><br/><br/>
+        IO.output("Enter a: ");<br/>
+        int a = IO.inputInteger();<br/>
+        <br/>
+        IO.output("Enter b: ");<br/>
+        int b = IO.inputInteger();<br/>
+        <br/>
+        IO.output("Enter c: ");<br/>
+        int c = IO.inputInteger();<br/>
+        <br/>
+        double delta = b * b - 4.0 * a * c;<br/>
+        double first_x = (-b + Math.sqrt(delta)) / (2 * a);<br/>
+        double second_x = (-b - Math.sqrt(delta)) / (2 * a);<br/>
+        <br/>
+        IO.outputln("First solution for x = " + first_x);<br/>
+        IO.outputln("Second solution for x = " + second_x);<br/>
+      <br/>
+	</p>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>Outputting the two solutions on the same line.</li>
+          <li>Performing multiplication without using the multiplication operator (*), e.g. 4ac, 2a.</li>
+          <li>Using the <b>bitwise exclusive OR operator (^)</b> for taking the power of <b>b</b>. The Math.pow() method or simply b * b should be used instead.</li>
+          <li>Incorrect bracketing for the quadratic formula which gives wrong result.</li>
+        </ol>
+        <br/>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+      You may download the BlueJ Project for the above sample answer <a href="/static/Lab_02_Sol.zip">here</a>.
+      <br/>
+    </p>
+    </div>
+  </solution>
+</problem>

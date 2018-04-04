@@ -1,0 +1,38 @@
+<problem display_name="Week 04 Graded Problem Task 4" markdown="null" max_attempts="2" weight="1.0">
+  <p>Given the following switch statement, what would be the final value of <b>grade</b> if the initial value of <b>score</b> is 52? What if the initial value of <b>score</b> is 89?</p>
+  <p>
+int score;    //initialize value according to question<br/>
+char grade;<br/>
+<br/>
+switch(score/10) {<br/>
+<br/>
+        case 10: grade = 'A';<br/>
+        case  9: grade = 'A'; break;<br/>
+        case  8: grade = 'B';<br/>
+        case  7: grade = 'C';<br/>
+        case  6: grade = 'C'; break;<br/>
+        case  5: grade = 'D';<br/>
+        default: grade = 'F';<br/>
+}<br/>
+</p>
+  <p>
+// i) initial value of score = 52;<br/>
+// ii) initial value of score = 89;<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="week4gpt4input1" type="MultipleChoice">
+      <choice correct="false">i) 'A', ii) 'A'</choice>
+      <choice correct="false">i) 'D', ii) 'B'</choice>
+      <choice correct="true">i) 'F', ii) 'C'</choice>
+      <choice correct="false">i) 'F', ii) 'F'</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+  In the above <b>switch statement</b>, <b>break statements</b> are only available in <b>case 9</b> and <b>case 6</b>. Therefore, the value of grade will be 'A' for scores ranging from 100 to 90; 'C' for scores ranging from 89 to 60 and 'F' for scores below 60.
+</p>
+    </div>
+  </solution>
+</problem>

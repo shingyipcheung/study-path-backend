@@ -1,0 +1,62 @@
+<problem markdown="null" max_attempts="3" submission_wait_seconds="5" weight="3.0" display_name="Lab 01 Graded Task 1" showanswer="past_due">
+  <p style="font-size: 16px; line-height: 25.600000381469727px;">
+    <span style="text-decoration: underline;">Instructions</span>
+  </p>
+  <ol>
+    <li>
+      <span style="font-size: 1em; line-height: 1.6em;">Output the sentence "Hello, world!" on the terminal window.</span>
+    </li>
+    <li>
+      <span style="font-size: 1em; line-height: 1.6em;">Output the sentence "Hello, XXX!" on the terminal window in the next line. XXX can be words of your own choice.</span>
+    </li>
+    <li>
+      <span style="font-size: 1em; line-height: 1.6em;">Output the sentence "Hello, world!" in a different language of your choice on the terminal window in the next line, e.g. "全世界，大家好！" (Greetings in Chinese). You may make use of google translate to get different translations.</span>
+    </li>
+  </ol>
+  <p>Notice that all three sentences should be output in the same execution of the program.</p>
+  <p>
+    <b>You will only need to write the code within the curly braces of the main method, as indicated by the area between the dashed lines.</b>
+  </p>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="7" cols="80" mode="python" tabsize="4"/>
+    <codeparam>
+      <initial_display>// Please code in the following area
+// ---------------------------------
+  
+  
+  
+// ---------------------------------
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab01/ex01", "version":"V-03-20140627", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p><u>Sample Answer</u><br/><br/>
+      System.out.println("Hello, world!");<br/>
+      System.out.println("Hello, everyone!");<br/>
+      System.out.println("全世界，大家好!");<br/>
+      <br/>
+	</p>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>Inclusion of the main method declaration when submitting the code.</li>
+          <li>Missing space or incorrect letter case in the output messages.</li>
+          <li>Misspell of <code>System</code> as <code>system</code>. The first letter should be a capital letter "S" instead of a small letter "s". <code>System</code> is a class in Java.</li>
+          <li>Misspell of <code>println</code> as <code>printIn</code>. The second to the last letter should be a small letter "L" instead of a capital letter "I".</li>
+        </ol>
+        <br/>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+      You may download the BlueJ Project for the above sample answer <a href="/static/Lab_01_Sol.zip">here</a>.
+      <br/>
+    </p>
+    </div>
+  </solution>
+</problem>

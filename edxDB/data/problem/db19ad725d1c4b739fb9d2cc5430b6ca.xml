@@ -1,0 +1,21 @@
+<problem id="TryitYourself1" display_name="P01 Polling" markdown="null" showanswer="attempted" weight="0.0">
+  <problem markdown="null" weight="0.0">
+    <p>Which of the following programming languages are you familiar with? Tick all that apply or just click on the <b>Check</b> button if you are not familiar with any programming language.</p>
+    <choiceresponse>
+      <checkboxgroup label="What programming languages are you familiar with?" direction="vertical">
+        <choice correct="true">Fortran</choice>
+        <choice correct="true">Cobol</choice>
+        <choice correct="true">Basic</choice>
+        <choice correct="true">C</choice>
+        <choice correct="true">Python</choice>
+        <choice correct="true">Java</choice>
+      </checkboxgroup>
+    </choiceresponse>
+    <solution>
+      <div class="detailed-solution">
+        <p>Explanation</p>
+        <p>Please ignore the green tick/red cross mark.</p>
+      </div>
+    </solution>
+  </problem>
+</problem>

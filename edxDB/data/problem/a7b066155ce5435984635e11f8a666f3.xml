@@ -1,0 +1,32 @@
+<problem display_name="Week 09 Graded Problem Task 1" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+  Given the method <b>f1()</b> below, what does <b>f1(4)</b> return ?
+</p>
+  <p>
+    <pre>
+public static int f1(int n) {
+  
+    if (n == 1)
+        return 1;
+  
+    return n + f1(n – 1);
+}
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week9gpt1input1" type="MultipleChoice">
+      <choice correct="false">13</choice>
+      <choice correct="false">1</choice>
+      <choice correct="true">10</choice>
+      <choice correct="false">7</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+  The recursive method <b>f1()</b> computes the sum from 1 to the input parameter <b>n</b> for any positive integer <b>n</b>. Therefore, <b>f1(4)</b> yields a result of 1 + 2 + 3 + 4 = 10.
+</p>
+    </div>
+  </solution>
+</problem>

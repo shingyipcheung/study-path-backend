@@ -1,0 +1,46 @@
+<problem display_name="Week 07 Graded Problem Task 2" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+Given the String objects <b>s1</b> and <b>s2</b> below:
+</p>
+  <p>
+    <pre>
+String s1 = "zzz";
+String s2 = "ZZZ";
+</pre>
+  </p>
+  <p>
+What would be the returned value of the following comparisons?
+</p>
+  <p>
+    <pre>
+i)    int v1 = s1.compareTo("AAA");
+</pre>
+  </p>
+  <p>
+    <pre>
+ii)   int v2 = s2.compareTo("aaa");
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week7gpt2input1" type="MultipleChoice">
+      <choice correct="false">i)    v1 &lt; 0        ii)    v2 &gt; 0</choice>
+      <choice correct="true">i)    v1 &gt; 0        ii)    v2 &lt; 0</choice>
+      <choice correct="false">i)    v1 &gt; 0        ii)    v2 &gt; 0</choice>
+      <choice correct="false">It generates a compilation error.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+  The <b>compareTo()</b> instance method of the String class compares lexicographically the character sequence represented by the current String to the character sequence represented by the other String object.
+</p>
+      <p>  
+A negative integer is returned when the current String is lexicographically less than the other String. A positive integer is returned when the current String is lexicographically greater than the other String. 0 is returned if the two Strings are equal.
+</p>
+      <p>
+In the first comparison, the character 'z' is lexicographically greater than the character 'A'. Thus a positive value is assigned to the variable <b>v1</b>. In the second comparison, the character 'Z' is lexicographically less than the character 'a. Thus, a negative value is assigned to the variable <b>v2</b>.
+</p>
+    </div>
+  </solution>
+</problem>

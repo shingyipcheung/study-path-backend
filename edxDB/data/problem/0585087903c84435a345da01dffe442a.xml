@@ -1,0 +1,112 @@
+<problem display_name="Lab 06 Graded Task 1" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this lab exercise, you are tasked to complete the <b>readWordList()</b> method in the <b>Hangman</b> class. This method reads a word list file and initializes a word list String array. Finally, it returns the number of words read.
+</p>
+    <p>
+      <u>Assumptions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+Each line in the word list file contains one word only with no space.
+</li>
+        <li>
+All words in the word list are in lower case.
+</li>
+        <li>
+There are at most 128 words in the word list file.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+Open the file specified by the parameter, <b>fileName</b>, of the method.
+</li>
+        <li>
+Read each line of the file and assign each line to a new position in the <b>wordList</b> array given as one of the method's parameters; i.e. assign the first read line to the first position of the array, the second line to the second position of the array ... etc.
+</li>
+        <li>
+Return the number of words read from the file. You may wish to declare a local <b>int</b> variable for this purpose.
+</li>
+        <li>
+You can assume that the import statements: <b>import java.io.File;</b> and <b>import java.util.Scanner;</b> have been added.  
+</li>
+        <li>
+You may also add your own words to the word list file. Please make sure that the last line of the file should not be empty.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_06_ca1.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab06gt1input1"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab06/ex01", "version":"V-01-20140806", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <p>
+        <pre>
+int numberOfWordsLoaded = 0;
+
+File file = new File(fileName);
+Scanner scanner = new Scanner(file);
+
+while (scanner.hasNextLine())
+{
+	String line = scanner.nextLine();
+	wordList[numberOfWordsLoaded++] = line;
+}
+        
+scanner.close();
+        
+return numberOfWordsLoaded;
+</pre>
+      </p>
+      <br/>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>
+Creating a Scanner object by using the <b>fileName</b> parameter directly instead of creating a File object first.
+</li>
+          <li>
+Returning the length of the wordList array to be the number of words read from the file.
+</li>
+        </ol>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_06_Sol.zip">here</a>.
+<br/>
+</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,29 @@
+<problem display_name="Final Exam Question 04" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+What is the value of variable z after executing the following statements?
+</p>
+  <p>
+    <pre>
+int x = 1;
+int y = x++;
+int z = ++y;
+y = z++;
+z = ++z;
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ04" type="MultipleChoice">
+      <choice correct="false">2</choice>
+      <choice correct="false">3</choice>
+      <choice correct="true">4</choice>
+      <choice correct="false">5</choice>
+      <choice correct="false">None of above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

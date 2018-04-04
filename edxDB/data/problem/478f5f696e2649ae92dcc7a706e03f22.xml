@@ -1,0 +1,42 @@
+<problem display_name="Week 03 Graded Problem Task 3B" markdown="null" max_attempts="5" weight="1.0">
+  <text>
+    <p>Task 3B)    After obtaining the rotation angle in radians, you can calculate the distance to move the car in the x and y directions by using simple math equations. Given the distance we want to move the car and the rotation angle in radians, the distance to move in x and y directions can be calculated as follows:</p>
+    <p>
+      <center>Distance to Move in x Direction = Distance to Move * cos(Angle of Rotation)</center>
+    </p>
+    <p>
+      <center>Distance to Move in y Direction = Distance to Move * sin(Angle of Rotation)</center>
+    </p>
+    <p>By using the methods <b>sin</b> and <b>cos</b> in the Java Math class <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html">here</a>, write a piece of Java code in the textbox provided below to calculate the distance to move in the x direction and the distance to move in the y direction and store the calculated distances to the <b>double</b> variables <code>distX</code> and <code>distY</code> respectively.</p>
+    <p>Let's assume that the <b>int</b> variable <code>dist</code> and the <b>double</b> variable <code>rotationInRadians</code> have been declared to store the distance to move and the current rotation angle of the car in radians respectively.</p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="10" cols="80" mode="python" tabsize="4" label="week3gpt3input2"/>
+    <codeparam>
+      <initial_display>
+// Calculate the distance to move in both x and y directions.
+// Assume that the int variable dist has been declared to store
+// the distance to move and the double variable rotationInRadians 
+// has also been declared to store the current rotation angle of 
+// the car in radians.
+// The current assignment to distX and distY will only move the car 
+// in the X direction for the distance to move.
+  
+double distX = dist;
+double distY = 0.0;
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/gps03/ex02", "version":"V-01-20140702", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <p><u>Sample Answer</u><br/><br/>
+      double distX = dist * Math.cos(rotationInRadians); <br/>
+      double distY = dist * Math.sin(rotationInRadians);
+	</p>
+    </div>
+  </solution>
+</problem>

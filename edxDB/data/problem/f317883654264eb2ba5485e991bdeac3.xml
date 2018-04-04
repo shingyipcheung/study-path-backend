@@ -1,0 +1,79 @@
+<problem display_name="Week 08 Graded Problem Task 3" markdown="null" max_attempts="5" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this exercise, you are tasked to complete the implementation of the <b>doBrowsePhoto()</b> method in the <b>CountryMapMouseListener</b> class. Upon completion, the pinned photos can be scaled up by left clicking on the mouse and rescaled back to its original size by right clicking on the mouse.
+</p>
+    <p>
+      <u>Project Template</u>
+    </p>
+    <p>
+The project template for this graded task can be downloaded <a href="/static/week_8_country_map.zip">here</a>.
+</p>
+    <p>
+      <u>Demo Project</u>
+    </p>
+    <p>
+The demo project for this graded task can be downloaded <a href="/static/week_8_country_map_demo.zip">here</a>.
+</p>
+    <p>
+      <u>Instructions on the task</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+The <b>doBrowsePhoto()</b> method takes in a <b>MouseEvent</b> object as the parameter. Use the instance methods of the <b>MouseEvent</b> class to initialize four different variables according to the steps below. The Javadoc of the <b>MouseEvent</b> class can be found <a href="http://docs.oracle.com/javase/7/docs/api/java/awt/event/MouseEvent.html">here</a>.
+</li>
+        <li> Create a <b>int</b> local variable, <b>x</b>, and initialize it with the x position of the mouse event. </li>
+        <li> Create an <b>int</b> local variable, <b>y</b>, and initialize it with the y position of the mouse event. </li>
+        <li> Create a <b>boolean</b> local variable, <b>leftClicked</b>, and initialize it to <b>true</b> if the left mouse button is clicked during the event. Otherwise, initialize it to <b>false</b>. Hints: the left mouse button is clicked if the <b>getButton()</b> instance method returns a value equals to the static constant <b>BUTTON1</b> in the <b>MouseEvent</b> class.</li>
+        <li> Create a <b>boolean</b> local variable, <b>rightClicked</b>, and initialize it to <b>true</b> if the right mouse button is clicked during the event. Otherwise, initialize it to <b>false</b>. Hints: the right mouse button is clicked if the <b>getButton()</b> instance method returns a value equals to the static constant <b>BUTTON3</b> in the <b>MouseEvent</b> class.</li>
+        <li>
+          <font color="red"> Submit <b>ONLY</b> the code for initializing the four variables. The remaining code given in the <b>doBrowsePhoto()</b> method must not be submitted.</font>
+        </li>
+      </ol>
+    </p>
+    <p>
+      <u>Instructions on the running the program</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+To run the program, right click on the <b>CountryMapApp</b> class and invoke the main method.
+</li>
+        <li>
+The program operates in three modes, <b>Browse mode</b>, <b>Pin mode</b> and <b>Delete mode</b>. The program is in <b>Browser mode</b> by default.
+</li>
+        <li>
+To add a photo, press the <b>Pin mode</b> button and click on a location on the map. The image chosen from the pop up dialog will be added to the clicked location on the map.
+</li>
+        <li>
+To rescale a photo, press the <b>Browser mode</b> button. Left click on a photo for scaling it up and right click on the photo for rescaling it to its original size.
+</li>
+        <li>
+To delete a photo, press the <b>Delete mode</b> button. Left click on a photo to delete it.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/country_map.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="week8gpt3input1"/>
+    <codeparam>
+      <initial_display>
+// please write your code after this line
+
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/gps08/ex03", "version":"V-01-20140703", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+</problem>

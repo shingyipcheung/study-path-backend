@@ -1,0 +1,8 @@
+<problem display_name="Honor Code Pledge" markdown="null" showanswer="never" weight="0.0">
+  <choiceresponse>
+    <checkboxgroup label="Honor Code Pledge" direction="vertical">
+      <choice correct="true">I declare that I have followed all the instructions above and the answers submitted for this examination are based on my own independent effort.</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <p>Click on the <b>Check</b> button after ticking the checkbox above.</p>
+</problem>

@@ -1,0 +1,34 @@
+<problem display_name="Final Exam Question 07" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Given the following code segment:
+</p>
+  <p>
+    <pre>
+if ( x &gt; y )
+     if ( z &gt; x)
+         x = 1;
+else
+     x = 3;
+</pre>
+  </p>
+  <p>
+What would be the final value of x if initially:<br/>
+i)   x = 2, y = 4, z = 6<br/>
+ii)  x = 6, y = 4, z = 2<br/>
+iii) x = 4, y = 2, z = 6<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ07" type="MultipleChoice">
+      <choice correct="false">i) 2    ii) 3    iii) 4</choice>
+      <choice correct="true">i) 2    ii) 3    iii) 1</choice>
+      <choice correct="false">i) 3    ii) 1    iii) 6</choice>
+      <choice correct="false">i) 2    ii) 1    iii) 3</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

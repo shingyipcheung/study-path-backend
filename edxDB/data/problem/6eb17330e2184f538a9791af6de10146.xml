@@ -1,0 +1,114 @@
+<problem display_name="Lab 04 Graded Task 1" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+  In this lab exercise, you are tasked to complete the <b>compareWith()</b> method in the <b>Choice</b> class. This method compares the current Choice instance with another Choice instance and returns the comparison result.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+The rules of Rock-paper-scissors are as follows:<br/>
+<center><img src="/static/rps_rules.png" width="50%"/><br/>
+(The above image is distributed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license.)<br/>
+(Author: Enzoklop    Source: <a href="http://en.wikipedia.org/wiki/Rock-paper-scissors#mediaviewer/File:Rock-paper-scissors.svg">click here</a>)</center><br/>
+If both players have the same choice, the game is a draw.
+</li>
+        <li>
+The instance variable, <b>type</b>, in a Choice instance has values 0, 1, or 2 which represent Rock, Paper and Scissors respectively. Obtain the instance variable, <b>type</b>, of the current Choice instance and that of the other Choice instance, <b>anotherChoice</b>.
+</li>
+        <li>
+Compare the choices by its instance variable, <b>type</b>, and return the following according to the rules of Rock-Paper-Scissors:<br/>
+<br/>
+ 1 - If the current choice beats the other choice.<br/>
+-1 - If the current choice is beaten by the other choice.<br/>
+ 0 - If the game is a draw.<br/>
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Testing</u>
+    </p>
+    <p>
+A testing class, <b>Lab04GradedTask1</b>, has been prepared for you to test the implementation of the <b>compareWith()</b> method. To perform testing, right click on the <b>Lab04GradedTask1</b> class and then run the <b>testCase1()</b> method. The expected output of <b>testCase1()</b> is shown below. You are encouraged to add your own test cases to test the <b>compareWith()</b> method.
+</p>
+    <p>
+      <u>Code in testCase1()</u>
+    </p>
+    <p>
+      <pre>
+Choice choice1 = new Choice(0); // Rock
+Choice choice2 = new Choice(1); // Paper
+int result = choice1.compareWith(choice2); // -1
+IO.outputln(result);
+</pre>
+    </p>
+    <p>
+      <u>Expect output of testCase1()</u>
+    </p>
+    <p>
+      <pre>
+-1
+</pre>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab04gt1.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab04gt1input1"/>
+    <codeparam>
+      <initial_display>
+// write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab04/ex01", "version":"V-01-20140716", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution"><p>Explanation: </p><br/><p><u>Sample Answer</u><br/></p><pre>
+if(this.type==anotherChoice.getType()) {
+  
+	return 0;
+
+} else if(this.type==0 &amp; anotherChoice.getType()==1) {
+
+	return -1;
+
+} else if(this.type==1 &amp; anotherChoice.getType()==2) {
+
+	return -1;
+
+} else if(this.type==2 &amp; anotherChoice.getType()==0) {
+
+	return -1;
+
+} else {
+
+	return 1;
+
+}
+</pre><br/>
+A shorter solution is available in the solution BlueJ project.<br/>
+<br/>
+  
+<p><u>Common Mistakes</u><br/><ol><li>Comparing the Choice instances directly instead of comparing the instance variable <b>type</b>.</li><li>Missing some of the cases for comparison out of the 9 cases.</li><li>Returning incorrect result for the case of rock vs scissors and scissors vs rock.</li></ol></p>
+
+<p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_04_Sol.zip">here</a>.
+<br/>
+</p>
+
+</div>
+  </solution>
+</problem>

@@ -1,0 +1,28 @@
+<problem display_name="Final Exam Question 14" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Given f(), what are the return values of f(9) and f(10)?
+</p>
+  <p>
+    <pre>
+int f(int value) {
+    
+        if (value == 0) return 0;
+        return 1 * f(value - 2);
+}
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ14" type="MultipleChoice">
+      <choice correct="true">f(9): Undefined/error during execution        f(10): 0</choice>
+      <choice correct="false">f(9): 0                                                                      f(10): 0</choice>
+      <choice correct="false">f(9): Undefined/error during execution        f(10): Undefined/error during execution</choice>
+      <choice correct="false">f(9): 1                                                                      f(10): 1</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

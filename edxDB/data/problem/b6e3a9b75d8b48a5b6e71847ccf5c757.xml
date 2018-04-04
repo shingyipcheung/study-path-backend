@@ -1,0 +1,74 @@
+<problem display_name="Lab 05 Graded Task 1" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this lab exercise, you are tasked to complete the <b>swapCards()</b> method in the <b>GameBoard</b> class of the <b>1D array matching game</b>. This method swaps two <b>Card</b> objects in the cards array of the <b>GameBoard</b> class.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+Swap the two <b>Card</b> objects in the cards array. The array indices of the two <b>Card</b> objects are specified in the parameters of the method.
+</li>
+        <li>
+Notice that you will have to swap two <b>Card</b> objects instead of their internal values.
+</li>
+        <li>
+With a correct implementation of the method, the cards should be positioned differently from the last game played.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_task_1_ca.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab05gt1input1"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab05/ex01", "version":"V-01-20140730", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <pre>
+Card originalCardA = cards[cardAIndex];
+cards[cardAIndex] = cards[cardBIndex];
+cards[cardBIndex] = originalCardA;
+</pre>
+      <br/>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>Declaring the temp variable to be of <b>int</b> type.</li>
+          <li>Creating a new <b>Card</b> object instead of swapping the existing two card objects.</li>
+          <li>Swapping the two array indices instead of swapping the two cards.</li>
+        </ol>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_05_1D_Sol.zip">here</a>.
+<br/>
+</p>
+    </div>
+  </solution>
+</problem>

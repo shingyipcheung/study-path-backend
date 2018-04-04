@@ -1,0 +1,27 @@
+<problem display_name="Final Exam Question 16" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Given the following declaration for array a: 
+</p>
+  <p>
+    <pre>
+int[][] a = new int[4][7];
+</pre>
+  </p>
+  <p>
+What would be the value returned by a[1][7].length? 
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ16" type="MultipleChoice">
+      <choice correct="false">4</choice>
+      <choice correct="false">7</choice>
+      <choice correct="false">28</choice>
+      <choice correct="true">Undefined/error during execution</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

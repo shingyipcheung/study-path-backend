@@ -1,0 +1,19 @@
+<problem display_name="Final Exam Question 23" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+The major purpose of constructors in a class is:
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ23" type="MultipleChoice">
+      <choice correct="true">To initialize variables of an object.</choice>
+      <choice correct="false">To declare variables for an object.</choice>
+      <choice correct="false">To be used by other methods in the class.</choice>
+      <choice correct="false">To construct outputs for an object.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

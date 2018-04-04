@@ -1,0 +1,112 @@
+<problem display_name="Lab 04 Graded Task 2" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="2.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this lab exercise, you are tasked to complete the <b>draw()</b> method in the <b>Choice</b> class. This method draws the image of the current Choice instance at a designated position and orientation.
+</p>
+    <p>
+      <u>Documentation</u>
+    </p>
+    <p>Click <a href="http://w02.hkvu.hk/edX/COMP102x/Javadoc/comp102x/comp102x/ColorImage.html">here</a> for the documentation of the ColorImage class.</p>
+    <p>Click <a href="http://w02.hkvu.hk/edX/COMP102x/Javadoc/comp102x/comp102x/Canvas.html">here</a> for the documentation of the Canvas class.</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+The instance variable <b>type</b> in a Choice instance has values 0, 1, or 2 which represent Rock, Paper and Scissors respectively.
+</li>
+        <li>
+Assign a new ColorImage to the instance variable <b>choiceImage</b> of the current Choice instance according to the value of its instance variable <b>type</b>. For example, if <b>type</b> is equal to 0, a new Colorimage of a rock should be assigned to choiceImage.
+</li>
+        <li>
+You can create a new ColorImage by using the ColorImage constructor, which takes the filename in double quotes. For example, to create a new ColorImage of a rock, you can code <b>new ColorImage("rock.png");</b>. The image filenames for rock, paper and scissors are "rock.png", "paper.png" and "scissors.png" respectively.
+</li>
+        <li>
+Update the x, y positions and the rotation of the choiceImage according to the given parameters using the <b>setX()</b>, <b>setY()</b> and <b>setRotation()</b> methods in the ColorImage class and add the image to the canvas using the <b>add()</b> method in the Canvas class.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Testing</u>
+    </p>
+    <p>
+A testing class, <b>Lab04GradedTask2</b>, has been prepared for you to test the implementation of the <b>draw()</b> method. To perform testing, right click on the <b>Lab04GradedTask2</b> class and then run the <b>testCase1()</b> method. The expected output of <b>testCase1()</b> is shown below. You are encouraged to add your own test cases to test the <b>draw()</b> method.
+</p>
+    <p>
+      <u>Code in testCase1()</u>
+    </p>
+    <p>
+      <pre>
+Canvas canvas = new Canvas(480, 960);
+Choice choice1 = new Choice(0); //Rock
+choice1.draw(canvas, 0, 480, 0); 
+</pre>
+    </p>
+    <p>
+      <u>Expect output of testCase1()</u>
+    </p>
+    <p><img src="/static/lab04gt2output.png"/><br/>
+The above image is created by drawing the image downloaded from the link below on a Canvas object. it is distributed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> license.<br/>
+<br/>
+Original Image Link:<br/>
+<a href="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Rock-paper-scissors_%28rock%29.png/480px-Rock-paper-scissors_%28rock%29.png">Rock-paper-scissors (rock)</a><br/>
+<br/>
+Author: Sertion    Photo by: Fluff    Modified by: Sertion<br/>
+</p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab04gt2.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab04gt2input1"/>
+    <codeparam>
+      <initial_display>
+// write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab04/ex02", "version":"V-01-20140703", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution"><p>Explanation: </p><br/><p><u>Sample Answer</u><br/></p><pre>
+switch(type)
+{
+	case 0:
+		choiceImage = new ColorImage("rock.png");
+		break;
+	case 1:
+		choiceImage = new ColorImage("paper.png");
+		break;
+	case 2:
+		choiceImage = new ColorImage("scissors.png");
+		break;
+}
+  
+choiceImage.setX(x);
+choiceImage.setY(y);
+choiceImage.setRotation(rotation);
+canvas.add(choiceImage);
+</pre><br/>
+Alternative solution is available in the solution BlueJ project.<br/>
+<br/>
+  
+<p><u>Common Mistakes</u><br/><ol><li>Creating an additional Canvas object instead of using the one defined in the parameter of the method.</li><li>Loading image files with wrong filenames. e.g. wrong spelling, additional space.</li><li>Specifying the rotation of the image in the <b>add()</b> method of the Canvas class.</li></ol></p>
+
+<p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_04_Sol.zip">here</a>.
+<br/>
+</p>
+
+</div>
+  </solution>
+</problem>

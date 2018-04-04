@@ -1,0 +1,31 @@
+<problem display_name="Week 09 Graded Problem Task 2" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+Given the method <b>f2()</b> below, what does <b>f2(3, 2)</b> return?
+</p>
+  <p>
+    <pre>
+public static int f2(int a, int b) {
+    if (b &gt;= 1)
+        return f2(a + 1, b - 1);
+    else
+        return a;
+}
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week9gpt2input1" type="MultipleChoice">
+      <choice correct="false">3</choice>
+      <choice correct="true">5</choice>
+      <choice correct="false">Error - infinite loop</choice>
+      <choice correct="false">2</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+  The recursive method <b>f2()</b> takes two integer parameters <b>a</b> and <b>b</b>. In each recursive call, if <b>b</b> is greater than 0, <b>a</b> is increased by 1 while <b>b</b> is decreased by 1. The recursive call continues until <b>b</b> is 0. Therefore, the value of <b>b</b> is added to <b>a</b> by this recursive method. <b>a</b> is returned by the method at the end. Thus, <b>f2(3, 2)</b> returns a value of 3 + 2 = 5.
+</p>
+    </div>
+  </solution>
+</problem>

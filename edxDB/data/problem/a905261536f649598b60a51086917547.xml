@@ -1,0 +1,19 @@
+<problem display_name="Final Exam Question 26" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Which of the following is always true?
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ26" type="MultipleChoice">
+      <choice correct="true">The body of a “do-while loop” is executed at least once.</choice>
+      <choice correct="false">The body of a “while loop” is executed at least once.</choice>
+      <choice correct="false">The body of a “for loop” is executed at least once.</choice>
+      <choice correct="false">All of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

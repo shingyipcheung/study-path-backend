@@ -1,0 +1,72 @@
+<problem display_name="Coding Question 2" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="10.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+  In this question, you are tasked to write a <b>recursive</b> Java method <b>sumOfProduct(int[], int[], int)</b> which takes two 1D integer arrays and an integer <b>n</b> as parameters and returns the sum of products of the first <b>n</b> elements of the two arrays. For example, given the following two 1D arrays:
+</p>
+    <p>
+      <pre>
+int[] arr1 = {1, 2, 3, 4, 5};
+int[] arr2 = {6, 7, 8, 9, 10};
+</pre>
+    </p>
+    <p>
+Invoking <b>sumOfProduct(arr1, arr2, 4)</b> will return the sum of products of the first 4 elements of <b>arr1</b> and <b>arr2</b>, that is, 1 * 6 + 2 * 7 + 3 * 8 + 4 * 9 = 80 as the result.
+</p>
+    <p>
+Invoking <b>sumOfProduct(int[], int[], int)</b> will return 0 if <b>n</b> is equal to zero.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+  You are <b>NOT ALLOWED</b> to use any loops in your implementation. You <b>MUST</b> use <b>recursion</b> to solve the problem.
+</li>
+        <li>
+You can assume that there are at least <b>n</b> elements in both arrays.
+</li>
+        <li>
+You can also assume that <b>n</b> is always greater than or equal to zero.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/final_exam_sum_of_product_ca.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="FinalExamQ32"/>
+    <codeparam>
+      <initial_display>
+// write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/final/cq02", "version":"V-01-20140819", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <pre>
+  
+if (n == 0) return 0;
+return sumOfProduct(arr1, arr2, n-1) + arr1[n-1] * arr2[n-1];
+  
+</pre>
+      <br/>
+    </div>
+  </solution>
+</problem>

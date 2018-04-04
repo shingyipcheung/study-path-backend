@@ -1,0 +1,175 @@
+<problem markdown="null" weight="0.0" display_name="Pre-Course Survey" showanswer="attempted">
+  <p><font style="color: #6CC" size="+2"><b>Question 1</b></font><br/>
+  Identify the region that best describes where you are located.<br/></p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q01 Identify the region that best describes where you are located." type="MultipleChoice">
+      <choice correct="true">North America</choice>
+      <choice correct="true">South America</choice>
+      <choice correct="true">Africa</choice>
+      <choice correct="true">Asia</choice>
+      <choice correct="true">Europe</choice>
+      <choice correct="true">Oceania</choice>
+      <choice correct="true">The Middle East</choice>
+      <choice correct="true">Others</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 2</b></font><br/>
+Identify your age range.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q02 Identify your age range." type="MultipleChoice">
+      <choice correct="true">under 18</choice>
+      <choice correct="true">18-25</choice>
+      <choice correct="true">26-30</choice>
+      <choice correct="true">31-35</choice>
+      <choice correct="true">36-40</choice>
+      <choice correct="true">41-45</choice>
+      <choice correct="true">46-50</choice>
+      <choice correct="true">51-55</choice>
+      <choice correct="true">56-60</choice>
+      <choice correct="true">61-65</choice>
+      <choice correct="true">66-70</choice>
+      <choice correct="true">over 70</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 3</b></font><br/>
+This course will be conducted in English. Is English your mother tongue / first language?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q03 This course will be conducted in English. Is English your mother tongue / first language?" type="MultipleChoice">
+      <choice correct="true">Yes</choice>
+      <choice correct="true">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 4</b></font><br/>
+Please identify the proficiency level of your English. You may refer to the categories described at <a href="http://ells.wiki.farmington.k12.mi.us/ELL+Proficiency+Levels" target="_blank">http://ells.wiki.farmington.k12.mi.us/ELL+Proficiency+Levels</a>.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q04 Please identify the proficiency level of your English. You may refer to the categories described at http://ells.wiki.farmington.k12.mi.us/ELL+Proficiency+Levels." type="MultipleChoice">
+      <choice correct="true">Level 1 - Basic</choice>
+      <choice correct="true">Level 2 - Low Intermediate</choice>
+      <choice correct="true">Level 3 - High Intermediate</choice>
+      <choice correct="true">Level 4 - Proficient</choice>
+      <choice correct="true">Level 5 - Advanced Proficient</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 5</b></font><br/>
+Which one of the following descriptors best characterizes you?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q05 Which one of the following descriptors best characterizes you?" type="MultipleChoice">
+      <choice correct="true">Student</choice>
+      <choice correct="true">Industry Professional</choice>
+      <choice correct="true">Research Scientist</choice>
+      <choice correct="true">Academic / Professor</choice>
+      <choice correct="true">Retiree / Hobbyist</choice>
+      <choice correct="true">None of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 6</b></font><br/>
+What is your highest formal educational background?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q06 What is your highest formal educational background?" type="MultipleChoice">
+      <choice correct="true">Master / Doctoral Graduate</choice>
+      <choice correct="true">University Graduate (Bachelor degree holder)</choice>
+      <choice correct="true">High School / Postsecondary School Graduate</choice>
+      <choice correct="true">Currently a Graduate Student</choice>
+      <choice correct="true">Currently an Undergraduate Student</choice>
+      <choice correct="true">Currently a High School / Post-secondary School Student</choice>
+      <choice correct="true">None of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p>
+    <table width="100%" border="2" style="border-color:#6CC;">
+      <tr>
+        <th scope="col" style="border-color:#6CC; margin-left:20px">For questions 7 - 10, please rate on a scale of Not Important to Very Important</th>
+      </tr>
+    </table>
+  </p>
+  <p><font style="color: #6CC" size="+2"><b>Question 7</b></font><br/>
+The course content is relevant to my academic field of study.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q07 The course content is relevant to my academic field of study." type="MultipleChoice">
+      <choice correct="true">Not Important</choice>
+      <choice correct="true">Slightly Important</choice>
+      <choice correct="true">Moderately Important</choice>
+      <choice correct="true">Quite Important</choice>
+      <choice correct="true">Very Important</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 8</b></font><br/>
+The course content is relevant to my  career development.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q08 The course content is relevant to my future career development." type="MultipleChoice">
+      <choice correct="true">Not Important</choice>
+      <choice correct="true">Slightly Important</choice>
+      <choice correct="true">Moderately Important</choice>
+      <choice correct="true">Quite Important</choice>
+      <choice correct="true">Very Important</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 9</b></font><br/>
+I want to earn a credential to add to my resume/CV.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q09 I want to earn a credential to add to my resume/CV." type="MultipleChoice">
+      <choice correct="true">Not Important</choice>
+      <choice correct="true">Slightly Important</choice>
+      <choice correct="true">Moderately Important</choice>
+      <choice correct="true">Quite Important</choice>
+      <choice correct="true">Very Important</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 10</b></font><br/>
+I am curious about what it is like to take an open online course.</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q10 I am curious about what it is like to take an open online course." type="MultipleChoice">
+      <choice correct="true">Not Important</choice>
+      <choice correct="true">Slightly Important</choice>
+      <choice correct="true">Moderately Important</choice>
+      <choice correct="true">Quite Important</choice>
+      <choice correct="true">Very Important</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 11</b></font><br/>
+Which one of the following statements best describes your experience in the subject area of this course?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q11 Which one of the following statements best describes your experience in the subject area of this course?" type="MultipleChoice">
+      <choice correct="true">I am new to this subject area.</choice>
+      <choice correct="true">I have explored this subject area on my own.</choice>
+      <choice correct="true">I have completed some coursework or have some work experience in this field.</choice>
+      <choice correct="true">I have a degree or significant work experience in this field.</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 12</b></font><br/>
+Prior to enrolling in this course, have you ever participated in any massive open online courses (MOOCs)?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q12 Prior to enrolling in this course, have you ever participated in any massive open online courses (MOOCs)?" type="MultipleChoice">
+      <choice correct="true">Yes</choice>
+      <choice correct="true">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 13</b></font><br/>
+Apart from this course, how many other massive open online courses (MOOCs) have you taken in total up to now?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q13 Apart from this course, how many other massive open online courses (MOOCs) have you taken in total up to now?" type="MultipleChoice">
+      <choice correct="true">5 or fewer</choice>
+      <choice correct="true">6-10</choice>
+      <choice correct="true">11-15</choice>
+      <choice correct="true">16-20</choice>
+      <choice correct="true">more than 20</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p><font style="color: #6CC" size="+2"><b>Question 14</b></font><br/>
+How many hours per week do you have available in total to dedicate to all online courses you are taking?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Q14 How many available hours in total per week do you have to dedicate to all online courses you are taking?" type="MultipleChoice">
+      <choice correct="true">5 or fewer</choice>
+      <choice correct="true">6-10</choice>
+      <choice correct="true">11-15</choice>
+      <choice correct="true">16-20</choice>
+      <choice correct="true">more than 20</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Please ignore the green tick/red cross mark.</p>
+    </div>
+  </solution>
+</problem>

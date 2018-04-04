@@ -1,0 +1,75 @@
+<problem markdown="null" max_attempts="5" submission_wait_seconds="5" weight="2.0" display_name="Lab 02 Graded Task 2" showanswer="past_due">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>In this lab exercise, you are tasked to write a piece of Java code to calculate the area of a triangle using the formula:
+    </p>
+    <p>Triangle area = width x height / 2 </p>
+    <p>The calculated result is then outputted on the screen.</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>The Java code should first ask the user to input the width of the triangle by outputting a message on the screen. The format of the message must be <code>Enter the width of the triangle: </code>. Notice that the message ends with a colon followed by a space (i.e. ": ") and the printing position should <b>not</b> be moved to a new line. The program will then allow the user to input the width of the triangle. After that, the inputted width from the user is stored by using a variable.</li>
+        <li>Repeat the previous step to get the height of the triangle.</li>
+        <li>Calculate the area of the triangle using the formula indicated above, after getting the width and the height. Store the result by using a variable.</li>
+        <li>Lastly, output a message on the screen to report the calculated area. The format of the message must be <code>The triangle area = <i>calculated_area</i></code>, with <i>calculated_area</i> replaced by the result obtained. Notice that there must be an equal sign followed by a space (i.e. "= ") just before the <i>calculated_area</i> in the message.</li>
+      </ol>
+    </p>
+    <p>
+      <u>Sample Input/Output</u>
+    </p>
+    <p>
+      <img src="/static/lab_02_graded_task_2_sample.png"/>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_02_gt2_ca.png"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="10" cols="80" mode="python" tabsize="4"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+		{"refid": "/comp102x/lab02/ex02",  "version":"V-01-20140627", "edge":false }
+	</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p><u>Sample Answer</u><br/><br/>
+        IO.output("Enter the width of the triangle: ");<br/>
+        int width = IO.inputInteger();<br/>
+        <br/>
+        IO.output("Enter the height of the triangle: ");<br/>
+        int height = IO.inputInteger();<br/>
+        <br/>
+        double calculated_area = width * height / 2.0;<br/>
+        IO.outputln("The triangle area = " + calculated_area);<br/>
+      	<br/>
+	</p>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>Calculating the area of the triangle using integer division, e.g. 3 * 5 / 2, which give a value of 7 instead of 7.5.</li>
+          <li>Assigning a double value to a float variable, e.g. float f = IO.inputDouble(), which results in a loss of precision error. </li>
+        </ol>
+        <br/>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+      You may download the BlueJ Project for the above sample answer <a href="/static/Lab_02_Sol.zip">here</a>.
+      <br/>
+    </p>
+    </div>
+  </solution>
+</problem>

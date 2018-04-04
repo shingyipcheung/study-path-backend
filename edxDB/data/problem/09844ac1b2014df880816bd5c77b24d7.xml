@@ -1,0 +1,98 @@
+<problem display_name="Lab 06 Graded Task 4" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this lab exercise, you are tasked to complete the <b>updateDisplayWord()</b> method in the <b>Hangman</b> class. This method creates an updated representation of the secret word with all occurrences of the correctly guessed letters revealed.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+Create an empty intermediate String.
+</li>
+        <li>
+Compare each character of the String parameter <b>secretWord</b> with the character parameter <b>guess</b>. For the i<sup><font size="2">th</font></sup> comparison, if the i<sup><font size="2">th</font></sup> character of <b>secretWord</b> equals the character <b>guess</b>, concatenate the intermediate String with the character <b>guess</b>. Otherwise, concatenate the intermediate String with the i<sup><font size="2">th</font></sup> character of the String parameter <b>displayWord</b>.
+</li>
+        <li>
+Return the intermediate String.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_06_ca4.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab06gt4input1"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab06/ex04", "version":"V-01-20140806", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <p>
+        <pre>
+String newDisplayWord = "";        
+
+for(int i = 0; i &lt; displayWord.length(); i++)
+{
+	if(secretWord.charAt(i) == guess) 
+	{
+		newDisplayWord += guess;
+	}
+            
+	else
+	{
+		newDisplayWord += displayWord.charAt(i);
+	}
+}
+        
+return newDisplayWord;
+</pre>
+      </p>
+      <br/>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>
+Shortened new display word.
+</li>
+          <li>
+The new display word is generated in a reverse order.
+</li>
+          <li>
+The guess character is appended at the end of the new display word.
+</li>
+          <li>
+Incorrect use of the substring(int) method which causes a StringIndexOutOfBoundsException.
+</li>
+        </ol>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_06_Sol.zip">here</a>.
+<br/>
+</p>
+    </div>
+  </solution>
+</problem>

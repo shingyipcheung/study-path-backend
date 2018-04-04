@@ -1,0 +1,35 @@
+<problem display_name="Final Exam Question 20" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+What is the value of x after executing this segment of code?
+</p>
+  <p>
+    <pre>
+Stack&lt;Integer&gt; s = new Stack&lt;Integer&gt;();
+s.push(9);
+s.push(2);
+s.push(7);
+
+int a = s.pop();
+int b = s.pop();
+int c = s.pop();
+
+int x = a + b * c;
+
+// What is the value of x at this point?
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ20" type="MultipleChoice">
+      <choice correct="true">25</choice>
+      <choice correct="false">77</choice>
+      <choice correct="false">81</choice>
+      <choice correct="false">23</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

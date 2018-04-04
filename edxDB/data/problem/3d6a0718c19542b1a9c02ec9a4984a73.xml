@@ -1,0 +1,23 @@
+<problem markdown="null" submission_wait_seconds="5" weight="0.0" display_name="T02 Try it Yourself" max_attempts="10" rerandomize="never" showanswer="never">
+  <text>
+    <p>Please fill in <b>the body of main() method</b> to output the sentence “Hello, world!” on the terminal window. Submitting the whole Java file content is not required.</p>
+    <img src="/static/tryitout.png"/>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="7" cols="80" mode="python" tabsize="4"/>
+    <codeparam>
+      <initial_display>
+// ---------------------------------
+// Please code in the following area for the method body 
+// ---------------------------------
+  
+// ---------------------------------
+// end of method body
+// ---------------------------------
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab00/ex01", "version": "V-03-20140622"}
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+</problem>

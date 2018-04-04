@@ -1,0 +1,33 @@
+<problem display_name="Week 05 Graded Problem Task 2" markdown="null" max_attempts="2" weight="1.0">
+  <p>What would be the values of the variables “result1” and “result2” after executing the following segment of code?</p>
+  <p>
+    <pre>
+int a = 6;
+int b = 42;
+int result1 = b / ++a;
+int result2 = b / a++;
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="week5gpt2input1" type="MultipleChoice">
+      <choice correct="true">result1:    6        result2:    6</choice>
+      <choice correct="false">result1:    6        result2:    7</choice>
+      <choice correct="false">result1:    7        result2:    6</choice>
+      <choice correct="false">result1:    7        result2:    7</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+  After executing the first two lines of the code segment, <b>a</b> will have a value of 6 and <b>b</b> a value of 42.
+</p>
+      <p>
+When executing the third line of the code segment, the incremented value of <b>a</b> is used when evaluating the expression <b>int result1 = b / ++a;</b>. The value of <b>a</b> is incremented to 7 before the expression is evaluated. Therefore, result1 = 42 / 7 = 6.
+</p>
+      <p>
+When executing the fourth line of the code segment, the  current value of <b>a</b> is used when evaluating the expression <b>int result2 = b / a++;</b>. The value of <b>a</b> is incremented after the expression is evaluated. Therefore, result2 = 42 / 7 = 6. The final value of <b>a</b> is 8.
+</p>
+    </div>
+  </solution>
+</problem>

@@ -1,0 +1,103 @@
+<problem display_name="Lab 04 Graded Task 3" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="2.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this lab exercise, you are tasked to complete the <b>makeChoice()</b> method in the <b>Computer</b> class. This method selects from rock, paper or scissors randomly and updates the computer’s choice.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+Select from 0, 1 or 2 randomly to imitate the computer making a random choice between rock, paper and scissors.
+</li>
+        <li>
+A Random object can be created to select random integers in a specified range. For example, to generate a random integer between 0 (inclusive) and 10 (exclusive), you can code the following:<br/>
+<br/>
+<pre>
+Random randomObject = new Random();
+int randomInteger  = randomObject.nextInt(10);  
+</pre>
+<br/>
+You can assume that the Random class has already been imported in the grader.
+</li>
+        <li>
+Assign a new Choice instance to the instance variable choice of the Computer instance according to the random integer generated. You can use the Choice constructor that takes 1 integer argument for creating the new Choice instance.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Testing</u>
+    </p>
+    <p>
+A testing class, <b>Lab04GradedTask3</b>, has been prepared for you to test the implementation of the <b>makeChoice()</b> method. To perform testing, right click on the <b>Lab04GradedTask3</b> class and then run the <b>testCase1()</b> method. The expected output of <b>testCase1()</b> is shown below.
+</p>
+    <p>
+      <u>Code in testCase1()</u>
+    </p>
+    <p>
+      <pre>
+Computer computer = new Computer();
+computer.makeChoice();
+int result = computer.getChoice().getType();
+IO.outputln(result);
+</pre>
+    </p>
+    <p>
+      <u>Expect output of testCase1()</u>
+    </p>
+    <p>
+Because of the randomness of this method, there is no specific output. However, only values of 0, 1 or 2 will be output on the screen for a correct implementation for different runs of the <b>testCase1()</b> method.
+</p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab04gt3.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab04gt3input1"/>
+    <codeparam>
+      <initial_display>
+// write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab04/ex03", "version":"V-01-20140716", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <pre>
+Random random = new Random();
+int type = random.nextInt(3);
+choice = new Choice(type);
+</pre>
+      <br/>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>Using the <b>nextInt(int)</b> of the Random class method with an incorrect bound. e.g. nextInt(2)</li>
+          <li>Assigning the new Choice instance to a local variable instead of the instance variable <b>choice</b> defined.</li>
+        </ol>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_04_Sol.zip">here</a>.
+<br/>
+</p>
+    </div>
+  </solution>
+</problem>

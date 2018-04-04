@@ -1,0 +1,51 @@
+<problem display_name="Week 03 Graded Problem Task 3A" markdown="null" max_attempts="5" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>From the Car2 demo, you noticed that we can move the car from left  to right (or vice versa) by simply calling <b>setX</b> to change its x position. Note that the orientation of the car was not considered in that demo.</p>
+    <p>In this task you are required to improve the movement of the car. Move the car forward or backward taking into consideration the orientation of the car. You can do this by changing both the x position (using <b>setX</b>) and y position (using <b>setY</b>). You may refer to the diagram below to understand the relationship between distance to move and the angle of rotation.</p>
+    <p>
+      <img src="/static/trigo_2.png" width="100%"/>
+    </p>
+    <p>As indicated in the diagram, the cosine (<b>cos</b>)and sine (<b>sin</b>) of the angle of rotation would need to be computed. This can be done by using the methods, <b>cos</b> and <b>sin</b>, defined in the Java Math class <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html">(click here to go to the Javadoc for the Math class)</a>. In order to use these methods, you will first need to convert the current rotation angle from degrees to radians.
+  <p>Instructions on how to carry out the calculations are provided below.</p>
+    <p>        Task 3A) convert an angle from degrees to radians, and</p>
+    <p>        Task 3B) calculate the distance to move the car in the X and Y directions.</p>
+    
+    A skeleton Java code is provided <a href="/static/week_3_car_2.zip">(click here to download)</a> for you to test the program before submitting your answers. Only coding in the <b>moveForward()</b> method is required.
+</p>
+    <hr/>
+    <p>Task 3A)    To convert the current rotation angle from degrees to radians. You may use the method provided in the Java Math class <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html">here</a> or apply the formula below for the conversion.</p>
+    <p>
+      <center>
+        <img src="/static/deg2rad.png" width="70%"/>
+      </center>
+    </p>
+    <p>Write a piece of Java code in the textbox provided below to convert the current rotation angle from degrees to radians and assign the converted angle to a <b>double</b> variable <code>rotationInRadians</code>, assuming that the <b>int</b> variable <code>rotationInDegrees</code> has been declared to store the current rotation angle in degrees.</p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="10" cols="80" mode="python" tabsize="4" label="week3gpt3input1"/>
+    <codeparam>
+      <initial_display>
+// Convert the current rotation from degrees to radians
+// Assume that the int variable rotationInDegrees has been declared
+// to store the current rotation angle in degrees.
+  
+double rotationInRadians = 0.0;
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/gps03/ex01", "version":"V-01-20140702", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <p><u>Sample Answer</u><br/><br/>
+      There are several possible answers to this question, two of them are:
+      <ol><li>double rotationInRadians = Math.toRadians(rotationInDegrees);</li><li>double rotationInRadians = 22.0 / 7.0 * rotationInDegrees / 180;</li></ol>
+	</p>
+    </div>
+  </solution>
+</problem>

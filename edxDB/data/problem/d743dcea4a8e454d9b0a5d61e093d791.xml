@@ -1,0 +1,88 @@
+<problem display_name="Lab 03 Graded Task 4" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="2.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>In this lab exercise, you are tasked to write a piece of Java code to load two images of the same size and multiply them together. The two images and result of multiplying them are then displayed on a canvas.</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>Your Java code should first create two ColorImage objects by using the default constructor of the ColorImage class.</li>
+        <li>A third ColorImage object is then created by using the <b>multiply()</b> method of the ColorImage class.</li>
+        <li>A Canvas object is then created by calling the Canvas constructor with arguments. The first arugment is three times the width of the first(or second) ColorImage object plus 20 units while the second argument is the height of the first(or second) ColorImage object. You can obtain the width and height of a ColorImage by using the <b>getWidth()</b> and <b>getHeight()</b> methods in the ColorImage class.</li>
+        <li>Lastly, display the ColorImage objects on the Canvas Object by using the <b>add()</b> method of the Canvas class. The first ColorImage object is placed at the top left hand corner of the Canvas obejct. The second ColorImage object is placed at the right side of the first ColorImage obejct with 10-unit spacing between them. The third ColorImage object is placed at the right side of the second ColorImage object with 10-unit spacing between them.</li>
+      </ol>
+    </p>
+    <p>
+      <u>Sample Input</u>
+    </p>
+    <p>
+      <table>
+        <tr>
+          <td>
+            <img src="/static/lab_03_image_A.jpg" width="100%"/>
+          </td>
+          <td>
+            <img src="/static/lab_03_image_B.jpg" width="100%"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <center>First Image (A.jpg)</center>
+          </td>
+          <td>
+            <center>Second Image (B.jpg)</center>
+          </td>
+        </tr>
+      </table>
+    </p>
+    <p>
+      <u>Sample Output</u>
+    </p>
+    <p>
+      <img src="/static/lab_03_graded_task_4_output.png" width="100%"/>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_03_gt4_ca.png"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab03gt4input1"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+		{"refid": "/comp102x/lab03/ex04", "version":"V-01-20140703", "edge":false }
+	</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution"><p>Explanation: </p><br/><p><u>Sample Answer</u><br/></p>
+ColorImage imageA = new ColorImage();<br/>
+ColorImage imageB = new ColorImage();<br/>
+ColorImage result = imageA.multiply(imageB);<br/>
+int width = imageA.getWidth();<br/>
+int height = imageA.getHeight();<br/>
+Canvas canvas = new Canvas(width + 10 + width + 10 + width, height);<br/>
+canvas.add(imageA);<br/>
+canvas.add(imageB, width + 10, 0);<br/>
+canvas.add(result, width + 10 + width + 10 , 0);<br/>
+<br/>
+<p><u>Common Mistakes</u><br/><ol><li>Creating the result image using a default constructor.</li><li>Omitting the 10 unit of spacing between the images.</li></ol></p>
+
+<p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_03_Sol.zip">here</a>.
+<br/>
+</p>
+
+</div>
+  </solution>
+</problem>

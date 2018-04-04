@@ -1,0 +1,23 @@
+<problem display_name="Final Exam Question 12" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+Which of the following is true for String?<br/>  
+<br/>
+(i)    String is an ADT<br/>
+(ii)   Strings are immutable<br/>
+(iii)  String concatenation can be done by the addition operator (+)<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ12" type="MultipleChoice">
+      <choice correct="false">(i) only</choice>
+      <choice correct="false">(ii) only</choice>
+      <choice correct="false">(iii) only</choice>
+      <choice correct="true">All of the above</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

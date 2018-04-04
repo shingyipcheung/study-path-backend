@@ -1,0 +1,41 @@
+<problem display_name="Week 10 Graded Problem Task 2" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+How many distinct solutions (mirrored solutions are considered to be different) will there be to the N-Queen problem ...
+</p>
+  <p>if N is equal to 3? (Please enter an integer)</p>
+  <stringresponse answer="0" type="ci">
+    <textline label="week10gpt2input1" size="20"/>
+  </stringresponse>
+  <br/>
+  <p>if N is equal to 4? (Please enter an integer)</p>
+  <stringresponse answer="2" type="ci">
+    <textline label="week10gpt2input2" size="20"/>
+  </stringresponse>
+  <br/>
+  <p>if N is equal to 5? (Please enter an integer)</p>
+  <stringresponse answer="10" type="ci">
+    <textline label="week10gpt2input3" size="20"/>
+  </stringresponse>
+  <br/>
+  <p>if N is equal to 6? (Please enter an integer)</p>
+  <stringresponse answer="4" type="ci">
+    <textline label="week10gpt2input4" size="20"/>
+  </stringresponse>
+  <br/>
+  <p>if N is equal to 7? (Please enter an integer)</p>
+  <stringresponse answer="40" type="ci">
+    <textline label="week10gpt2input5" size="20"/>
+  </stringresponse>
+  <br/>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+You may refer to the Wikipedia page on <a href="http://en.wikipedia.org/wiki/Eight_queens_puzzle#Counting_solutions">Eight queens puzzle</a> for counting the solutions.
+</p>
+      <p>
+You may also run the BlueJ demo program we provided to verify the solutions.
+</p>
+    </div>
+  </solution>
+</problem>

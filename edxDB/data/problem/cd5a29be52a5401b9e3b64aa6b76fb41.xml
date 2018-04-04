@@ -1,0 +1,73 @@
+<problem markdown="null" weight="2.0" display_name="Lab 02 Graded Task 1" max_attempts="5" rerandomize="never" showanswer="past_due" submission_wait_seconds="5">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>In this lab exercise, you are tasked to write a piece of Java code to multiply two integers, x and y. The calculated result is then outputted on the screen.</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>The Java code should first ask the user to input the value of x by outputting a message on the screen. The format of the message must be <code>Enter an integer, x: </code>. Notice that the message ends with a colon followed by a space (i.e. ": ") and the printing position should <b>not</b> be moved to a new line. The program will then allow the user to input the value of x. After that, the inputted value from the user is stored by using a variable.</li>
+        <li>Repeat the previous step to get the value of y.</li>
+        <li>After getting the values of x and y, calculate the product of x and y. Store the result by using a variable.</li>
+        <li>Lastly, output a message on the screen to show the answer to the user. The format of the message must be <code>Answer = <i>calculated_result</i></code>, with <i>calculated_result</i> replaced by the result obtained. Notice that there is an equal sign followed by a space (i.e. "= ") just before the<i> calculated_result</i> in the message.</li>
+      </ol>
+    </p>
+    <p>
+      <u>Sample Input/Output</u>
+    </p>
+    <p>
+      <img src="/static/lab_02_graded_task_1_sample.png"/>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_02_gt1_ca.png"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+		{"refid": "/comp102x/lab02/ex01", "version":"V-01-20140627", "edge":false }
+	</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p><u>Sample Answer</u><br/><br/>
+      IO.output("Enter an integer, x: ");<br/>
+      int x = IO.inputInteger();<br/>
+      <br/>
+      IO.output("Enter an integer, y: ");<br/>
+      int y = IO.inputInteger();<br/>
+      <br/>
+      int calculated_result  = x * y;<br/>
+      IO.outputln("Answer = " + calculated_result);<br/>
+      <br/>
+	</p>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>Using variables without declaration.</li>
+          <li>Using IO.inputInt() instead of IO.inputInteger() for reading interger input from user.</li>
+          <li>Creating <b>two different</b> BufferedReader objects on the same InputStream (System.in) for reading user input. Notice that it is possible for the first BufferedReader to consume all the two user inputs. The second BufferedReader object will return null when reading from the user. An error will be reported by Java when converting null to an integer. It is suggested to create only one BufferedReader object for reading both user inputs.</li>
+        </ol>
+        <br/>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+      You may download the BlueJ Project for the above sample answer <a href="/static/Lab_02_Sol.zip">here</a>.
+      <br/>
+    </p>
+    </div>
+  </solution>
+</problem>

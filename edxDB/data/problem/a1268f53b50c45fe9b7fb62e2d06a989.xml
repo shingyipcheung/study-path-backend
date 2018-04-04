@@ -1,0 +1,55 @@
+<problem display_name="Week 10 Graded Problem Task 1" markdown="null" max_attempts="2" weight="1.0">
+  <p>
+Given the following method:  
+</p>
+  <p>
+    <pre>
+public static int f(String input) {
+  
+        Stack&lt;Character&gt; stack = new Stack&lt;Character&gt;();
+  
+        int n = 0;
+        
+        for (int i = 0; i &lt; input.length(); i++) {
+  
+                if (input.charAt(i) == 'd')
+                        stack.push('d');
+           
+                else if (input.charAt(i) == 'b') {
+  
+                        if (!stack.empty() &amp;&amp; stack.pop() == 'd') n++;
+                }
+        }  
+  
+        return n;
+}
+
+</pre>
+  </p>
+  <p>
+What are the return values for the above method if the input is equal to:<br/>
+<br/>
+(i)   "bdbdbd"<br/>
+(ii)  "dddbbb"<br/>
+(iii) "buddy"<br/>
+</p>
+  <multiplechoiceresponse>
+    <choicegroup label="week10gpt1input1" type="MultipleChoice">
+      <choice correct="false">i) 3    ii) 0    iii) 1</choice>
+      <choice correct="false">i) 3    ii) 3    iii) 1</choice>
+      <choice correct="true">i) 2    ii) 3    iii) 0</choice>
+      <choice correct="false">i) 2    ii) 1    iii) 0</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+The program reads the characters from the input String one by one. Whenever the program reads the character 'd', it pushes the character 'd' onto the stack. Whenever the program reads the character 'b', it pops a character from the stack and checks if it is the character 'd'. If it is indeed a 'd', the counter variable <b>n</b> will be increased by 1.
+</p>
+      <p>
+The aim of the program is to pair up a read character 'b' with a previously read character 'd' and count the number of unique pairings. Therefore, for the input "b<b><font color="red">d</font><font color="red">b</font><font color="blue">d</font><font color="blue">b</font></b>d" we can find 2 pairs. For the input "<b><font color="red">d</font><font color="green">d</font><font color="blue">d</font><font color="blue">b</font><font color="green">b</font><font color="red">b</font></b>", we can find 3 pairs. For the input "buddy", we cannot find any pairs.
+</p>
+    </div>
+  </solution>
+</problem>

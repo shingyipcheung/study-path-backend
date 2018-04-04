@@ -1,0 +1,127 @@
+<problem display_name="Coding Question 3" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="10.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+A cipher is a secret text that represents a message. In this question, each character in the original message is represented by a String of 6 characters in the cipher. For example, the text "java", which consists of 4 characters, is represented as a 24-character string in the cipher:
+</p>
+    <p>
+      <pre>
+kjdktizldzaecvyrvwaaemgk
+</pre>
+    </p>
+    <p>
+In this question, you are tasked to complete the method <b>decipher(String)</b> for decoding the cipher by using the method <b>decipherChar(String)</b> given below.
+</p>
+    <p>
+      <pre>
+/**
+ * This method decodes a 6-character input String into a single character.
+ * The first and second halves of the input String are compared lexicographically.
+ * The middle character of the smaller half is then returned.
+ * In case of equal halves, a space character is returned.
+ * 
+ * @param inputStr The 6-character String to be decoded.
+ * @return The decoded character.
+ */ 
+public static char decipherChar(String inputStr) {
+        // implementation not shown here
+}
+</pre>
+    </p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+Given the parameter <b>cipher</b> as the cipher to be decoded.
+</li>
+        <li>
+Check if the cipher is valid. If the cipher is an empty String, return the String message "no cipher". If the cipher does not have a length divisible by 6, return the String message "invalid cipher".
+</li>
+        <li>
+If the cipher is valid, decode each 6-character sub-string of the cipher into a character of the original message by using the given method <b>decipherChar(String)</b>. The <b>decipherChar(String)</b> method takes in a String of length 6 and returns the decoded character.
+</li>
+        <li>
+Concatenate all the decoded characters and return the original message.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Sample Output</u>
+    </p>
+    <table border="1">
+      <tr>
+        <td style="text-align: center;">
+          <b>Cipher</b>
+        </td>
+        <td style="text-align: center;">
+  yjqzicdamnovvvozyrjstfad
+</td>
+        <td style="text-align: center;">
+  ycczlxpobxnbcmpighuqxupb
+</td>
+        <td style="text-align: center;">
+  yryzqrzudrapyoryiqztzxnb
+</td>
+      </tr>
+      <tr>
+        <td style="text-align: center;">
+          <b>  Original message</b>
+        </td>
+        <td style="text-align: center;">
+java
+</td>
+        <td style="text-align: center;">
+comp
+</td>
+        <td style="text-align: center;">
+rain
+</td>
+      </tr>
+    </table>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/final_exam_cipher_ca.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="FinalExamQ33"/>
+    <codeparam>
+      <initial_display>
+// write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/final/cq03", "version":"V-01-20140819", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <pre>
+  
+String msg = "";
+        
+if (cipher.equals("")) return "no cipher";
+if (cipher.length() % 6 != 0) return "invalid cipher";
+        
+for (int i = 0; i &lt; cipher.length(); i += 6)
+	msg += decipherChar(cipher.substring(i, i + 6));
+        
+return msg;
+  
+</pre>
+      <br/>
+    </div>
+  </solution>
+</problem>

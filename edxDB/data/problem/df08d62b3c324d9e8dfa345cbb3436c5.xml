@@ -1,0 +1,32 @@
+<problem display_name="Final Exam Question 22" markdown="null" max_attempts="1" showanswer="past_due" weight="2.0">
+  <p>
+What is the value of variable y after executing the following block of statements?
+</p>
+  <p>
+    <pre>
+int y = 1;
+  
+do {
+  
+        y = y + y;
+  
+} while (y &lt; 126);
+  
+// What is the value of y at this point?
+</pre>
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup label="FinalExamQ22" type="MultipleChoice">
+      <choice correct="false">1</choice>
+      <choice correct="false">126</choice>
+      <choice correct="false">127</choice>
+      <choice correct="true">128</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p/>
+    </div>
+  </solution>
+</problem>

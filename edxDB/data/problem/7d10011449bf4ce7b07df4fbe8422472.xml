@@ -1,0 +1,110 @@
+<problem display_name="Week 07 Graded Problem Task 4" markdown="null" max_attempts="5" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+  Complete the implementation of the method, <b>searchFromRecord(String, String)</b>. The method takes in the record filename, <b>recordName</b>,  as the first parameter and the word to be searched, <b>word</b>, as the second parameter. The method opens the record file by the given filename and returns <b>true</b> if the word exists in the record file. Otherwise, <b>false</b> is returned. You implementation of the method should account for the case difference, that is, the comparison of words should be case sensitive.
+</p>
+    <p>
+You can make the following assumptions:
+</p>
+    <p>
+      <ol>
+        <li>The record file always exists.</li>
+        <li>The words in the record are stored in a line by line manner as indicated below. <br/><br/>
+<pre>
+word1
+word2
+word3
+.
+.
+.
+</pre>
+    </li>
+        <li>You can treat the empty space in each line a part of the word.</li>
+      </ol>
+    </p>
+    <p>
+A project template is provided for you to test the program before submitting your answers. Click <a href="/static/week_7_search_record.zip">here</a> to download the project.
+</p>
+    <p>
+  To test the method, create an instance of <b>SearchRecordDemo</b> and run the void <b>searchWord()</b> instance method. You can then input a word on the terminal window. Search result will be displayed after inputting the word.
+</p>
+    <p>
+In addition to inputting a word by typing, we can also input a word from an image. The method <b>inputTextImage()</b> of the IO class reads an image from the user and perform Optical Character Recognition (OCR) for recognizing the string in the image.
+</p>
+    <p>
+      <b>
+This method is only supported on <b>Windows platform</b> with Visual C++ Redistributable for Visual Studio 2012 installed. You can download it from <a href="http://www.microsoft.com/en-us/download/details.aspx?id=30679">here</a>. Please select the VSU_4\vcredist_x86.exe installer if you are using a 32-bit system and select the VSU_4\vcredist_x64.exe if you are using a 64-bit system. Restart the system after installation.
+</b>
+    </p>
+    <p>  
+  To enable OCR in the program, comment out the following line in the <b>searchWord()</b> method: <br/>
+<pre>
+String word = IO.inputString();
+</pre>
+<br/>
+Uncomment the following line in the declaration part of the <b>SearchRecordDemo</b> class:<br/><br/>
+<pre>
+private static Loader loader = new Loader();
+</pre>
+<br/>
+After that, uncomment the following lines in the <b>searchWord()</b> method: <br/><br/>
+<pre>
+String word = IO.inputTextImage();
+word = removeExtraSpace(word);
+IO.outputln(word);
+</pre>
+<br/>
+Some text images have been prepared in the "images" folder of the BlueJ project for your use. You may also input your own text image to the program and add your own word to the record.txt file.
+</p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="https://courses.edx.org/c4x/HKUSTx/COMP102x/asset/act4_01.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="week7gpt4input1"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/gps07/ex02", "version":"V-01-20140730", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <pre>
+File record = new File(recordName);
+Scanner scanner = new Scanner(record);
+
+String line;
+
+while (scanner.hasNextLine()) {
+
+        line = scanner.nextLine();
+            
+        if (line.equals(word)) {
+                scanner.close();
+                return true;
+        }            
+}
+
+scanner.close();
+return false;
+</pre>
+      <br/>
+    </div>
+  </solution>
+</problem>

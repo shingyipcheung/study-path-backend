@@ -147,7 +147,7 @@ def static_vars(**kwargs):
 # we start with the worst case - all possible paths of topological sort
 # estimate all paths and get the top_k paths
 @static_vars(paths=Graph(CONCEPT_EDGES).topological_all())
-def generate_paths(student_id, top_k=5):
+def generate_paths(student_id, top_k=10):
     evaluator = PathEvaluator(student_id=student_id)
     return paths_selection(evaluator.evaluate, generate_paths.paths, top_k=top_k)
 

@@ -1,0 +1,85 @@
+<problem display_name="Lab 06 Graded Task 2" markdown="null" max_attempts="5" showanswer="past_due" submission_wait_seconds="5" weight="1.0">
+  <text>
+    <p>
+      <u>Description</u>
+    </p>
+    <p>
+In this lab exercise, you are tasked to complete the <b>pickSecretWord()</b> method in the <b>Hangman</b> class. This method picks a secret word that the player will guess, from a String array.
+</p>
+    <p>
+      <u>Instructions</u>
+    </p>
+    <p>
+      <ol>
+        <li>
+Pick a random String as the secret word to be guessed from the <b>wordList</b> String array given in the parameter of the <b>pickSecretWord()</b> method.
+</li>
+        <li>
+  The number of Strings, n, in the <b>wordList</b> array is given by the method parameter <b>wordListSize</b>. The Strings are located in the first n positions of the array.
+</li>
+        <li>
+Return the selected String as the secret word.
+</li>
+        <li>
+  You can assume that the import statement: <b>import java.util.Random;</b> has been added.
+</li>
+      </ol>
+    </p>
+    <p>
+      <u>Coding Area</u>
+    </p>
+    <p>
+      <img src="/static/lab_06_ca2.png" width="100%"/>
+    </p>
+  </text>
+  <coderesponse queuename="hkust_java">
+    <textbox rows="9" cols="80" mode="python" tabsize="4" label="lab06gt2input1"/>
+    <codeparam>
+      <initial_display>
+// Please write your code after this line
+</initial_display>
+      <grader_payload>
+{"refid": "/comp102x/lab06/ex02", "version":"V-01-20140806", "edge":false }
+</grader_payload>
+    </codeparam>
+  </coderesponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation: </p>
+      <br/>
+      <p>
+        <u>Sample Answer</u>
+        <br/>
+      </p>
+      <p>
+        <pre>
+Random randomNumberGenerator = new Random();
+int randomIndex = randomNumberGenerator.nextInt(wordListSize);        
+return wordList[randomIndex];
+</pre>
+      </p>
+      <br/>
+      <p>
+        <u>Common Mistakes</u>
+        <br/>
+        <ol>
+          <li>
+Creating an incorrect index for selecting the secret word.
+</li>
+          <li>
+Using the <b>nextInt()</b> method with an incorrect parameter. For example, <b>wordListSize</b> - 1, <b>wordListSize</b> + 1.
+</li>
+          <li>
+Using the Random constructor incorrectly. Passing the <b>wordListSize</b> to the constructor does not generate an error. However, it does not help in generating a valid index.
+</li>
+        </ol>
+      </p>
+      <p><u>BlueJ Project of the sample answer</u><br/><br/>
+You may download the BlueJ Project for the above sample 
+
+answer <a href="/static/Lab_06_Sol.zip">here</a>.
+<br/>
+</p>
+    </div>
+  </solution>
+</problem>

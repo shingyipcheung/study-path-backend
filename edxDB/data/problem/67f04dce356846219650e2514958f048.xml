@@ -1,0 +1,106 @@
+<problem display_name="Week 02 Graded Problem Task 1" markdown="null" max_attempts="10" rerandomize="never" weight="1.0">
+  <script type="loncapa/python">
+
+'''
+Category 0: (lower bound)
+Category 1: (upper bound)
+Category 2: (out of lower bound)
+Category 3: (out of lower bound)
+Category 4: (in bound)
+'''
+from xml.dom import WRONG_DOCUMENT_ERR
+
+def getCategory(number):
+   
+    try:
+        num = float(number)
+    except ValueError:
+        return 5
+   
+    # cat 0: lower bound
+    if num == 0: 
+        return 0
+  
+    # cat 1: upper bound
+    elif num == 100:
+        return 1
+  
+    # cat 2: out of lower bound
+    elif num &lt; 0:
+        return 2
+  
+    # cat 3: out of upper bound
+    elif num &gt; 100:
+        return 3
+  
+    # cat 4: in bound
+    elif num &gt; 0 and num &lt; 100:
+        return 4;
+  
+def main(expectedAnswer, studentAnswers):
+    
+    catMessage = ["You have tested the minimum in the range.", "You have tested the maximum in the range.", "You have tested some values lower than the minimum.", "You have tested some values larger than the maximum.", "You have tested some normal values."]
+    repeatedMessage = "The testing purpose of this test case is overlapping with a previous test case."
+    wrongMessage = "This test case is wrong."
+    myOverallMessage = "Oops! You have not explored all 5 test cases.";
+  
+    checkedArray = [False, False, False, False, False]
+    correctArray = [False, False, False, False, False]
+    myFeedback = ["", "", "", "", ""]
+  
+    exploredCategory = 0
+    
+    for i in range(5):
+        category = getCategory(studentAnswers[i])
+        if category == 5:
+            myFeedback[i] = wrongMessage 
+        elif not checkedArray[category]:
+            checkedArray[category] = True
+            correctArray[i] = True
+            myFeedback[i] = catMessage[category]
+            exploredCategory += 1
+        else:            
+            myFeedback[i] = repeatedMessage
+
+    if exploredCategory == 5:
+        myOverallMessage = "Congratulations, you have explored all the 5 test cases."
+    
+    return {'overall_message': myOverallMessage, 'input_list': [
+                    {'ok': correctArray[0], 'msg': myFeedback[0]},
+                    {'ok': correctArray[1], 'msg': myFeedback[1]},
+                    {'ok': correctArray[2], 'msg': myFeedback[2]},
+                    {'ok': correctArray[3], 'msg': myFeedback[3]},
+                    {'ok': correctArray[4], 'msg': myFeedback[4]} ] }
+
+def check_function(expect, ans):
+    return main(10, ans)
+
+</script>
+  <p>As discussed, it is important to come up with a test plan to check if the program is working as expected. In the CourseGrade example, you may want to test the program on different input values for examScore, labScore and hwScore.</p>
+  <p>Considering examScore only, please try to come up with a test plan of 5 meaningfully different test cases, assuming that the range of actual scores is between 0 and 100. Key in the five test cases in the boxes provided below. Only numerical test cases are considered for this problem.</p>
+  <customresponse cfn="check_function">
+    <textline size="10"/>
+    <br/>
+    <textline size="10"/>
+    <br/>
+    <textline size="10"/>
+    <br/>
+    <textline size="10"/>
+    <br/>
+    <textline size="10"/>
+  </customresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>To test if a program only accepts numbers between a certain range (0 - 100 in this case), we can identify five meaningfully different test cases.</p>
+      <ol>
+        <li>The minimum value in the range. (0)</li>
+        <li>The maximum value in the range. (100)</li>
+        <li>Any value lower than the minimum. (e.g. - 1)</li>
+        <li>Any value higher than the maximum. (e.g. 101)</li>
+        <li>Any value within the range. (e.g. 50)</li>
+      </ol>
+      <p>This method of testing is known as <b>Boundary Testing</b>.</p>
+    </div>
+  </solution>
+</problem>
