@@ -32,7 +32,7 @@ def problem(request, problem_id):
 
 
 def problem_html(request, problem_id):
-    return HttpResponse(open(local_path(os.path.join("data", "problem", problem_id + '.xml'))).read())
+    return HttpResponse(open(local_path(os.path.join("data", "problem", problem_id + '.xml')), encoding='utf8').read())
 
 
 def concept_score(request, student_id):
