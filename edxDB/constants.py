@@ -148,11 +148,12 @@ with open(os.path.join(BASE, 'data/videos.json')) as data_file:
 GRADE_FILE = "data/HKUSTx-COMP102x-2T2014-courseware_studentmodule-prod-analytics.sql"
 COURSE_STRUCTURE_FILE = "data/HKUSTx-COMP102x-2T2014-course_structure-prod-analytics.json"
 
+# # uncomment the following to generate the videos
 # import json
 # from pprint import pprint
 # from course_structure_parser import parse_course_structure
 #
-# with open('data/updated_video.json') as data_file:
+# with open('data/videos_original.json') as data_file:
 #     VIDEO_DICT = json.load(data_file)
 #
 #     # for generating new mapping of video
@@ -167,6 +168,8 @@ COURSE_STRUCTURE_FILE = "data/HKUSTx-COMP102x-2T2014-course_structure-prod-analy
 #         meta_dict[meta["sub"]] = {
 #             "title": meta["display_name"],
 #             "vid": meta["youtube_id_1_0"],
+#             "chapter": n.chapter,
+#             "chapter_tag": n.chapter_tag
 #         }
 #
 #     # print(meta_dict)
@@ -183,12 +186,11 @@ COURSE_STRUCTURE_FILE = "data/HKUSTx-COMP102x-2T2014-course_structure-prod-analy
 #                 print(sub)
 #
 #             vlist.append({
-#                 "title": meta_dict[sub]["title"],
 #                 "code": sub,
-#                 "vid":meta_dict[sub]["vid"],
+#                 **meta_dict[sub]
 #             })
 #         mapping[k] = vlist
 #
-#     print(mapping)
-#     with open('result.json', 'w') as fp:
+#     pprint(mapping)
+#     with open('data/videos.json', 'w') as fp:
 #         json.dump(mapping, fp)

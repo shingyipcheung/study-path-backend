@@ -1,0 +1,123 @@
+{
+    "primitive_type": {
+        "Introduction": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L2-T1.1-Introduction.mp4",
+        "Example": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L2-T1.2-Example.mp4",
+        "Data Types": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L2-T3.2-Data Types.mp4",
+        "Identifiers": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L2-T2.1-Identifiers.mp4"
+    },
+    "variable": {
+        "Variable": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L2-T3.1-Variable.mp4",
+        "Data Types": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T2.4-Class Instance and Local Variables.mp4",
+        "Boolean Expressions": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T3.1-Boolean Expressions.mp4",
+        "Expressions":"http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L2-T4.1-Expressions.mp4",
+        "Assignment":"http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L2-T4.3-Assignment.mp4"
+    },
+    "operator": {
+        "Expressions": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L2-T4.1-Expressions.mp4",
+        "Message from the Instructor":"http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T1.0-Message from the Instructor.mp4",
+        "Scope Part 1":"http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T1.1-Scope Part 1.mp4",
+        "BankAccount Demo":"http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T1.2-BankAccount Demo.mp4",
+        "Scope Part 1 (Cont.)":"http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T2.1-Scope Part 1 (Cont.).mp4",
+        "CS101Grade Demo":"http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T2.2-CS101Grade Demo.mp4",
+        "Scope Part 2":"http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T2.3-Scope Part 2.mp4"
+    },
+    "array": {
+        "Message from the Instructor": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T1.0-Message from the Instructor.mp4",
+        "Arrays": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T1.1-Arrays.mp4",
+        "Examples": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T1.2-Examples.mp4",
+        "Swapping Elements": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T2.1-Swapping Elements.mp4",
+        "Sorting": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T2.2-Sorting.mp4",
+        "Sorting Images": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T2.3-Sorting Images.mp4",
+        "Break and Continue": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T2.4-Break and Continue.mp4"
+    },
+    "nd_array": {
+        "2D Arrays Part 1": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T3.1-2D Arrays Part 1.mp4",
+        "2D Arrays Part 2": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T3.2-2D Arrays Part 2.mp4",
+        "Example on Manipulating 2D Array": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T3.3-Example on Manipulating 2D Array.mp4",
+        "Demo on Manipulating 2D Array": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L6-T3.4-Demo on Manipulating 2D Array.mp4"
+    },
+    "string": {
+        "Message from the Instructor": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T1.0-Message from the Instructor.mp4",
+        "Character String": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T1.1-Character String.mp4",
+        "String Manipulation Part 1": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T2.1-String Manipulation Part 1.mp4",
+        "String Manipulation Part 2": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T2.2-String Manipulation Part 2.mp4",
+        "String Manipulation Part 3": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T2.3-String Manipulation Part 3.mp4",
+        "File IO": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T3.1-File IO.mp4",
+        "Example on Using Scanner": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T3.2-Example on Using Scanner.mp4",
+        "Example on Using PrintWriter": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T3.3-Example on Using PrintWriter.mp4",
+        "Optical Character Recognition": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T3.4-Optical Character Recognition.mp4",
+        "Demo on Reading Input from Console": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T4.1-Demo on Reading Input from Console.mp4",
+        "Demo on Using Scanner and PrintWriter": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L7-T4.2-Demo on Using Scanner and PrintWriter.mp4"
+    },
+    "branch": {
+        "Boolean Expressions": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T3.1-Boolean Expressions.mp4",
+        "If-else-if": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T4.1-If-else-if.mp4",
+        "Example Moveforward": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T4.2-Example Moveforward.mp4",
+        "Switch": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T5.1-Switch.mp4",
+        "BouncingBall Demo": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T5.2-BouncingBall Demo.mp4"
+    },
+    "loop": {
+        "Message from the Instructor": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T1.0-Message from the Instructor.mp4",
+        "Introduction": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T1.1-Introduction.mp4",
+        "Example": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T1.2-Example.mp4",
+        "Static Methods": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T2.1-Static Methods.mp4",
+        "Demo on Static Methods": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T2.2-Demo on Static Methods.mp4",
+        "Shortcut Operators": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T2.3-Shortcut Operators.mp4",
+        "Do-While and For Loops": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T3.1-Do-While and For Loops.mp4",
+        "Common Errors": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T3.2-Common Errors.mp4"
+    },
+    "object_class": {
+        "Introduction to Object-oriented Programming Part 1": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T1.1-Introduction to Object-oriented Programming Part 1.mp4",
+        "Introduction to Object-oriented Programming Part 2": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T1.2-Introduction to Object-oriented Programming Part 2.mp4",
+        "Example Car": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T1.3-Example Car.mp4",
+        "Car Demo": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T1.4-Car Demo.mp4",
+        "Constructor": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T2.1-Constructor.mp4",
+        "Method": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T2.2-Method.mp4",
+        "Comments": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T3.1-Comments.mp4",
+        "Example BankAccount": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T4.1-Example BankAccount.mp4",
+        "BankAccount Demo": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T4.2-BankAccount Demo.mp4",
+        "Example ColorImage": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T5.1-Example ColorImage.mp4",
+        "ColorImage Demo": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T5.2-ColorImage Demo.mp4",
+        "3D ColorImage Demo": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T5.3-3D ColorImage Demo.mp4",
+        "Example Car2": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T6.1-Example Car2.mp4",
+        "Car2 Demo": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T6.2-Car2 Demo.mp4",
+        "Subclass": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T4.1-Subclass.mp4",
+        "Example on Subclass": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T4.2-Example on Subclass.mp4",
+        "Demo on Subclass": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T4.3-Demo on Subclass.mp4",
+        "Demo on Subclass Part 2": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T4.4-Demo on Subclass Part 2.mp4",
+        "Demo on Loops": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T4.5-Demo on Loops.mp4",
+        "Message from the Instructor.mp4": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T1.0-Message from the Instructor.mp4",
+        "Introduction": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T1.1-Introduction.mp4",
+        "Stack": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T1.2-Stack.mp4",
+        "Example on Stack": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T1.3-Example on Stack.mp4",
+        "The N-Queen Probelm": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T2.1-The N-Queen Probelm.mp4",
+        "The N-Queen Probelm (Cont.)": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T2.2-The N-Queen Probelm (Cont.).mp4",
+        "Implement the N-Queen Problem": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T2.3-Implement the N-Queen Problem.mp4",
+        "Implement the N-Queen Problem (Cont.)": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T2.4-Implement the N-Queen Problem (Cont.).mp4",
+        "Demo on the N-Queen Problem": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T2.5-Demo on the N-Queen Problem.mp4",
+        "Square Apple Example": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T3.1-Square Apple Example.mp4",
+        "Eclipse": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T4.1-Eclipse.mp4",
+        "Eclipse (Cont.)": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L10-T4.2-Eclipse (Cont.).mp4"
+    },
+    "instance_variable": {
+        "Class, Instance and Local Variables": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T2.4-Class Instance and Local Variables.mp4"
+    },
+    "method": {        
+        "Method": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L3-T2.2-Method.mp4",
+        "Static Methods": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T2.1-Static Methods.mp4",
+        "Demo on Static Methods": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L5-T2.2-Demo on Static Methods.mp4"
+        },
+    "recursion": {
+        "Message from the Instructor": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T1.0-Message from the Instructor.mp4",
+        "The Handshake Problem": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T1.1-The Handshake Problem.mp4",
+        "The Factorial Function": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T1.2-The Factorial Function.mp4",
+        "Recursive Method Calls": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T1.3-Recursive Method Calls.mp4",
+        "Fibonacci Numbers": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T1.4-Fibonacci Numbers.mp4",
+        "Binary Search": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T2.1-Binary Search.mp4",
+        "Binary Search (Cont.)": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T2.2-Binary Search (Cont.).mp4",
+        "The Towers of Hanoi": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T2.3-The Towers of Hanoi.mp4",
+        "The Towers of Hanoi Demo": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T2.4-The Towers of Hanoi Demo.mp4",
+        "Fractal": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T2.5-Fractal.mp4",
+        "Fractal Tree": "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L9-T2.6-Fractal Tree.mp4"
+    }
+}
