@@ -1,3 +1,7 @@
+import json
+import os.path
+BASE = os.path.dirname(os.path.abspath(__file__))
+
 # CONSTANT file
 
 # problem to concept mapping
@@ -137,375 +141,54 @@ CONCEPT_EDGES = {
     "method": ["recursion"]
 }
 
-VIDEO_DICT = {
-  "primitive_type": [
-    {
-      "title": "Identifiers",
-      "code": "COMP102x-L2-T2.1-Identifiers",
-      "vid": "PLvB6IBDzec"
-    },
-    {
-      "title": "Data Types",
-      "code": "COMP102x-L2-T3.2-Data Types",
-      "vid": "OajA9et0Ri0"
-    },
-    {
-      "title": "Boolean Expressions",
-      "code": "COMP102x-L4-T3.1-Boolean Expressions",
-      "vid": "K9n4b2fpPlo"
-    }
-  ],
-  "variable": [
-    {
-      "title": "Identifiers",
-      "code": "COMP102x-L2-T2.1-Identifiers",
-      "vid": "PLvB6IBDzec"
-    },
-    {
-      "title": "Data Types",
-      "code": "COMP102x-L2-T3.2-Data Types",
-      "vid": "OajA9et0Ri0"
-    },
-    {
-      "title": "Boolean Expressions",
-      "code": "COMP102x-L4-T3.1-Boolean Expressions",
-      "vid": "K9n4b2fpPlo"
-    }
-  ],
-  "operator": [
-    {
-      "title": "Shortcut Operators",
-      "code": "COMP102x-L5-T2.3-Shortcut Operators",
-      "vid": "IEEo4Eplwl8"
-    }
-  ],
-  "array": [
-    {
-      "title": "Message from the Instructor",
-      "code": "COMP102x-L6-T1.0-Message from the Instructor",
-      "vid": "f6d27dUoLS4"
-    },
-    {
-      "title": "Arrays",
-      "code": "COMP102x-L6-T1.1-Arrays",
-      "vid": "gaf0_N8_efo"
-    },
-    {
-      "title": "Examples",
-      "code": "COMP102x-L6-T1.2-Examples",
-      "vid": "z4L-yr1st3I"
-    },
-    {
-      "title": "Swapping Elements",
-      "code": "COMP102x-L6-T2.1-Swapping Elements",
-      "vid": "doQ0RbYigKI"
-    },
-    {
-      "title": "Sorting",
-      "code": "COMP102x-L6-T2.2-Sorting",
-      "vid": "jopl8y-ybMc"
-    },
-    {
-      "title": "Sorting Images",
-      "code": "COMP102x-L6-T2.3-Sorting Images",
-      "vid": "wd4G73I5Wm8"
-    },
-    {
-      "title": "Break and Continue",
-      "code": "COMP102x-L6-T2.4-Break and Continue",
-      "vid": "xWQXQyba6Z0"
-    }
-  ],
-  "nd_array": [
-    {
-      "title": "2D Arrays Part 1",
-      "code": "COMP102x-L6-T3.1-2D Arrays Part 1",
-      "vid": "o4lcKm8XONw"
-    },
-    {
-      "title": "2D Arrays Part 2",
-      "code": "COMP102x-L6-T3.2-2D Arrays Part 2",
-      "vid": "6OqX40mo0bE"
-    },
-    {
-      "title": "Example on Manipulating 2D Array",
-      "code": "COMP102x-L6-T3.3-Example on Manipulating 2D Array",
-      "vid": "_l2lu_c4bW4"
-    },
-    {
-      "title": "Demo on Manipulating 2D Array",
-      "code": "COMP102x-L6-T3.4-Demo on Manipulating 2D Array",
-      "vid": "sN9t1w5pcvE"
-    }
-  ],
-  "string": [
-    {
-      "title": "Message from the Instructor",
-      "code": "COMP102x-L7-T1.0-Message from the Instructor",
-      "vid": "5PwfQDd9wNU"
-    },
-    {
-      "title": "Character String",
-      "code": "COMP102x-L7-T1.1-Character String",
-      "vid": "M4m8Lzdwg-8"
-    },
-    {
-      "title": "String Manipulation Part 1",
-      "code": "COMP102x-L7-T2.1-String Manipulation Part 1",
-      "vid": "aZW5pdd1MY4"
-    },
-    {
-      "title": "String Manipulation Part 2",
-      "code": "COMP102x-L7-T2.2-String Manipulation Part 2",
-      "vid": "sdtEY9tVWjU"
-    },
-    {
-      "title": "String Manipulation Part 3",
-      "code": "COMP102x-L7-T2.3-String Manipulation Part 3",
-      "vid": "3ka1KhRRHoE"
-    }
-  ],
-  "branch": [
-    {
-      "title": "If-else-if",
-      "code": "COMP102x-L4-T4.1-If-else-if",
-      "vid": "JkFaz1z7miE"
-    },
-    {
-      "title": "Example: moveForward",
-      "code": "COMP102x-L4-T4.2-Example Moveforward",
-      "vid": "FZAcTiHKEa8"
-    },
-    {
-      "title": "Switch ",
-      "code": "COMP102x-L4-T5.1-Switch",
-      "vid": "CgVOaQ7Quak"
-    },
-    {
-      "title": "BouncingBall Demo",
-      "code": "COMP102x-L4-T5.2-BouncingBall Demo",
-      "vid": "Ycq_aY0p8tc"
-    }
-  ],
-  "loop": [
-    {
-      "title": "Message from the Instructor",
-      "code": "COMP102x-L5-T1.0-Message from the Instructor",
-      "vid": "8MuEdSdA0H8"
-    },
-    {
-      "title": "Introduction to Loops",
-      "code": "COMP102x-L5-T1.1-Introduction",
-      "vid": "bryger2ulFc"
-    },
-    {
-      "title": "Example",
-      "code": "COMP102x-L5-T1.2-Example",
-      "vid": "5mxEslW7PxE"
-    },
-    {
-      "title": "Do-while and For Loops",
-      "code": "COMP102x-L5-T3.1-Do-While and For Loops",
-      "vid": "OnMq71FkHVY"
-    },
-    {
-      "title": "Common Errors",
-      "code": "COMP102x-L5-T3.2-Common Errors",
-      "vid": "naC2JjmOouc"
-    },
-    {
-      "title": "Demo on Loops",
-      "code": "COMP102x-L5-T4.5-Demo on Loops",
-      "vid": "WLE-kEZGQDg"
-    }
-  ],
-  "object_class": [
-    {
-      "title": "Message from the Instructor",
-      "code": "COMP102x-L3-T1.0-Message from the Instructor",
-      "vid": "92k2QWxn8o0"
-    },
-    {
-      "title": "Introduction to Object-oriented Programming Part 1",
-      "code": "COMP102x-L3-T1.1-Introduction to Object-oriented Programming Part 1",
-      "vid": "uGY3GG3W-Qw"
-    },
-    {
-      "title": "Introduction to Object-oriented Programming Part 2",
-      "code": "COMP102x-L3-T1.2-Introduction to Object-oriented Programming Part 2",
-      "vid": "WPqA-l_m3V0"
-    },
-    {
-      "title": "Example: Car",
-      "code": "COMP102x-L3-T1.3-Example Car",
-      "vid": "lpDFqXR4-64"
-    },
-    {
-      "title": "Car Demo",
-      "code": "COMP102x-L3-T1.4-Car Demo",
-      "vid": "2kyQVrRKYtU"
-    },
-    {
-      "title": "Constructor",
-      "code": "COMP102x-L3-T2.1-Constructor",
-      "vid": "5_hHtiEaYsk"
-    },
-    {
-      "title": "Comments",
-      "code": "COMP102x-L3-T3.1-Comments",
-      "vid": "j9rps2D5in0"
-    },
-    {
-      "title": "Example: Bank Account",
-      "code": "COMP102x-L3-T4.1-Example BankAccount",
-      "vid": "8j5UTREOlmA"
-    },
-    {
-      "title": "BankAccount Demo",
-      "code": "COMP102x-L3-T4.2-BankAccount Demo",
-      "vid": "9NexK8CFm3M"
-    },
-    {
-      "title": "Example: ColorImage",
-      "code": "COMP102x-L3-T5.1-Example ColorImage",
-      "vid": "lmM0pFy4HQU"
-    },
-    {
-      "title": "ColorImage Demo",
-      "code": "COMP102x-L3-T5.2-ColorImage Demo",
-      "vid": "yaE_BfQ781o"
-    },
-    {
-      "title": "3D ColorImage Demo",
-      "code": "COMP102x-L3-T5.3-3D ColorImage Demo",
-      "vid": "KktQsgvDH3A"
-    },
-    {
-      "title": "Example: Car2",
-      "code": "COMP102x-L3-T6.1-Example Car2",
-      "vid": "fi77PPxmJ-g"
-    },
-    {
-      "title": "Car2 Demo",
-      "code": "COMP102x-L3-T6.2-Car2 Demo",
-      "vid": "7dJ7jxjsbME"
-    },
-    {
-      "title": "Class, Instance and Local Variables",
-      "code": "COMP102x-L4-T2.4-Class, Instance and Local Variables",
-      "vid": "57PEDesYhx0"
-    },
-    {
-      "title": "Subclass",
-      "code": "COMP102x-L5-T4.1-Subclass",
-      "vid": "x5kPEttfdvY"
-    },
-    {
-      "title": "Example on Subclass",
-      "code": "COMP102x-L5-T4.2-Example on Subclass",
-      "vid": "wC0cmO3qJ-c"
-    },
-    {
-      "title": "Demo on Subclass",
-      "code": "COMP102x-L5-T4.3-Demo on Subclass",
-      "vid": "1SDdD5nexUw"
-    },
-    {
-      "title": "Demo on Subclass Part 2",
-      "code": "COMP102x-L5-T4.4-Demo on Subclass Part 2",
-      "vid": "UWVsLZo7Fkg"
-    }
-  ],
-  "instance_variable": [
-    {
-      "title": "Class, Instance and Local Variables",
-      "code": "COMP102x-L4-T2.4-Class, Instance and Local Variables",
-      "vid": "57PEDesYhx0"
-    }
-  ],
-  "method": [
-    {
-      "title": "Static Methods",
-      "code": "COMP102x-L5-T2.1-Static Methods",
-      "vid": "YtYaYFZoiq0"
-    },
-    {
-      "title": "Demo on Static Methods",
-      "code": "COMP102x-L5-T2.2-Demo on Static Methods",
-      "vid": "MgM-dFOmAwQ"
-    },
-    {
-      "title": "Method",
-      "code": "COMP102x-L3-T2.2-Method",
-      "vid": "JDh6KHm4Is8"
-    }
-  ],
-  "recursion": [
-    {
-      "title": "Message from the Instructor",
-      "code": "COMP102x-L9-T1.0-Message from the Instructor",
-      "vid": "edHzowhwuF8"
-    },
-    {
-      "title": "The Handshake Problem",
-      "code": "COMP102x-L9-T1.1-The Handshake Problem",
-      "vid": "T1kYiQbEB3s"
-    },
-    {
-      "title": "The Factorial Function",
-      "code": "COMP102x-L9-T1.2-The Factorial Function",
-      "vid": "TvQsYPtwTu4"
-    },
-    {
-      "title": "Recursive Method Calls",
-      "code": "COMP102x-L9-T1.3-Recursive Method Calls",
-      "vid": "dL1V4aUjyh0"
-    },
-    {
-      "title": "Fibonacci Numbers",
-      "code": "COMP102x-L9-T1.4-Fibonacci Numbers",
-      "vid": "ZzP6r018Hn0"
-    }
-  ]
-}
+with open(os.path.join(BASE, 'data/videos.json')) as data_file:
+    VIDEO_DICT = json.load(data_file)
 
 # preprocess grade file
 GRADE_FILE = "data/HKUSTx-COMP102x-2T2014-courseware_studentmodule-prod-analytics.sql"
 COURSE_STRUCTURE_FILE = "data/HKUSTx-COMP102x-2T2014-course_structure-prod-analytics.json"
 
-
-# # for generating new mapping of video
-# meta_dict = {}
+# import json
+# from pprint import pprint
 # from course_structure_parser import parse_course_structure
-# tree = parse_course_structure(COURSE_STRUCTURE_FILE)
-# for n in tree.get_all_node("video"):
-#     meta = n.meta
-#     sub = meta["sub"]
-#     # if sub == "":
-#     #     print(meta["display_name"])
-#     meta_dict[meta["sub"]] = {
-#         "title": meta["display_name"],
-#         "vid": meta["youtube_id_1_0"],
-#     }
 #
-# # print(meta_dict)
-# from collections import OrderedDict
-# mapping = {}
+# with open('data/updated_video.json') as data_file:
+#     VIDEO_DICT = json.load(data_file)
 #
-# import re
-# for k, v in VIDEO_DICT.items():
-#     vlist = list()
+#     # for generating new mapping of video
+#     meta_dict = {}
 #
-#     for link in v.values():
-#         sub = re.search("d\/(.*).mp4", link)[1]
-#         if sub not in meta_dict:
-#             print(sub)
+#     tree = parse_course_structure(COURSE_STRUCTURE_FILE)
+#     for n in tree.get_all_node("video"):
+#         meta = n.meta
+#         sub = meta["sub"]
+#         # if sub == "":
+#         #     print(meta["display_name"])
+#         meta_dict[meta["sub"]] = {
+#             "title": meta["display_name"],
+#             "vid": meta["youtube_id_1_0"],
+#         }
 #
-#         vlist.append({
-#             "title": meta_dict[sub]["title"],
-#             "code": sub,
-#             "vid":meta_dict[sub]["vid"],
-#         })
-#     mapping[k] = vlist
+#     # print(meta_dict)
+#     from collections import OrderedDict
+#     mapping = {}
 #
-# print(mapping)
+#     import re
+#     for k, v in VIDEO_DICT.items():
+#         vlist = list()
+#
+#         for link in v.values():
+#             sub = re.search("d\/(.*).mp4", link)[1]
+#             if sub not in meta_dict:
+#                 print(sub)
+#
+#             vlist.append({
+#                 "title": meta_dict[sub]["title"],
+#                 "code": sub,
+#                 "vid":meta_dict[sub]["vid"],
+#             })
+#         mapping[k] = vlist
+#
+#     print(mapping)
+#     with open('result.json', 'w') as fp:
+#         json.dump(mapping, fp)

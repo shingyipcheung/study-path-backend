@@ -1,6 +1,6 @@
 from django.http import JsonResponse, HttpResponse
 import pandas as pd
-from .constants import PROBLEM_WEIGHT, VIDEO_DICT
+from .constants import *
 from .df_loader import load_df, local_path
 from .path import generate_paths
 import os

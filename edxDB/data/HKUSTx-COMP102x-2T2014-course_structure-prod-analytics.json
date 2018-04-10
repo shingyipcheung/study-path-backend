@@ -6555,13 +6555,13 @@
     "category": "video", 
     "children": [], 
     "metadata": {
-      "display_name": "Class, Instance and Local Variables", 
+      "display_name": "Class Instance and Local Variables",
       "download_track": true, 
       "download_video": true, 
       "html5_sources": [
-        "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T2.4-Class, Instance and Local Variables.mp4"
+        "http://w02.hkvu.hk/edX/COMP102x/download/COMP102x-L4-T2.4-Class Instance and Local Variables.mp4"
       ], 
-      "sub": "COMP102x-L4-T2.4-Class, Instance and Local Variables", 
+      "sub": "COMP102x-L4-T2.4-Class Instance and Local Variables",
       "youtube_id_1_0": "57PEDesYhx0"
     }
   }, 
