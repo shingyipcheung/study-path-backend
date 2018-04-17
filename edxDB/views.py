@@ -4,6 +4,7 @@ from .constants import *
 from .df_loader import load_df, local_path
 from .path import generate_paths
 import os
+from functools import lru_cache
 
 
 def videos(request, concept):
@@ -31,8 +32,26 @@ def problem(request, problem_id):
     return JsonResponse(sorted_grade.to_dict(orient="list"), safe=False)
 
 
+@lru_cache()
+def load_xml(problem_id):
+    return open(local_path(os.path.join("data", "problem", problem_id + '.xml')), encoding='utf8').read()
+
+
+@lru_cache()
+def is_mc_problem(problem_id):
+    if "<multiple" in load_xml(problem_id):
+        print(problem_id, "is", "a mc question")
+        return True
+    return False
+
+
+
+def problems(request, concept):
+    return JsonResponse(list(filter(is_mc_problem, PROBLEM_WEIGHT[concept].keys())), safe=False)
+
+
 def problem_html(request, problem_id):
-    return HttpResponse(open(local_path(os.path.join("data", "problem", problem_id + '.xml')), encoding='utf8').read())
+    return HttpResponse(load_xml(problem_id))
 
 
 def concept_score(request, student_id):

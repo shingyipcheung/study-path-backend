@@ -13,7 +13,7 @@ urlpatterns = [
 
     url(r'^videos/(?P<concept>\w+)/$', views.videos, name='videos'),
 
-    url(r'^problems/(?P<concept>\w+)/$', views.videos, name='problems'),
+    url(r'^problems/(?P<concept>\w+)/$', views.problems, name='problems'),
     url(r'^problem/(?P<problem_id>\w+)/$', views.problem, name='problem'),
     url(r'^problem/html/(?P<problem_id>\w+)/$', views.problem_html, name='problem_html'),
 ]
