@@ -1,5 +1,4 @@
 <problem id="Assignment1" display_name="Week 01 Graded Problem Task 2" markdown="null" max_attempts="1" weight="1.0">
-  <problem markdown="null">
     <p>Use what you have observed from the 2D problem and try coming up with a quick solution to the following question again:</p>
     <p>Would it be possible for the worm to finish eating through all the 27 apples if it starts from <u><b>one of the corners</b></u> of the cube?</p>
     <multiplechoiceresponse>
@@ -16,5 +15,4 @@ From the 2D square apple problem, we can observe that the worm would be able to 
 </p>
       </div>
     </solution>
-  </problem>
 </problem>
