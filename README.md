@@ -1,7 +1,7 @@
 # Study path analyzer
 
 ### Install packages
-**you should have python3 installed**
+**you should have python3.6+ installed**
 
 `pip install -r requirements.txt`
 

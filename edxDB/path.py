@@ -4,6 +4,8 @@ from heapq import nlargest
 from functools import lru_cache
 from edxDB.constants import CONCEPT_EDGES
 
+from typing import List
+
 
 def generate_ratio_dict():
     risk_ratio = load_df("risk_ratio.pkl")
@@ -89,6 +91,7 @@ class Graph:
         return paths
 
 
+'''        
 def paths_selection(fitness_func, paths: list, top_k=10) -> list():
     if len(paths) < top_k:
         top_k = len(paths)
@@ -97,7 +100,17 @@ def paths_selection(fitness_func, paths: list, top_k=10) -> list():
     nlargest_indexes = nlargest(top_k, range(len(paths)), key=lambda i: fitness[i])
     # select top k paths
     return [paths[i] for i in nlargest_indexes]
-
+'''
+def paths_selection(fitness_func, paths: list, top_k=10) -> list():
+    if len(paths) < top_k:
+        top_k = len(paths)
+    fitness = fitness_func(paths)
+    # sort from high to low
+    nlargest_indexes = nlargest(top_k, range(len(paths)), key=lambda i: fitness[i])
+    # select top k paths
+    return [paths[i] for i in nlargest_indexes]
+    
+  
 
 class PathEvaluator:
     # static variable for calculation
@@ -111,6 +124,7 @@ class PathEvaluator:
         # diff between student score and mean
         self.relative_score = (mean - self.__score().fillna(0)) / mean
 
+    # === sample of calculate the score of some path ===
     def __score(self):
         return PathEvaluator.student_grade.loc[self.student_id]
 
@@ -120,8 +134,8 @@ class PathEvaluator:
         # example only
         # implement your own
         return (n - position) * self.relative_score.ix[node]
-
-    def evaluate(self, path: list) -> float:
+        
+    def evaluate_old(self, path: list) -> float:
         """
         :param path:
         :return: path score
@@ -131,7 +145,41 @@ class PathEvaluator:
         for i, node in enumerate(path):
             sum_of_product += self.__node_position_score(i, node, n)
         return sum_of_product
-
+    # === sample ends ===
+    
+    # === Wenlong's job ===
+    def __calc_A(self, path):
+        return 0.0
+        
+    def __calc_B(self, path):
+        n = len(path)
+        sum_of_product = 0
+        for i, node in enumerate(path):
+            sum_of_product += self.__node_position_score(i, node, n)
+        return sum_of_product
+        
+    def __calc_C(self, path):
+        return 0.0
+        
+    def evaluate(self, paths: List[List]):
+        raw_scores = []
+        # max_A = xxx, min_A = xxx, ......
+        for path in paths:
+            A = self.__calc_A(path)
+            B = self.__calc_B(path)
+            C = self.__calc_C(path)
+            raw_scores.append(A + B + C)
+            # max_A = xxx
+            # min_A = xxx
+            # ......
+        scores = []
+        for raw_score in raw_scores:
+            A_ = (A - min_A) / (max_A - min_A)
+            B_ = (B - min_B) / (mBx_B - min_B)
+            C_ = (C - min_C) / (mCx_C - min_C)
+            scores.append(A_ + B_ + C_)
+        return scores
+    # === Wenlong's job ends === 
 
 # https://stackoverflow.com/questions/279561
 def static_vars(**kwargs):
