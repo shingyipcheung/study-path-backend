@@ -2,9 +2,11 @@ from django.http import JsonResponse, HttpResponse
 import pandas as pd
 from .constants import *
 from .df_loader import load_df, local_path
-from .path import generate_paths
 import os
 from functools import lru_cache
+
+#from .path import generate_paths
+from .path_wenlong import generate_paths
 
 
 def videos(request, concept):

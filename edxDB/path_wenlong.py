@@ -4,8 +4,10 @@ from heapq import nlargest
 from functools import lru_cache
 from edxDB.constants import CONCEPT_EDGES
 
+import time
 from typing import List
 
+from .diversified.diversified_results_loader import DiversifiedResultsLoader
 
 def generate_ratio_dict():
     risk_ratio = load_df("risk_ratio.pkl")
@@ -108,6 +110,8 @@ def paths_selection(fitness_func, paths: list, top_k=10) -> list():
     # sort from high to low
     nlargest_indexes = nlargest(top_k, range(len(paths)), key=lambda i: fitness[i])
     # select top k paths
+    for i in nlargest_indexes:
+        print(fitness[i])
     return [paths[i] for i in nlargest_indexes]
     
   
@@ -123,6 +127,7 @@ class PathEvaluator:
         mean = PathEvaluator.mean
         # diff between student score and mean
         self.relative_score = (mean - self.__score().fillna(0)) / mean
+
 
     # === sample of calculate the score of some path ===
     def __score(self):
@@ -149,35 +154,65 @@ class PathEvaluator:
     
     # === Wenlong's job ===
     def __calc_A(self, path):
-        return 0.0
+        n = len(path)
+        score = 0.0
+        num_of_failed_descendents = [0] * n
+        
+        # caculate num_of_failed_descendents[]
+        for i in range(n-1,-1,-1):
+            for j in range(i+1,n):
+
+                if (path[i] in CONCEPT_EDGES and path[j] in CONCEPT_EDGES[path[i]]):
+                    num_of_failed_descendents[i] += 1
+                    num_of_failed_descendents[i] += num_of_failed_descendents[j]
+
+        for i in range(n):
+            score += 1.0 / (i+1) * num_of_failed_descendents[i]
+        
+        return score
         
     def __calc_B(self, path):
         n = len(path)
-        sum_of_product = 0
-        for i, node in enumerate(path):
-            sum_of_product += self.__node_position_score(i, node, n)
+        sum_of_product = 0.0
+        
+        for i, node in enumerate(path, start = 1):
+           sum_of_product += 1.0 / i * self.relative_score.ix[node]
         return sum_of_product
         
     def __calc_C(self, path):
-        return 0.0
+        n = len(path)
+        sum_of_product = 0.0
+        
+        for i in range(0,n):
+            for j in range(i+1,n):
+                if ((path[i] in self.risk_ratio) and (path[j] in self.risk_ratio[path[i]])):
+                    distance = j - i
+                    sum_of_product += 1.0 / distance * self.risk_ratio[path[i]][path[j]]
+        
+        return sum_of_product
         
     def evaluate(self, paths: List[List]):
-        raw_scores = []
-        # max_A = xxx, min_A = xxx, ......
-        for path in paths:
-            A = self.__calc_A(path)
-            B = self.__calc_B(path)
-            C = self.__calc_C(path)
-            raw_scores.append(A + B + C)
-            # max_A = xxx
-            # min_A = xxx
-            # ......
-        scores = []
-        for raw_score in raw_scores:
-            A_ = (A - min_A) / (max_A - min_A)
-            B_ = (B - min_B) / (mBx_B - min_B)
-            C_ = (C - min_C) / (mCx_C - min_C)
-            scores.append(A_ + B_ + C_)
+        # almost the same performance, the easier-to-understand version is chosen
+        #raw_scores_A = list(map(self.__calc_A, paths))
+        #raw_scores_B = list(map(self.__calc_B, paths))
+        #raw_scores_C = list(map(self.__calc_C, paths))
+        raw_scores_A = [self.__calc_A(path) for path in paths]
+        raw_scores_B = [self.__calc_B(path) for path in paths]
+        raw_scores_C = [self.__calc_C(path) for path in paths]
+        max_A = max(raw_scores_A)
+        max_B = max(raw_scores_B)
+        max_C = max(raw_scores_C)
+        min_A = min(raw_scores_A)
+        min_B = min(raw_scores_B)
+        min_C = min(raw_scores_C)
+        
+        scores = [a + b + c for a, b, c in zip(
+          ((a - min_A) / (max_A - min_A) if max_A != min_A else (a - min_A) for a in raw_scores_A),
+          ((b - min_B) / (max_B - min_B) if max_B != min_B else (b - min_B) for b in raw_scores_B),
+          ((c - min_C) / (max_C - min_C) if max_C != min_C else (c - min_C) for c in raw_scores_C),
+        )]
+
+        #scores.append(1.0)
         return scores
     # === Wenlong's job ends === 
 
@@ -194,7 +229,8 @@ def static_vars(**kwargs):
 # temporary function to generate paths
 # we start with the worst case - all possible paths of topological sort
 # estimate all paths and get the top_k paths
-@static_vars(paths=Graph(CONCEPT_EDGES).topological_all())
+#@static_vars(paths=Graph(CONCEPT_EDGES).topological_all())
+@static_vars(paths=DiversifiedResultsLoader().load({}))
 def generate_paths(student_id, top_k=10):
     evaluator = PathEvaluator(student_id=student_id)
     return paths_selection(evaluator.evaluate, generate_paths.paths, top_k=top_k)
@@ -202,8 +238,14 @@ def generate_paths(student_id, top_k=10):
 
 def main():
     # example
-    top_k_paths = generate_paths(student_id=69845)
+    #print(CONCEPT_EDGES)
+    start = time.time()
+    top_k_paths = generate_paths(student_id=342)
+    end = time.time()
     print(top_k_paths)
+    running_time = end - start
+    print("running time: " + str(running_time))
+    #print(CONCEPT_EDGES)
 
 
 if __name__ == '__main__':
