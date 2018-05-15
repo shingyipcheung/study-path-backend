@@ -6,7 +6,7 @@ import os
 from functools import lru_cache
 
 #from .path import generate_paths
-from .path_wenlong import generate_paths
+from .path import generate_paths
 
 
 def videos(request, concept):
