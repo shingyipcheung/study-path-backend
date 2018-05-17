@@ -129,6 +129,8 @@ PROBLEM_WEIGHT = {
     }
 }
 
+CONCEPTS = list(PROBLEM_WEIGHT.keys())
+
 # sparse graph using adjacency list
 CONCEPT_EDGES = {
     "primitive_type": ["operator", "array", "variable"],

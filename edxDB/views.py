@@ -5,7 +5,6 @@ from .df_loader import load_df, local_path
 import os
 from functools import lru_cache
 
-#from .path import generate_paths
 from .path import generate_paths
 
 
@@ -19,7 +18,7 @@ def graph(request):
 
 
 def concepts(request):
-    return JsonResponse(list(PROBLEM_WEIGHT.keys()), safe=False)
+    return JsonResponse(CONCEPTS, safe=False)
 
 
 def means(request):
@@ -45,7 +44,6 @@ def is_mc_problem(problem_id):
         print(problem_id, "is", "a mc question")
         return True
     return False
-
 
 
 def problems(request, concept):
@@ -77,8 +75,6 @@ def recommendation(request, student_id):
     mean = load_df("concept_score_mean.pkl")
     mean = mean.rename("mean")
     df = pd.concat([student, mean], axis=1)
-
-    # path = list(PROBLEM_WEIGHT.keys())
 
     # https://bootstrap-vue.js.org/docs/components/table
     def row_variant(row):
