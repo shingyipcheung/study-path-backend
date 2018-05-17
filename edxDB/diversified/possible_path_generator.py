@@ -1,7 +1,7 @@
 # permutation example by Luc
 
 class PossiblePathGenerator():
-    
+
     def find_node_set(self, dictionary):
         '''
         **goal**: find the set of:
@@ -19,7 +19,6 @@ class PossiblePathGenerator():
     def create_dependency_map_with_index(self, dictionary, all_nodes):
         '''
         **goal**: convert nodes with string names into integer indices
-
         :param dictionary: dictionary of edges, parent -> list of children
         :param all_nodes: set of all nodes
         '''
@@ -34,11 +33,10 @@ class PossiblePathGenerator():
                     indmap[node2ind[p], node2ind[c]] = 1
         return node2ind, indmap
 
-
     # === brutal pruning ===
-    def permutation(self, all_nodes:set, node2ind, indmap):
+    def permutation(self, all_nodes: set, node2ind, indmap):
         visited = []
-        unvisited = set((node2ind[n] for n in all_nodes)) # create set of unvisited indices
+        unvisited = set((node2ind[n] for n in all_nodes))  # create set of unvisited indices
         all_possible = []
 
         def _step():
@@ -51,7 +49,7 @@ class PossiblePathGenerator():
                 # check if valid
                 for j in visited:
                     # if j->i, i.e. indmap[j,i] != 0, then illegal
-                    if indmap[j,i] != 0:
+                    if indmap[j, i] != 0:
                         return
                 # put into visited, visit next position
                 visited.append(i)
@@ -65,19 +63,17 @@ class PossiblePathGenerator():
 
         return all_possible
 
-    
     def get_possible_paths(concept_edges):
         all_nodes, _, _ = find_node_set(concept_edges)
         node2ind, indmap = create_dependency_map_with_index(concept_edges, all_nodes)
         ret = permutation(all_nodes, node2ind, indmap)
         return ret
-    
-    
+
     def main():
         ret = get_possible_paths(CONCEPT_EDGES)
         print(len(ret))
-        
+
+
 if __name__ == "__main__":
     main()
 
-    

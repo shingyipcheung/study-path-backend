@@ -1,5 +1,6 @@
 from .possible_path_generator import *
 from .diversifier import *
+from ..df_loader import local_path
 import pickle
 
 class DiversifiedResultsLoader:
@@ -34,10 +35,10 @@ class DiversifiedResultsLoader:
         "recursion": []    
     }
     PPG = PossiblePathGenerator()
-    diversifier = Diviersifier()
+    diversifier = Diversifier()
     def load(self, learned_object):
         if len(learned_object) == 0:
-            file_name = './edxDB/diversified/answer/answer3.pkl'
+            file_name = local_path('./diversified/answer/answer3.pkl')
             with open(file_name, 'rb') as f:
                 node_name_map, res = pickle.load(f)
             L = []
@@ -51,7 +52,7 @@ class DiversifiedResultsLoader:
             file_name = ''
             for key, value in self.PRECOMPUTED_PATH.items():
                 if(learned_object.issubset(value)):
-                    file_name = './edxDB/diversified/answer/' + key + '.pkl'
+                    file_name = local_path('./diversified/answer/' + key + '.pkl')
                     break
             if(file_name != ''):
                 with open(file_name, 'rb') as f:
