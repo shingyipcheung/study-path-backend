@@ -4,8 +4,8 @@ from functools import lru_cache
 from edxDB.constants import CONCEPT_EDGES
 from typing import List
 
-from edxDB.diversified.diversified_results_loader import DiversifiedResultsLoader
 from edxDB.diversified.diversified_paths_loader import PathsLoader
+
 
 def generate_ratio_dict():
     risk_ratio = load_df("risk_ratio.pkl")
@@ -17,18 +17,6 @@ def generate_ratio_dict():
         else:
             ratio_dict[v] = {u: w}
     return ratio_dict
-
-
-'''        
-def paths_selection(fitness_func, paths: list, top_k=10) -> list():
-    if len(paths) < top_k:
-        top_k = len(paths)
-    fitness = list(map(fitness_func, paths))
-    # sort from high to low
-    nlargest_indexes = nlargest(top_k, range(len(paths)), key=lambda i: fitness[i])
-    # select top k paths
-    return [paths[i] for i in nlargest_indexes]
-'''
 
 
 def paths_selection(fitness_func, paths: list, top_k=10) -> list():
@@ -59,44 +47,23 @@ class PathEvaluator:
     def __score(self):
         return PathEvaluator.student_grade.loc[self.student_id]
 
-    @lru_cache(maxsize=256)
-    def __node_position_score(self, position, node, n):
-        # parameter B from Wenlong
-        # example only
-        # implement your own
-        return (n - position) * self.relative_score.ix[node]
-
-    def evaluate_old(self, path: list) -> float:
-        """
-        :param path:
-        :return: path score
-        """
-        n = len(path)
-        sum_of_product = 0
-        for i, node in enumerate(path):
-            sum_of_product += self.__node_position_score(i, node, n)
-        return sum_of_product
-
-    # === sample ends ===
-
     # === Wenlong's job ===
     @staticmethod
     @lru_cache(maxsize=None)
     def __calc_A(path):
         n = len(path)
         score = 0.0
-        num_of_failed_descendents = [0] * n
-
-        # caculate num_of_failed_descendents[]
+        num_of_failed_descendants = [0] * n
         for i in range(n - 1, -1, -1):
             for j in range(i + 1, n):
-
+                # if node j is child of node i
                 if path[i] in CONCEPT_EDGES and path[j] in CONCEPT_EDGES[path[i]]:
-                    num_of_failed_descendents[i] += 1
-                    num_of_failed_descendents[i] += num_of_failed_descendents[j]
+                    # child += 1
+                    num_of_failed_descendants[i] += 1
+                    num_of_failed_descendants[i] += num_of_failed_descendants[j]
 
         for i in range(n):
-            score += 1.0 / (i + 1) * num_of_failed_descendents[i]
+            score += 1.0 / (i + 1) * num_of_failed_descendants[i]
 
         return score
 
@@ -112,7 +79,6 @@ class PathEvaluator:
     def __calc_C(path):
         n = len(path)
         sum_of_product = 0.0
-
         for i in range(0, n):
             for j in range(i + 1, n):
                 if (path[i] in PathEvaluator.risk_ratio) and (path[j] in PathEvaluator.risk_ratio[path[i]]):
@@ -122,27 +88,28 @@ class PathEvaluator:
         return sum_of_product
 
     def evaluate(self, paths: List[List]):
-        # almost the same performance, the easier-to-understand version is chosen
-        # raw_scores_A = list(map(self.__calc_A, paths))
-        # raw_scores_B = list(map(self.__calc_B, paths))
-        # raw_scores_C = list(map(self.__calc_C, paths))
-        raw_scores_A = [self.__calc_A(tuple(path)) for path in paths]
-        raw_scores_B = [self.__calc_B(path) for path in paths]
-        raw_scores_C = [self.__calc_C(tuple(path)) for path in paths]
-        max_A = max(raw_scores_A)
-        max_B = max(raw_scores_B)
-        max_C = max(raw_scores_C)
-        min_A = min(raw_scores_A)
-        min_B = min(raw_scores_B)
-        min_C = min(raw_scores_C)
+        scores_a = [self.__calc_A(tuple(path)) for path in paths]
+        scores_b = [self.__calc_B(path) for path in paths]
+        scores_c = [self.__calc_C(tuple(path)) for path in paths]
+        min_a, max_a = min(scores_a), max(scores_a)
+        min_b, max_b = min(scores_b), max(scores_b)
+        min_c, max_c = min(scores_c), max(scores_c)
+        # min-max normalization
+        diff_a = max_a - min_a
+        diff_b = max_b - min_b
+        diff_c = max_c - min_c
+        if diff_a == 0:
+            diff_a = 1
+        if diff_b == 0:
+            diff_b = 1
+        if diff_c == 0:
+            diff_c = 1
 
-        scores = [a + b + c for a, b, c in zip(
-            ((a - min_A) / (max_A - min_A) if max_A != min_A else (a - min_A) for a in raw_scores_A),
-            ((b - min_B) / (max_B - min_B) if max_B != min_B else (b - min_B) for b in raw_scores_B),
-            ((c - min_C) / (max_C - min_C) if max_C != min_C else (c - min_C) for c in raw_scores_C),
-        )]
+        scores = [((a - min_a) / diff_a +
+                   (b - min_b) / diff_b +
+                   (c - min_c) / diff_c
+                   ) for a, b, c in zip(scores_a, scores_b, scores_c)]
 
-        # scores.append(1.0)
         return scores
     # === Wenlong's job ends ===
 
