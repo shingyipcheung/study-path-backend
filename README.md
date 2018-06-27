@@ -42,8 +42,10 @@ http://127.0.0.1:8000/study_plan/concept_score/all/
 #### return the edges with risk ratio values
 http://127.0.0.1:8000/study_plan/graph/
 
-#### Work with built application by Vue
-Put dist inside current directory
+**Other Restful APIs and corresponding response functions are in edxDB/urls.py and edxDB/views.py respectively**
+
+### Work with built application by Vue.js
+Put the compiled **dist** by Vue.js inside current directory
 
 ```
 dist
