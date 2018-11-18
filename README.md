@@ -6,7 +6,7 @@
 `pip install -r requirements.txt`
 
 ### Preprocess data
-you should have the graded sql under the folder **data** 
+you should have the graded sql under the folder **edxDB/data** 
 
 **HKUSTx-COMP102x-2T2014-courseware_studentmodule-prod-analytics.sql**
 
