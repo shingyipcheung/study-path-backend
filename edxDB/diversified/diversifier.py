@@ -1,10 +1,9 @@
 import numpy as np
 from itertools import combinations
 from collections import defaultdict
-from numba import jit
+from tqdm import tqdm
 
 
-@jit(nopython=True)
 def displacement(seq1, seq2):
     _sum = 0
     for i in range(len(seq1)):
@@ -55,7 +54,7 @@ class Diversifier:
     @staticmethod
     def build_graph(possible_sequences, distance_func, max_dist):
         graph = [Diversifier.Node(idx, seq) for idx, seq in enumerate(possible_sequences)]
-        for v, u in combinations(graph, 2):
+        for v, u in tqdm(combinations(graph, 2)):
             d = distance_func(v.seq, u.seq)
             if d <= max_dist:
                 v.add_neighbour(u.idx, d)
