@@ -1,5 +1,8 @@
 # Study path analyzer
 
+### Live demo
+http://143.89.76.37:8000/
+
 ### Install packages
 **you should have python3.6+ installed**
 
