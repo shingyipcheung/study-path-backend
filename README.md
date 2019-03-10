@@ -1,7 +1,11 @@
 # Study path analyzer
 
-### Live demo
+### Live demo and Video
 http://143.89.76.37:8000/
+https://youtu.be/KdxVHWSMNi4
+
+### Frontend repository
+https://github.com/shingyipcheung/study-path-frontend
 
 ### Install packages
 **you should have python3.6+ installed**
